@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Objektiv;
+  src: url(images/ObjektivMk2_Rg.ttf);
+}
+@font-face {
+  font-family: ObjektivBd;
+  src: url(images/ObjektivMk2_Bd.ttf);
+}
+body {
+  font-family: Objektiv, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
