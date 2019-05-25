@@ -11,5 +11,5 @@ And then when you're ready to start development, run "grunt watch"
 - You'll be able to use partials, that are located in the /include folder. You can see how the partials are used in the pages/index.html file.
 - For scripts, if you need to run anything on document.ready, you can input that in scripts/script.js
 - For CSS, you can add the actual styling within the /styles folder using SCSS format ("`_`[filename].scss") and then include that SCSS file into syles/style.scss
-- To actually view the website, you can open deploy/index.html in your browser.
-- All fonts and images will be placed in the deploy/fonts and deploy/images folders.
+- To actually view the website, you can open for_deploy/index.html in your browser.
+- All fonts and images will be placed in the for_deploy/fonts and for_deploy/images folders.

@@ -30,14 +30,14 @@ module.exports = function(grunt) {
   cssmin: {
     minify: {
       files: {
-        'deploy/style.min.css' : 'styles/style.css' 
+        'for_deploy/style.min.css' : 'styles/style.css' 
       }
     }
   },
   uglify: {
      my_target: {
       files: {
-        'deploy/script.min.js': 'scripts/*'
+        'for_deploy/script.min.js': 'scripts/*'
       }
     }
   },
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     files:{
       cwd: 'pages',
       src: '*.html',
-      dest: 'deploy/',
+      dest: 'for_deploy/',
       options: {
         flatten: true,
         includePath: 'include'
