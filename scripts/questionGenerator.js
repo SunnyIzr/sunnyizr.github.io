@@ -26,15 +26,19 @@ var QuestionGenerator = {
       QuestionGenerator.sessionId = res.session_id
       if (res.type == 'question'){
         QuestionGenerator.populateQuestionAndProgress(res.question, res.progress, res.percent_complete)
-      } else if (res.type == 'results') {
+      } else if (res.type == 'result') {
         QuestionGenerator.populatesResult(res.result)
       }
     })
   },
   populateQuestionAndProgress: function(question, progress, percent_complete){
     // Populate a new question screen
+    console.log(progress)
+    console.log(percent_complete)
+    console.log(question)
   },
   populatesResult: function(result){
     // Populate result screen
+    console.log(result)
   }
 }
