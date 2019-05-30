@@ -1,2 +1,41 @@
-#index{
+body{
+  .quizStart{
+    p{
+      width: 662px;
+      color: #2f2f2f;
+      font-family: Objektiv, serif;
+      font-size: 18px;
+      line-height: 31px;
+
+      &:first-child{
+        margin-top: 168px;
+        margin-bottom: 49px;
+      }
+
+      &:nth-child(2){
+        margin-bottom: 128px;
+      }
+    }
+
+    button{
+      cursor: pointer;
+      width: 207px;
+      height: 77px;
+      border-radius: 39px;
+      background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
+      border: none;
+      outline: none;
+      color: #ffffff;
+      font-family: ObjektivBd, serif;
+      font-size: 19px;
+      letter-spacing: 3.96px;
+      text-transform: uppercase;
+    }
+  } 
+
+  &.quiz_active{
+    .quizStart{
+      display: none;
+    }
+  }
 }

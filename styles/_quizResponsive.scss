@@ -1,0 +1,157 @@
+@media all and (max-width: 715px) { 
+  html{
+    .quiz_active{
+      #index{
+        .headerLine{
+          .orangeBlock{
+            width: 128px;
+          }
+        }
+  
+        .mainQuiz{
+          .pagesNum{
+            font-size: 20px;
+            height: 34px;
+            line-height: 31px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+          }
+  
+          .contentInfo{
+            width: 265px;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 32px;
+          }
+          .break-line{
+            display: none;
+          }
+          .chooseOne {
+            margin-bottom: 42px;
+            font-size: 14px;
+            line-height: 31px;
+          }
+          .storeHolder{
+            .storeBlock{
+              width: 100vw;
+              height: 142px;
+              border-radius: 0;
+              border-left: none;
+              border-right: none;
+              margin: 0;
+              justify-content: center;
+              border-bottom: none;
+              &:last-child {
+                border-bottom:  1px solid #d5d2d2;
+              }
+
+              p{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                max-width: unset;
+                min-width: unset;
+              }
+
+              img{
+                position: unset;
+                width: 75px;
+                height: 75px;
+                margin-left: 19px;
+              }
+            }
+          }
+        }
+      }
+
+      .landingPopupHolder{
+        .landingPopup{
+          min-width: 320px;
+          width: unset;
+
+          .mainQuiz{
+            .contentInfo{
+              min-width: 320px;
+              width: unset;
+            }
+
+            .storeHolder{
+              .storeBlock{
+                width: 100vw;
+                height: 142px;
+                border-radius: 0%;
+                border-left: none;
+                border-right: none;
+                margin: 0;
+                justify-content: center;
+                border-bottom: none;
+
+                &:last-child {
+                  border-bottom:  1px solid #d5d2d2;
+                }
+
+                p{
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 20px;
+                  max-width: unset;
+                  min-width: unset;
+                }
+
+                img{
+                  position: unset;
+                  width: 75px;
+                  height: 75px;
+                  margin-left: 19px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    body{
+      .quizStart{
+        overflow: auto;
+        p{
+          min-width: 320px;
+          width: unset;
+        }
+      }
+    }
+
+    .result_active{
+      overflow: auto;
+      .mainQuiz{
+        height: unset;
+        p{
+          width: unset;
+          min-width: 320px;
+        }
+        .popup{
+          margin-bottom: 50px;
+          width: 100%;
+
+          input{
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 565px) {
+  html{
+    .quiz_active{
+      #index{
+        .storeHolder{
+          .storeBlock{
+            width: 467px;
+          }
+        }
+      }
+    }
+  }
+}

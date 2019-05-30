@@ -10,4 +10,10 @@
 
 body{
   font-family: Objektiv, sans-serif;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+
+  &.cloak{
+    opacity: 0;
+  }
 }
