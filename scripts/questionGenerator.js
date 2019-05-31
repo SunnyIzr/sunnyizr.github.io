@@ -58,8 +58,7 @@ var QuestionGenerator = {
     });
   },
   populatesResult: function(result){
-    $('body').removeClass('quiz_active');
     $('#resultTitle').text(result);
-    changePageAnim('result_active');
+    changePageAnim('result_active', 'quiz_active');
   }
 };

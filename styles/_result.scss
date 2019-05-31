@@ -29,7 +29,8 @@
 
 	.popup {
 		width: 640px;
-		height: 232px;
+		min-height: 232px;
+    	margin-bottom: 44px;
 		overflow: hidden;
 		position: relative;
 		text-align: center;

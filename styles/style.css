@@ -18,6 +18,7 @@ body.cloak {
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
   overflow: hidden;
 }
 body p {
@@ -25,7 +26,8 @@ body p {
   padding: 0;
 }
 body .mainQuiz {
-  height: 100vh;
+  height: 100%;
+  overflow: auto;
   width: 100%;
   background-size: 100%;
   background-attachment: fixed;
@@ -35,6 +37,9 @@ body .mainQuiz {
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+body #index {
+  height: 100%;
 }
 body #index .headerLine {
   height: 17px;
@@ -302,7 +307,8 @@ body.result_active .landingPopupHolder {
 }
 .result_active .popup {
   width: 640px;
-  height: 232px;
+  min-height: 232px;
+  margin-bottom: 44px;
   overflow: hidden;
   position: relative;
   text-align: center;
