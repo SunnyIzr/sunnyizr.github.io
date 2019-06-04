@@ -60,5 +60,6 @@ var QuestionGenerator = {
   populatesResult: function(result){
     $('#resultTitle').text(result);
     changePageAnim('result_active', 'quiz_active');
+    // Need to populate result elements: title, image, desc, tips
   }
 };

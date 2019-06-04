@@ -77,11 +77,12 @@ body #index .mainQuiz .break-line {
 body #index .mainQuiz .chooseOne {
   width: 662px;
   color: #2f2f2f;
-  font-family: ObjektivIt, serif;
+  font-family: Objektiv, serif;
   font-size: 18px;
   line-height: 31px;
   text-align: center;
   margin-bottom: 32px;
+  font-style: italic;
 }
 body #index .mainQuiz .storeHolder .storeBlock {
   cursor: pointer;
