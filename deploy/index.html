@@ -20,88 +20,170 @@
 
 
   <body>
-    <div class="mainQuiz quizStart">
-      <p>It’s Tuesday. Your boss called you in her
-        office and told you that your performance
-        sucks and if you don’t get your act together
-        you might get fired. You can feel your heartbeat
-        moving faster since this was a surprise.
-        What do you do later that evening. Lorem ipsum dolor
-        sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et </p>
+  <div class="sp_type-block">
+  	<div class="mainQuiz">
+  		<div class="sp_type-content">
 
-      <p>Dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt
-        mollit anim id est laborum.</p>
+  			<h2>What kind of spender are you?</h2>
 
-      <div class="buttonHolder">
-        <button id="startQuiz">START</button>
-      </div>
-    </div>
+  			<button id="startQuiz" class="start-sp_type">START</button>
 
-    <div id="index">
-      <div class="headerLine">
-        <div class="orangeBlock" id="progress"></div>
-      </div>
+  			<p>Do you find yourself aimlessly filling up your 
+  				Amazon cart during an afternoon lull? Do you have a 
+  				shirt whose permanent residence is the back of your closet, 
+  				but you had to buy it because it was on sale? We are often 
+  				irrational when it comes to money; retail therapy is a 
+  				real thing people. You start the month off with the best 
+  				financial intentions, but your feelings can sneak up on 
+  				you and derail your budget. Have you ever purchased 
+  				something on a whim and later experienced serious buyers 
+  				remorse? Whether these purchases are because you are bored 
+  				or stressed, fall into the trap of peer-pressure or can’t pass 
+  				up an awesome deal, it’s important to have awareness on what 
+  				emotions drive our spending behavior.</p>
 
-      <div class="mainQuiz">
-        <p class="pagesNum" id="progressNum">1 / 8</p>
+  			<p>Think you already know what your emotional vices are? I wouldn’t 
+  				be so sure, your feelings can mislead you and tempt you to blow your 
+  				budget. It’s important to get to know your emotional spending habit, 
+  				to really live your best life. Most of us would like to believe that 
+  				we aren’t pressured into purchases or that we don’t spend money just 
+  				because we are stressed, but in reality, our emotions play a larger 
+  				role than we think.  </p>
 
-        <p class="contentInfo" id="quiz_question"></p>
+  			<p>Take our quiz to learn more about what your emotional drivers are. 
+  				It isn’t likely that you will be able to stop making emotional purchases 
+  				entirely, but by bringing some awareness into the picture, hopefully you 
+  				can decrease the damage to your bank account.  So what are you waiting 
+  				for? See if your assumptions about yourself hold up--take the quiz now.</p>
+  				
+  			<button id="startQuiz2" class="start-sp_type">START</button>	
+  		</div>
+  	</div>
+  </div>
 
-        <div class="break-line"></div>
-
-        <p class="chooseOne">(Choose One)</p>
-
-        <div class="storeHolder" id="quiz_choices"></div>
-      </div>
+  <div id="index">
+    <div class="headerLine">
+      <div class="orangeBlock" id="progress"></div>
     </div>
 
     <div class="mainQuiz">
-      <p class="headSocial" id="resultTitle">Social Spender</p>
+      <p class="pagesNum" id="progressNum">1 / 8</p>
 
-      <p class="">
-          It’s Tuesday. Your boss called you in
-          her office and told you that your performance
-          sucks and if you don’t get your act together
-          you might get fired. You can feel your heartbeat
-          moving faster since this was a surprise.
-          What do you do later that evening. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et
-      </p>
+      <p class="contentInfo" id="quiz_question"></p>
 
-      <p class="">
-          Dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillum dolore
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
-      </p>
+      <div class="break-line"></div>
 
-      <div class="popup">
-        <!-- <div class="closeImg togglePopup">
-          <img src="images/Close_Dark.png" alt="">
-        </div>-->
+      <p class="chooseOne">(Choose One)</p>
 
-        <div>
-          <p>Stay in the Know</p>
-          <input type="email" placeholder="EMAIL">
+      <div class="storeHolder" id="quiz_choices"></div>
+    </div>
+  </div>
+
+  <div class="social_sp_block">
+    <div class="mainQuiz">
+      <h2 id="resultTitle"></h2>
+      <img id="resultImg" class="soc-sp-img" src="../deploy/images/bargain-spender.jpg">
+
+      <div class="social_sp-content">
+          <div id="resultDesc">
+            <p>You are a social spender. Whether it is due to the fear of
+              missing out or peer pressure from your friends you can’t
+              help but spend money in social situations. Social spenders
+              will make every effort to be included in nights out, trips,
+              and events. Even if you don’t have the money set aside for that
+              vacation with your besties you will move money around to make it work.</p>
+
+            <p>Social spenders often find themselves overspending just to keep up
+              with their companions. After a night out, do you wake up regretting
+              that you spent more than you had intended? Social spenders fear missing out,
+              being excluded from their group, and being judged by their peers.</p>
+          </div>
+
+          <br/>
+
+        <div class="tip_on">Tips on How to Deal</div>
+
+        <div id="resultTips">
+          <p>
+            So how do you avoid the peer pressure and stick to
+            your budget? First, be honest. Explain your situation
+            and your financial goals. Whether you are trying to
+            pay off your student loans, buy your first home, or
+            save up for future trips, have a heart to heart
+            with your friends.</p>
+
+          <p>After you have had a candid conversation, it won’t be a
+            surprise when you suggest free or inexpensive activities.
+            No one said that everything enjoyable must come with a
+            price-tag. Come up with low-cost alternatives when your
+            friends propose something pricey. Go to a free concert,
+            take a hike, or hold off until those Groupon deals arrive.</p>
+
+          <p>Tip number two, get real with your budget. You will probably
+            still want to go out with friends on occasion, and unfortunately,
+            not everything can be free. See if you can find room in your
+            budget to save up for social spending. If your friends
+            regularly get drinks on Friday or take an annual trip,
+            try to cut back your spending in one area and instead
+            allocate it for these events so they don’t take you by surprise.</p>
+        </div>
+            
+        <h3>Find out how we can help</h3>
+
+        <div class="down_button-block-holder">
+          <img class="down_button-img" src="../deploy/images/Down_Button.svg">
         </div>
 
-        <button class="togglePopup">Join Email List</button>
-      </div>
-    </div>
+        <div class="social-sp-content active">
+          <p class="find-help">You are a social spender. Whether it is due to the fear
+              of missing out or peer pressure from your friends you can’t help but
+              <span>spend money in social situations.</span>
+              Social spenders will make every effort to be included in nights out,
+              trips, and events. Even if you don’t have the money set aside for
+              that vacation with your besties you will move
+              money around to make it work.</p>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="script.min.js"></script>
+            <p class="find-help">Social spenders often find themselves overspending just to keep up with
+              their companions. After a night out, do you wake up regretting that you
+              spent more than you had intended? Social spenders fear missing out, being
+              <span>excluded from their group,</span> and being judged by their peers.</p>
+
+            <p class="find-help">Vacation with your besties you will move money around to make it work.
+              Social spenders often find themselves overspending just to keep up with
+              their companions. Start your journey now.</p>
+        </div>
+
+        <div class="welcom-content">
+          <h3>Thank You</h3>
+          <p>Welcome to the community!</p>
+          <p>You should expect an introductory
+            email in your inbox. We look forward to
+            continuing this relationship. Social
+            spenders often find themselves overspending
+            just to keep up with their companions. After a
+            night out, do you wake up regretting that
+            you spent more than you had intended.
+          </p>
+          <p>Best,</p>
+          <p>Sunny and Katherine</p>
+        </div>
+
+        <div class="start_here-button-holder">
+          <button class="start-btn  active">START HERE</button>
+
+          <div class="input-holder">
+            <input type="email" placeholder="Enter your email address">
+            <button class="sing-up-btn">SIGN UP</button>
+          </div>
+
+          <button class="sing-up-btn">SIGN UP</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="script.min.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,275 @@
+body{
+  h2,
+  h3,
+  h4{
+    margin: 0;
+    padding: 0;
+  }
+}
+.social_sp_block{
+  height: 100%;
+  overflow: auto;
+  .mainQuiz{
+    height: unset;
+
+    .welcom-content{
+      display: none;
+      h3{
+        margin-top: 56px;
+        margin-bottom: 98px;
+        text-align: center;
+      }
+      p{
+        width: 100%;
+        margin-bottom: 43px;
+        &:nth-child(4){
+          margin-bottom: 0;
+        }
+        &:nth-child(5){
+          margin-bottom: 0;
+        }
+      }
+    }
+    .welcom-content.active{
+      display: block;
+    }
+    .social-sp-content{
+      display: none;
+      flex-flow: column;
+    }
+    .social-sp-content.active{
+      display: flex;
+    }
+
+    h2{
+      margin-top: 158px;
+      margin-bottom: 46px;
+      color: #2f2f2f;
+      font-family: ObjektivBd, serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+    .soc-sp-img{
+      max-width: 527px;
+      max-height: 351px;
+      margin-bottom: 75px;
+    }
+    p,
+    #resultDesc,
+    #resultTips{
+      max-width:765px;
+      color: #2f2f2f;
+      font-family: Objektiv, serif;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      line-height: 26px;
+      text-align: justify;
+    }
+
+    .tip_on{
+      width: 100%;
+      font-family: ObjektivBd, serif;
+      font-size: 22px;
+      line-height: 34px;
+      max-width: 765px;
+    }
+
+    h3{
+      margin-top: 67px;
+      margin-bottom: 41px;
+      color: #2f2f2f;
+      font-family: ObjektivBd, serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .down_button-img{
+      margin-bottom: 47px;
+    }
+    .find-help{
+      max-width:765px;
+      width: 100%;
+      color: #2f2f2f;
+      font-family: Objektiv, serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      span{
+        font-family: ObjektivBd, serif;
+        font-weight: 700;
+      }
+    }
+    .start_here-button-holder{
+      margin-top: 97px;
+      margin-bottom: 80px;
+      .start-btn{
+        display: none;
+        width: 252px;
+        height: 77px;
+        border-radius: 39px;
+        background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
+        color: #ffffff;
+        font-family: ObjektivBd, serif;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 3.26px;
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.6s;  
+      }
+      .start-btn.active{
+        display: block;
+      }
+      .start-btn.grow{
+        width: 514px;
+        height: 108px;
+        border-radius: 39px;
+        transition: all 0.6s;  
+      }
+      .sing-up-btn{
+        display: none;
+      }
+      .sing-up-btn.active{
+        display: none;
+      }
+      .input-holder{
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 514px;
+        height: 108px;
+        border-radius: 54px;
+        border: 1px solid #979797;
+        background-color: #ffffff;
+    
+        .sing-up-btn{
+          display: block;
+          cursor: pointer;
+          color: #ffffff;
+          font-family: ObjektivBd, serif;
+          font-size: 17px;
+          font-weight: 700;
+          letter-spacing: 2.72px;
+          text-transform: uppercase;
+          width: 170px;
+          height: 77px;
+          border-radius: 39px;
+          background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
+          border: none;
+          outline: none;
+          margin-right: 14px;
+        }
+        input{
+          margin-left: 50px;
+          width: 266px;
+          border: none;
+          outline: none;
+          height: 24px;
+          color: #9a9898;
+          font-family: Objektiv, serif;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+      .input-holder.active{
+        display: flex;
+      }
+    }
+  } 
+  .social_sp-content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html{
+    body{
+      .social_sp_block{
+        .mainQuiz{
+          h2{
+            margin-top: 53px;
+            margin-bottom: 36px;
+            font-size: 24px;
+            line-height: 32px;
+          }
+          .soc-sp-img{
+            width: 320px;
+            height: 213px;
+            margin-bottom: 19px;
+          }
+          .social_sp-content{
+            margin: 0 21px;
+           
+            p,
+            .find-help,
+            #resultDesc,
+            #resultTips{
+              min-width: 279px;
+              font-size: 14px;
+              line-height: 22px;
+            }
+
+            .tip_on{
+              font-size: 19px;
+              min-width: 279px;
+            }
+
+            h3{
+              font-size: 18px;
+              margin-top: 120px;
+            }
+          }
+          .start_here-button-holder{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            .start-btn.grow{
+              width: 272px;
+              height: 91px;
+              border-radius: 54px;
+            }
+            .sing-up-btn{
+              display: none;
+              width: 170px;
+              height: 61px;
+              border-radius: 39px;
+              cursor: pointer;
+              color: #ffffff;
+              font-family: ObjektivBd, serif;
+              font-size: 17px;
+              font-weight: 700;
+              letter-spacing: 2.72px;
+              text-transform: uppercase;
+              background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
+              border: none;
+              outline: none;
+
+            }
+            .sing-up-btn.active{
+              display: block;
+            }
+            .input-holder{
+              justify-content: center;
+              width: 272px;
+              height: 91px;
+              border-radius: 54px;
+              margin-bottom: 24px;
+              input{
+                margin-left: 26px;
+                width: 242px;
+              }
+              .sing-up-btn{
+                display: none;
+              }
+            }
+          }
+        }  
+      }
+    }
+  }
+}

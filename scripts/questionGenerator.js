@@ -58,8 +58,11 @@ var QuestionGenerator = {
     });
   },
   populatesResult: function(result){
-    $('#resultTitle').text(result);
+    $('#resultTitle').text(result.title);
+    $('#resultImg').attr('src', './images/' + result.image + '.png');
+    $('#resultTips').html(result.tips);
+    $('#resultDesc').html(result.desc);
+
     changePageAnim('result_active', 'quiz_active');
-    // Need to populate result elements: title, image, desc, tips
   }
 };
