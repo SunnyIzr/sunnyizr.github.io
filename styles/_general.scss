@@ -8,6 +8,21 @@
   src: url(fonts/ObjektivMk2_Bd.ttf);
 }
 
+@font-face {
+  font-family: ObjektivIt;
+  src: url(fonts/Objektiv_Mk1_W03_Italic.ttf);
+}
+
+@font-face {
+  font-family: ObjektivXBd;
+  src: url(fonts/Objektiv_Mk1_W03_XBold.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(fonts/Lato-Regular.ttf);
+}
+
 body{
   font-family: Objektiv, sans-serif;
   opacity: 1;

@@ -59,7 +59,7 @@ var QuestionGenerator = {
   },
   populatesResult: function(result){
     $('#resultTitle').text(result.title);
-    $('#resultImg').attr('src', './images/' + result.image + '.png');
+    $('#resultImg').attr('src', './images/' + result.image + '.jpg');
     $('#resultTips').html(result.tips);
     $('#resultDesc').html(result.desc);
 

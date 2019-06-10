@@ -14,8 +14,7 @@ body{
     overflow: auto;
     width: 100%;
     background-size: 100%;
-    background-attachment: fixed;
-    background-position: left top;
+    background-position: 0% 0%;
     background-image: url(../deploy/images/Background.png);
     background-repeat: no-repeat;
     display: flex;
@@ -42,36 +41,36 @@ body{
         height: 35px;
         color: #908e8e;
         font-family: Lato, serif;
-        font-size: 29px;
+        font-size: 23px;
         line-height: 31px;
         text-align: center;
-        margin-top: 83px;
+        margin-top: 45px;
         margin-bottom: 38px;
       }
 
       .contentInfo{
         width: 662px;
-        color: #2f2f2f;
+        color: #5a5a5a;
         font-family: Objektiv, serif;
         font-size: 18px;
         line-height: 31px;
-        margin-bottom: 86px;
+        margin-bottom: 45px;
       }
 
       .break-line{
         width: 522px;
         border: 1px solid #979797;
-        margin-bottom: 45px;
+        margin-bottom: 25px;
       }
 
       .chooseOne{
         width: 662px;
-        color: #2f2f2f;
-        font-family: Objektiv, serif;
-        font-size: 18px;
+        color: #5a5a5a;
+        font-family: ObjektivIt, serif;
+        font-size: 16px;
         line-height: 31px;
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 22px;
         font-style: italic;
       }
       .storeHolder{
@@ -85,12 +84,13 @@ body{
           display: flex;
           align-items: center;
           margin-bottom: 46px;
+          background: #fff;
 
           p{
             max-width: 340px;
             min-width: 340px;
             width: 340px;
-            color: #2f2f2f;
+            color: #5a5a5a;
             font-family: Objektiv, serif;
             font-size: 16px;
             line-height: 23px;
