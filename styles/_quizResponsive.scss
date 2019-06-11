@@ -42,7 +42,7 @@
               justify-content: center;
               border-bottom: none;
               &:last-child {
-                border-bottom:  1px solid #d5d2d2;
+                border-bottom:  1px solid rgba(213, 210, 210, 1);
               }
 
               p{
@@ -59,6 +59,29 @@
                 min-width: 75px;
                 height: 75px;
                 margin-left: 19px;
+              }
+
+              &.active{
+                &:last-child {
+                  border-bottom:  1px solid rgba(213, 210, 210, 0);
+                  transition: 0.5s;
+                }
+
+                img{
+                  margin-left: 50%;
+                  transform: translateX(-50%);
+                  animation-name: grow-img-mobile;
+                  animation-duration: 2.5s;
+                }
+              }
+            }
+
+            &.active{
+              .storeBlock{
+                &:last-child {
+                  border-bottom:  1px solid rgba(213, 210, 210, 0);
+                  transition: 0.5s;
+                }
               }
             }
           }
@@ -86,10 +109,6 @@
                 margin: 0;
                 justify-content: center;
                 border-bottom: none;
-
-                &:last-child {
-                  border-bottom:  1px solid #d5d2d2;
-                }
 
                 p{
                   font-size: 14px;
@@ -150,7 +169,7 @@
         .storeHolder{
           .storeBlock{
             width: 467px;
-          }
+          } 
         }
       }
     }

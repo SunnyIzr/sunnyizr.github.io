@@ -40,6 +40,6 @@ var LeadGenGenerator = {
       }, 200)
     })
   }
-}
+};
 
 

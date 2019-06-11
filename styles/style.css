@@ -97,6 +97,13 @@ body #index .mainQuiz .contentInfo {
   font-size: 18px;
   line-height: 31px;
   margin-bottom: 45px;
+  animation-name: slide-in-from-right;
+  animation-duration: 1s;
+}
+body #index .mainQuiz .contentInfo.animText {
+  animation-name: slide-out-to-left;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
 }
 body #index .mainQuiz .break-line {
   width: 522px;
@@ -114,6 +121,7 @@ body #index .mainQuiz .chooseOne {
   font-style: italic;
 }
 body #index .mainQuiz .storeHolder .storeBlock {
+  opacity: 1;
   cursor: pointer;
   width: 547px;
   height: 94px;
@@ -124,6 +132,8 @@ body #index .mainQuiz .storeHolder .storeBlock {
   align-items: center;
   margin-bottom: 46px;
   background: #fff;
+  animation-name: fade-in;
+  animation-duration: 2s;
 }
 body #index .mainQuiz .storeHolder .storeBlock p {
   max-width: 340px;
@@ -134,10 +144,44 @@ body #index .mainQuiz .storeHolder .storeBlock p {
   font-size: 16px;
   line-height: 23px;
   margin-left: 14px;
+  opacity: 1;
 }
 body #index .mainQuiz .storeHolder .storeBlock img {
   width: 94px;
   height: 94px;
+  opacity: 1;
+}
+body #index .mainQuiz .storeHolder .storeBlock.active {
+  transition: all 0.5s;
+  border: 1px solid rgba(213, 210, 210, 0);
+}
+body #index .mainQuiz .storeHolder .storeBlock.active p {
+  opacity: 0;
+}
+body #index .mainQuiz .storeHolder .storeBlock.active img {
+  transition: all 1s;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation-name: grow-img;
+  animation-duration: 2.5s;
+}
+body #index .mainQuiz .storeHolder.active .storeBlock {
+  opacity: 0;
+  background: transparent;
+  border: 1px solid rgba(213, 210, 210, 0);
+  pointer-events: none;
+  transition: all 0.5s;
+}
+body #index .mainQuiz .storeHolder.active .storeBlock p {
+  opacity: 0;
+  transition: all 0.5s;
+}
+body #index .mainQuiz .storeHolder.active .storeBlock img {
+  opacity: 0;
+}
+body #index .mainQuiz .storeHolder.active .storeBlock.active {
+  opacity: 1;
 }
 
 body .landingPopupHolder {
@@ -249,6 +293,20 @@ body.result_active .landingPopupHolder {
     height: 75px;
     margin-left: 19px;
   }
+  html .quiz_active #index .mainQuiz .storeHolder .storeBlock.active:last-child {
+    border-bottom: 1px solid rgba(213, 210, 210, 0);
+    transition: 0.5s;
+  }
+  html .quiz_active #index .mainQuiz .storeHolder .storeBlock.active img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    animation-name: grow-img-mobile;
+    animation-duration: 2.5s;
+  }
+  html .quiz_active #index .mainQuiz .storeHolder.active .storeBlock:last-child {
+    border-bottom: 1px solid rgba(213, 210, 210, 0);
+    transition: 0.5s;
+  }
   html .quiz_active .landingPopupHolder .landingPopup {
     min-width: 320px;
     width: unset;
@@ -266,9 +324,6 @@ body.result_active .landingPopupHolder {
     margin: 0;
     justify-content: center;
     border-bottom: none;
-  }
-  html .quiz_active .landingPopupHolder .landingPopup .mainQuiz .storeHolder .storeBlock:last-child {
-    border-bottom: 1px solid #d5d2d2;
   }
   html .quiz_active .landingPopupHolder .landingPopup .mainQuiz .storeHolder .storeBlock p {
     font-size: 14px;
@@ -799,6 +854,74 @@ body h4 {
   }
   html body .sp_type-block .mainQuiz p:nth-child(5) {
     margin-bottom: 144px;
+  }
+}
+@keyframes grow-img {
+  0% {
+    width: 94px;
+    height: 94px;
+  }
+  39% {
+    width: 94px;
+    height: 94px;
+  }
+  80% {
+    width: 125px;
+    height: 125px;
+    opacity: 1;
+  }
+  100% {
+    width: 125px;
+    height: 125px;
+    opacity: 0;
+  }
+}
+@keyframes grow-img-mobile {
+  0% {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+  }
+  39% {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+  }
+  80% {
+    width: 106px;
+    min-width: 106px;
+    height: 106px;
+    opacity: 1;
+  }
+  100% {
+    width: 106px;
+    min-width: 106px;
+    height: 106px;
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-in-from-right {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out-to-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
 

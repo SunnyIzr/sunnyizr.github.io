@@ -55,6 +55,14 @@ body{
         font-size: 18px;
         line-height: 31px;
         margin-bottom: 45px;
+        animation-name:slide-in-from-right;
+        animation-duration: 1s;
+
+        &.animText{
+          animation-name:slide-out-to-left;
+          animation-duration: 1s;
+          animation-delay: 1.5s;
+        }
       }
 
       .break-line{
@@ -75,17 +83,19 @@ body{
       }
       .storeHolder{
         .storeBlock{
+          opacity: 1;
           cursor: pointer;
           width: 547px;
           height: 94px;
           border-radius: 47px;
-          border: 1px solid #d5d2d2;
+          border: 1px solid rgba(213, 210, 210, 1);
           position: relative;
           display: flex;
           align-items: center;
           margin-bottom: 46px;
           background: #fff;
-
+          animation-name: fade-in;
+          animation-duration: 2s;
           p{
             max-width: 340px;
             min-width: 340px;
@@ -95,11 +105,51 @@ body{
             font-size: 16px;
             line-height: 23px;
             margin-left: 14px;
+            opacity: 1;
           }
 
           img{
             width: 94px;
             height: 94px;
+            opacity: 1;
+          }
+
+          &.active{
+            transition: all 0.5s;
+            border: 1px solid rgba(213, 210, 210, 0);
+            p{
+              opacity: 0;
+            }
+            img{
+              transition: all 1s;
+              margin-left: 50%;
+              transform: translateX(-50%);
+              opacity: 1;
+              animation-name: grow-img;
+              animation-duration: 2.5s;
+            }
+          }
+        }
+
+        &.active{
+          .storeBlock{
+            opacity: 0;
+            background: transparent;
+            border: 1px solid rgba(213, 210, 210, 0);
+            pointer-events: none;
+            transition: all 0.5s;
+
+            p{
+              opacity: 0;
+              transition: all 0.5s;
+            }
+            img{
+              opacity: 0;
+            }
+
+            &.active{
+              opacity: 1;
+            }
           }
         }
       }
