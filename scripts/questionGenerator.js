@@ -48,7 +48,7 @@ var QuestionGenerator = {
     var choices_html = '';
 
     if($('#progress').length){
-      $(this).width(100*percent_complete + '%');
+      $('#progress').width(100*percent_complete + '%');
       $('#progressNum').text(progress);
     }
 
