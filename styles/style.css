@@ -253,16 +253,16 @@ body.result_active .landingPopupHolder {
     margin-bottom: 12px;
   }
   html .quiz_active #index .mainQuiz .contentInfo {
-    width: 265px;
+    width: 300px;
     font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 32px;
+    line-height: 26px;
+    margin-bottom: 20px;
   }
   html .quiz_active #index .mainQuiz .break-line {
     display: none;
   }
   html .quiz_active #index .mainQuiz .chooseOne {
-    margin-bottom: 42px;
+    margin-bottom: 18px;
     font-size: 14px;
     line-height: 31px;
   }
@@ -280,11 +280,12 @@ body.result_active .landingPopupHolder {
     border-bottom: 1px solid #d5d2d2;
   }
   html .quiz_active #index .mainQuiz .storeHolder .storeBlock p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 26px;
     max-width: unset;
     min-width: unset;
+    padding-right: 20px;
   }
   html .quiz_active #index .mainQuiz .storeHolder .storeBlock img {
     position: unset;
@@ -716,24 +717,29 @@ body h4 {
   html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
   html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
     min-width: 279px;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 25px;
+  }
+  html body .social_sp_block .mainQuiz .social_sp-content #resultDesc {
+    margin-bottom: 25px;
   }
   html body .social_sp_block .mainQuiz .social_sp-content .tip_on {
     font-size: 19px;
     min-width: 279px;
+    margin-bottom: 11px;
   }
   html body .social_sp_block .mainQuiz .social_sp-content h3 {
     font-size: 18px;
-    margin-top: 120px;
+    margin-top: 0px;
   }
   html body .social_sp_block .mainQuiz .start_here-button-holder {
-    display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 20px;
   }
   html body .social_sp_block .mainQuiz .start_here-button-holder .start-btn.grow {
-    width: 272px;
+    width: 310px;
     height: 91px;
     border-radius: 54px;
   }
@@ -752,13 +758,16 @@ body h4 {
     background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
     border: none;
     outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5px;
   }
   html body .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn.active {
     display: block;
   }
   html body .social_sp_block .mainQuiz .start_here-button-holder .input-holder {
     justify-content: center;
-    width: 272px;
+    width: 310px;
     height: 91px;
     border-radius: 54px;
     margin-bottom: 24px;
@@ -838,22 +847,22 @@ body h4 {
     font-size: 24px;
     text-align: center;
     margin-top: 85px;
-    margin-bottom: 58px;
+    margin-bottom: 40px;
   }
   html body .sp_type-block .mainQuiz .start-sp_type {
-    width: 178px;
+    width: 168px;
     height: 64px;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 40px;
   }
   html body .sp_type-block .mainQuiz p {
     min-width: 267px;
-    font-size: 14px;
-    line-height: 23px;
+    font-size: 16px;
+    line-height: 26px;
     margin-bottom: 37px;
   }
   html body .sp_type-block .mainQuiz p:nth-child(5) {
-    margin-bottom: 144px;
+    margin-bottom: 45px;
   }
 }
 @keyframes grow-img {
