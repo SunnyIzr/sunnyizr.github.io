@@ -1,0 +1,61 @@
+@media all and (max-width: 640px) {
+  body {
+    main {
+      .bannerSection {
+        padding-top: 0;
+        p {
+          font-size: 18px;
+          margin-right: 20px;
+        }
+        .date {
+          font-size: 12px;
+        }
+        .bannerTextArticle {
+          font-size: 14px;
+        }
+      }
+      .textBlock {
+        font-size: 14px;
+        margin: 35px auto;
+        span {
+          font-size: 18px;
+        }
+      }
+      .textBorder {
+        font-size: 18px;
+        margin: 0 40px;
+      }
+    }
+    .popupHolder {
+      .popup {
+        width: 100%;
+        input {
+          width: 90%;
+        }
+      }
+
+      &.submit-success {
+        .success {
+          h1 {
+            margin: 30px auto;
+          }
+          .submit {
+            .text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      &.submit-error {
+        .error {
+          .submitEr {
+            h2 {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

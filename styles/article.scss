@@ -1,0 +1,217 @@
+body {
+  .bannerSection {
+    padding-top: 12px;
+    .date {
+      margin-top: 10px;
+    }
+    .leftBorder {
+      margin: 0 20px;
+      height: 23px;
+    }
+    .bannerTextArticle {
+      max-width: 640px;
+      height: 96px;
+      font-family: DroidIt, serif;
+      font-size: 18px;
+      margin: 20px 20px 23px;
+    }
+  }
+  main {
+    max-width: 640px;
+    margin: auto;
+    .greyLine {
+      width: 270px;
+      height: 2px;
+      margin: auto;
+      background-color: #d8d8d8;
+    }
+    .textBlock {
+      max-width: 600px;
+      margin: 50px auto;
+      font-family: Droid, serif;
+      font-size: 18px;
+      padding: 0 20px;
+      span {
+        font-family: ObjektivBd, serif;
+        font-size: 22px;
+      }
+    }
+    .textBorder {
+      font-family: Objektiv, serif;
+      min-height: 96px;
+      border-left: 5px solid #ff5f93;
+      font-size: 22px;
+      max-width: 510px;
+      padding-left: 15px;
+      margin: auto;
+    }
+    .bottomBlock {
+      .socialBlock {
+        width: 85px;
+        display: flex;
+        margin: 0 auto 20px;
+        justify-content: space-between;
+      }
+      .commentBlock {
+        width: 300px;
+        height: 51px;
+        cursor: pointer;
+        margin: 0 auto 80px;
+        border: 1px solid #979797;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: Objektiv, serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .popupHolder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    transition: opacity .3s ease-in-out;
+    .popup {
+      width: 640px;
+      height: 232px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      border: 1px solid #979797;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      .closeImg {
+        position: absolute;
+        cursor: pointer;
+        right: 18px;
+        top: 20px;
+      }
+      .backgroundImg {
+        position: absolute;
+        height: 75px;
+        width: 75px;
+        right: -10px;
+        top: -10px;
+        border-radius: 30px 0 0 50px;
+        background-color: rgba(254, 141, 69, 0.05);
+      }
+      p {
+        color: #2f2f2f;
+        font-family: ObjektivBd, serif;
+        font-size: 14px;
+        letter-spacing: 1.75px;
+        line-height: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 45px 0 29px;
+      }
+      input {
+        display: flex;
+        width: 400px;
+        height: 47px;
+        margin: auto;
+        background-color: #ffffff;
+        border: 1px solid #979797;
+        outline: none;
+        opacity: .5;
+        text-align: center;
+        color: #2f2f2f;
+        font-family: Objektiv, serif;
+        font-size: 14px;
+      }
+      button {
+        width: 180px;
+        height: 44px;
+        border-radius: 10px;
+        background-color: #fe8d45;
+        margin: 20px auto;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: ObjektivBd, serif;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .error {
+        display: none;
+      }
+      .success {
+        display: none;
+      }
+    }
+
+    &.submit-success {
+      p {
+        display: none;
+      }
+      input {
+        display: none;
+      }
+      button {
+        display: none;
+      }
+      .success {
+        display: block;
+        h1 {
+          color: #2f2f2f;
+          font-family: ObjektivBd, serif;
+          font-size: 14px;
+          letter-spacing: 1.75px;
+          line-height: 16px;
+          text-transform: uppercase;
+          margin: 40px auto 30px;
+        }
+        .submit {
+          .text {
+            display: block;
+            color: #2f2f2f;
+            font-family: Objektiv, serif;
+            font-size: 14px;
+            line-height: 16px;
+            margin: 20px;
+            letter-spacing: normal;
+            text-transform: unset;
+          }
+        }
+      }
+    }
+
+    &.submit-error {
+      p {
+        margin: 35px 0 0;
+      }
+      .error {
+        display: block;
+        .submitEr {
+          h2 {
+            color: #ff1963;
+            font-family: Objektiv, serif;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  &.activePopup {
+    overflow: hidden;
+    .popupHolder {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

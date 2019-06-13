@@ -1,2 +1,14 @@
 #footer{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .copyright.believe{
+    margin: 20px 0px;
+  }
+  img{
+    margin-bottom: 107px;
+    width: 14px;
+    height: 12px;
+  }
 }

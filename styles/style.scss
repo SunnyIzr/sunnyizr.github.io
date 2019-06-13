@@ -18,4 +18,24 @@
 
 @import 'spender_type';
 
-@import 'animations.scss';
+@import 'animations';
+
+@import 'aboutUs';
+
+@import 'aboutUsResponsive';
+
+@import 'bio';
+
+@import 'bioResponsive';
+
+// posts + article styles
+
+@import "blog_main";
+
+@import "article";
+
+@import "article_responsive";
+
+@import "posts";
+
+@import "posts_responsive";

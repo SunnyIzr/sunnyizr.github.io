@@ -23,6 +23,25 @@
   src: url(fonts/Lato-Regular.ttf);
 }
 
+@font-face{
+  font-family: Droid;
+  src: url(fonts/DroidSerif-Regular.ttf);
+}
+
+@font-face{
+  font-family: DroidBd;
+  src: url(fonts/DroidSerif-Bold.ttf);
+}
+
+@font-face{
+  font-family: DroidIt;
+  src: url(fonts/DroidSerif-Italic.ttf);
+}
+
+@font-face{
+  font-family: Lucida;
+  scr: url();
+}
 body{
   font-family: Objektiv, sans-serif;
   opacity: 1;

@@ -8,9 +8,34 @@ const changePageAnim = function (class_name, remove_class) {
   }, 250);
 };
 
+const togglePopup = function(){$('body').toggleClass('activePopup');};
+
 $(document).ready(function(){
-  $('#startQuiz, #startQuiz2').click(QuestionGenerator.startQuiz);
+  // article js
+  if($('#article-page').length){
+    var timeout = setTimeout(function(){
+      togglePopup();
+      clearTimeout(timeout);
+      timeout = null;
+    }, 15000);
 
-  LeadGenGenerator.init()
+    $('.togglePopup').on('click', togglePopup);
+  } else {
+    // aboutUs js
+    $('.team').click(function() {
+      $('.bio-section.' + this.dataset.member).addClass('active');
+      $('.about-us-section.active').removeClass('active');
+      $('html, body').animate({ scrollTop : 0 }, 200);
+    });
 
+    $('.back-btn').click(function() {
+      $('.bio-section.active').removeClass('active');
+      $('.about-us-section').addClass('active');
+    });
+
+    // quiz js
+    $('#startQuiz, #startQuiz2').click(QuestionGenerator.startQuiz);
+
+    LeadGenGenerator.init();
+  }
 });
