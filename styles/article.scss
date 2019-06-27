@@ -1,4 +1,12 @@
 body {
+  .breakLine{
+    margin-top: 17px;
+    margin-bottom: 35px;
+    width: 150px;
+    height: 5px;
+    background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
+    margin: auto;
+}
   .bannerSection {
     padding-top: 12px;
     .date {
@@ -29,16 +37,19 @@ body {
       max-width: 600px;
       margin: 50px auto;
       font-family: Droid, serif;
-      font-size: 18px;
+      font-size: 16px;
       padding: 0 20px;
+      p{
+        margin-bottom: 30px;
+      }
       span {
         font-family: ObjektivBd, serif;
-        font-size: 22px;
+        font-size: 18px;
       }
     }
     .textBorder {
       font-family: Objektiv, serif;
-      min-height: 96px;
+      min-height: 150px;
       border-left: 5px solid #ff5f93;
       font-size: 22px;
       max-width: 510px;

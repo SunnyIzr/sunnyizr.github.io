@@ -1,4 +1,5 @@
 .result_active{
+
 	.headSocial{
 		text-align: center;
 		width: unset;
@@ -11,19 +12,21 @@
 		margin-bottom: 64px;
 	}
 
-	p{
-		width: 662px;
-		color: #5a5a5a;
-		font-family: Objektiv, serif;
-		font-size: 18px;
-		line-height: 31px;
+	.social_sp_block{
+		p{
+			width: 662px;
+			color: #5a5a5a;
+			font-family: Objektiv, serif;
+			font-size: 18px;
+			line-height: 31px;
 
-		&:nth-child(2) {
-			margin-bottom: 46px;
-		}
+			&:nth-child(2) {
+				margin-bottom: 46px;
+			}
 
-		&:nth-child(3) {
-			margin-bottom: 86px;
+			&:nth-child(3) {
+				margin-bottom: 86px;
+			}
 		}
 	}
 

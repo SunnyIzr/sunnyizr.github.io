@@ -2,7 +2,7 @@
   html{
     .quiz_active{
       #index{
-        .headerLine{
+        .headerLine.quizLine{
           .orangeBlock{
             width: 128px;
           }
@@ -174,5 +174,12 @@
         }
       }
     }
+  }
+}
+
+@media all and (max-width: 780px) {
+  body.indexPage{
+    padding-top: 60px;
+    height: calc(100vh - 60px);
   }
 }
