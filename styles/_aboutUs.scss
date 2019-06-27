@@ -195,17 +195,19 @@ body{
         }
         
       }
-      .horiz-line{
-        width: 150px;
-        height: 1px;
-        background-color: #d8d8d8;
-      }
-      .horiz-line.special{
-        margin-bottom: 27px;
-      }
+
     }
   }
   .about-us-section.active{
     display: flex;
   }
+}
+.horiz-line{
+  width: 150px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
+.horiz-line.special{
+  margin: auto;
+  margin-bottom: 27px;
 }

@@ -1,7 +1,7 @@
 .sp_type-block{
   overflow: auto;
-  height: 100%;
-  .mainQuiz{
+  height: calc(100% + 100px);
+  &.mainQuiz{
     height: unset;
     .sp_type-content{
       display: flex;
@@ -52,8 +52,8 @@
   }   
 }
 
-.quiz_active .sp_type-block,
-.result_active .sp_type-block{
+.quiz_active .mainQuiz.sp_type-block,
+.result_active .mainQuiz.sp_type-block{
   display: none;
 }
 
@@ -61,7 +61,7 @@
   html{
     body{
       .sp_type-block{
-        .mainQuiz{
+        &.mainQuiz{
           
           .sp_type-content{
             margin: 0 27px;
