@@ -121,28 +121,28 @@ body{
       .story-block{
         display: flex;
         justify-content: space-between;
-        width: 650px;
+        width: 750px;
         margin-top: 62px;
         margin-bottom: 134px;
         p{
-          width: 300px;
+          width: 350px;
           color: #2f2f2f;
           font-family: Droid, serif;
           font-size: 16px;
-          line-height: 20px;
+          line-height: 27px;
         }
       }
 
       .team-block{
         display: flex;
-        width: 650px;
+        width: 750px;
         justify-content: center;
         align-items: center;
         margin-top: 50px;
 
         .sunny-block,
         .katherine-block{
-          width: 270px;
+          width: 335px;
           display: flex;
           flex-flow: column;
           align-items: center;
@@ -165,7 +165,7 @@ body{
             color: #2f2f2f;
             font-family: Droid, serif;
             font-size: 16px;
-            line-height: 20px;
+            line-height: 27px;
           }
           .team-holder{
             width: 270px;

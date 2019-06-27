@@ -65,6 +65,8 @@ body.cloak {
   display: flex;
   flex-flow: column;
   align-items: center;
+  font-size: 12px;
+  color: #2F2F2F;
 }
 #footer .copyright.believe {
   margin: 20px 0px;
@@ -1072,27 +1074,27 @@ body .about-us-section .content-block .title-content:after {
 body .about-us-section .content-block .story-block {
   display: flex;
   justify-content: space-between;
-  width: 650px;
+  width: 750px;
   margin-top: 62px;
   margin-bottom: 134px;
 }
 body .about-us-section .content-block .story-block p {
-  width: 300px;
+  width: 350px;
   color: #2f2f2f;
   font-family: Droid, serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 27px;
 }
 body .about-us-section .content-block .team-block {
   display: flex;
-  width: 650px;
+  width: 750px;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
 body .about-us-section .content-block .team-block .sunny-block,
 body .about-us-section .content-block .team-block .katherine-block {
-  width: 270px;
+  width: 335px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -1119,7 +1121,7 @@ body .about-us-section .content-block .team-block .katherine-block .info-text {
   color: #2f2f2f;
   font-family: Droid, serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 27px;
 }
 body .about-us-section .content-block .team-block .sunny-block .team-holder,
 body .about-us-section .content-block .team-block .katherine-block .team-holder {
@@ -1525,8 +1527,9 @@ body main .textBlock {
   max-width: 600px;
   margin: 50px auto;
   font-family: Droid, serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 20px;
+  line-height: 27px;
 }
 body main .textBlock span {
   font-family: ObjektivBd, serif;
