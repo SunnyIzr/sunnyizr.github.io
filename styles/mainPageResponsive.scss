@@ -1,0 +1,117 @@
+@media all and (max-width:900px){
+
+    body{
+        .mainPage{
+            .panelBlock{
+                .panelFlex{
+                    flex-direction:column;
+                    margin:auto;
+                    align-items: center;
+
+                    div{
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (max-width:768px){
+    body{
+        .mainPage{
+            margin: 92px auto;
+            .topBlock{
+                div{
+                    &:first-child{
+                        span{
+                            font-size:24px;
+                        }
+                    }
+                }
+                .topText{
+                    p{
+                        font-size:14px;
+                    }
+                }
+            }
+            .start_here-button-holder {
+                margin-bottom: 40px;
+                .start-btn.grow{
+                    width: 300px;
+                    height: 80px;
+                }
+                .input-holder{
+                    width: 300px;
+                    height:80px;
+                    .sing-up-btn{
+                        font-size:10px;
+                        height: 44px;
+                    }
+                    input{
+                        font-size: 10px;
+                    }
+                }
+            }
+            .panelBlock{
+                span{
+                    font-size:18px;
+                }
+                p{
+                    font-size:14px;
+                    line-height: 18px;
+                    padding:0 50px;
+                }
+                .breakLine{
+                    right: 0;
+                }
+                .panelFlex{
+                    flex-direction:column;
+                    margin:auto;
+                    span{
+                        font-size:16px;
+                    }
+                    div{
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+            .storyBlock{
+                flex-direction: column;
+                margin:auto;
+                div{
+                    &:first-child{
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                }
+                .textBlock{
+                    font-size:14px;
+                    padding: 0 25px;
+                    max-width: 500px;
+                    margin: 0 auto;
+
+                    p{
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    span{
+                        &:first-child{
+                            font-size:18px;
+                        }
+                        &:last-child{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                div{
+                    img{
+                        margin: 40px auto;
+                        display:flex;
+                    }
+                }
+            }
+        }
+    }
+}
