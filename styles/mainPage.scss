@@ -4,14 +4,19 @@
         text-align:center;
         margin-top: 45px;
         .breakLine{
-            width: 200px;
-            height: 1px;
+            width: 250px;
+            height: 2px;
             background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
             margin:auto;
             margin-top: 20px;
         }
         .topText{
             margin-top: 14px;
+            p{
+              font-family: Droid, serif;
+              color: #565656;
+              font-size: 19px;
+            }
         }
         div{
             &:first-child{
@@ -19,7 +24,8 @@
                 margin: auto;
                 font-family: ObjektivBd, serif;
                 span{
-                    font-size:36px;
+                    font-size:40px;
+                    color: #4a4a4a;
                 }
    
             }
@@ -30,11 +36,11 @@
             }
             .centerButton{
                 letter-spacing: 1.67px;
-                border-radius: 22px;
+                border-radius: 35px;
                 background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
                 color: #ffffff;
                 font-family: ObjektivBd,serif;
-                font-size: 10px;
+                font-size: 14px;
                 text-transform: uppercase;
                 outline: none;
                 border: none;
@@ -67,14 +73,16 @@
         padding-bottom: 65px;
 
         span{
-            font-size:24px;
+            font-size:28px;
             margin:64px auto 19px;
             font-family: ObjektivBd, serif;
+            color: #4a4a4a;
         }
         p{
-            font-size:18px;
+            font-size:19px;
             line-height: 24px;
             font-family: Droid, serif;
+            color: #565656;
         }
         .breakLine{
             width: 150px;
@@ -90,7 +98,9 @@
             width: 1024px;
             max-width: 100%;
             margin: 0 auto;
-
+            p{
+              font-size: 18px;
+            }
             div{
               width: 300px;
             }
@@ -144,8 +154,8 @@
             font-family: Droid, serif;
             p{
               margin-bottom: 17px;
-              font-size: 18px;
-              line-height: 24px;
+              font-size: 16px;
+              line-height: 27px;
             }
             span{
                 &:first-child{
@@ -187,8 +197,8 @@
         position: relative;
         .start-btn{
           display: none;
-          width: 180px;
-          height: 44px;
+          width: 235px;
+          height: 55px;
           border-radius: 39px;
           background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
           color: #ffffff;

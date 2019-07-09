@@ -55,7 +55,7 @@
 body {
   font-family: Objektiv, sans-serif;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 body.cloak {
   opacity: 0;
@@ -67,6 +67,10 @@ body.cloak {
   align-items: center;
   font-size: 12px;
   color: #2F2F2F;
+}
+#footer .copyright {
+  margin-block-end: 3px;
+  margin-block-start: 0;
 }
 #footer .copyright.believe {
   margin: 20px 0px;
@@ -112,7 +116,7 @@ body.indexPage #index .headerLine.quizLine .orangeBlock {
   width: 128px;
   height: 17px;
   background-color: #fe8d45;
-  transition: width 0.3s ease-in-out;
+  transition: width .3s ease-in-out;
 }
 body.indexPage #index .mainQuiz .pagesNum {
   height: 35px;
@@ -469,7 +473,7 @@ body.result_active .landingPopupHolder {
   background-color: #ffffff;
   border: 1px solid #979797;
   outline: none;
-  opacity: 0.5;
+  opacity: .5;
   text-align: center;
   color: #5a5a5a;
   font-family: Objektiv, serif;
@@ -536,12 +540,12 @@ body h4 {
 
 .leadGenContent {
   display: none;
-  opacity: 0;
+  opacity: 0.0;
   transition: all 600ms ease-in-out;
 }
 
 .leadGenContent.active {
-  opacity: 1;
+  opacity: 1.0;
 }
 
 .fixed-section-break {
@@ -556,7 +560,7 @@ body h4 {
   height: unset;
 }
 .social_sp_block .mainQuiz .welcom-content {
-  opacity: 0;
+  opacity: 0.0;
   display: none;
   transition: all 600ms ease-in-out;
 }
@@ -656,7 +660,7 @@ body h4 {
   border-radius: 39px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivXBd, serif;
+  font-family: ObjektivXBd,serif;
   font-size: 17px;
   letter-spacing: 3.26px;
   text-transform: uppercase;
@@ -682,14 +686,14 @@ body h4 {
   transition: all 0.6s;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn.active {
   display: none;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .input-holder {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
   align-items: center;
   justify-content: space-between;
@@ -752,9 +756,9 @@ body h4 {
     margin: 0 21px;
   }
   html body .social_sp_block .mainQuiz .social_sp-content p,
-html body .social_sp_block .mainQuiz .social_sp-content .find-help,
-html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
-html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
+  html body .social_sp_block .mainQuiz .social_sp-content .find-help,
+  html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
+  html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
     min-width: 279px;
     font-size: 16px;
     line-height: 26px;
@@ -1050,6 +1054,7 @@ body .about-us-section .content-block .title {
   font-weight: 400;
   margin-top: 59px;
   margin-bottom: 43px;
+  text-align: center;
 }
 body .about-us-section .content-block .img-one,
 body .about-us-section .content-block .img-two {
@@ -1073,7 +1078,8 @@ body .about-us-section .content-block .title-content:after {
   content: "";
   position: absolute;
   top: 46px;
-  left: -15px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 150px;
   height: 2px;
   background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
@@ -1091,6 +1097,9 @@ body .about-us-section .content-block .story-block p {
   font-family: Droid, serif;
   font-size: 16px;
   line-height: 27px;
+}
+body .about-us-section .content-block .story-block p span {
+  font-family: DroidBd,serif;
 }
 body .about-us-section .content-block .team-block {
   display: flex;
@@ -1202,7 +1211,7 @@ body .about-us-section.active {
     text-align: center;
   }
   html body .about-us-section .content-block .img-one,
-html body .about-us-section .content-block .img-two {
+  html body .about-us-section .content-block .img-two {
     width: 305px;
     height: 259px;
     margin-bottom: 43px;
@@ -1324,7 +1333,7 @@ html body .about-us-section .content-block .img-two {
 }
 .bio-section .question-block .question-content h4 {
   color: #2f2f2f;
-  font-family: DroidBd, serif;
+  font-family: DroidBd,serif;
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 10px;
@@ -1442,7 +1451,7 @@ body .headerTitle h2 {
   color: #2f2f2f;
   font-family: Objektiv, serif;
   font-size: 12px;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   margin-bottom: 20px;
 }
 body .mg-b-0 {
@@ -1597,7 +1606,7 @@ body .popupHolder {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.85);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 body .popupHolder .popup {
   width: 640px;
@@ -1642,7 +1651,7 @@ body .popupHolder .popup input {
   background-color: #ffffff;
   border: 1px solid #979797;
   outline: none;
-  opacity: 0.5;
+  opacity: .5;
   text-align: center;
   color: #2f2f2f;
   font-family: Objektiv, serif;
@@ -1885,8 +1894,8 @@ body .contentBlock .content .date {
   margin-top: 45px;
 }
 .mainPage .topBlock .breakLine {
-  width: 200px;
-  height: 1px;
+  width: 250px;
+  height: 2px;
   background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
   margin: auto;
   margin-top: 20px;
@@ -1894,13 +1903,19 @@ body .contentBlock .content .date {
 .mainPage .topBlock .topText {
   margin-top: 14px;
 }
+.mainPage .topBlock .topText p {
+  font-family: Droid, serif;
+  color: #565656;
+  font-size: 19px;
+}
 .mainPage .topBlock div:first-child {
   max-width: 343px;
   margin: auto;
   font-family: ObjektivBd, serif;
 }
 .mainPage .topBlock div:first-child span {
-  font-size: 36px;
+  font-size: 40px;
+  color: #4a4a4a;
 }
 .mainPage .topBlock div:nth-child(2) {
   font-size: 18px;
@@ -1909,11 +1924,11 @@ body .contentBlock .content .date {
 }
 .mainPage .topBlock div .centerButton {
   letter-spacing: 1.67px;
-  border-radius: 22px;
+  border-radius: 35px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivBd, serif;
-  font-size: 10px;
+  font-family: ObjektivBd,serif;
+  font-size: 14px;
   text-transform: uppercase;
   outline: none;
   border: none;
@@ -1943,14 +1958,16 @@ body .contentBlock .content .date {
   padding-bottom: 65px;
 }
 .mainPage .panelBlock span {
-  font-size: 24px;
+  font-size: 28px;
   margin: 64px auto 19px;
   font-family: ObjektivBd, serif;
+  color: #4a4a4a;
 }
 .mainPage .panelBlock p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 24px;
   font-family: Droid, serif;
+  color: #565656;
 }
 .mainPage .panelBlock .breakLine {
   width: 150px;
@@ -1966,6 +1983,9 @@ body .contentBlock .content .date {
   width: 1024px;
   max-width: 100%;
   margin: 0 auto;
+}
+.mainPage .panelBlock .panelFlex p {
+  font-size: 18px;
 }
 .mainPage .panelBlock .panelFlex div {
   width: 300px;
@@ -2014,8 +2034,8 @@ body .contentBlock .content .date {
 }
 .mainPage .storyBlock .textBlock p {
   margin-bottom: 17px;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 27px;
 }
 .mainPage .storyBlock .textBlock span:first-child {
   font-size: 24px;
@@ -2050,12 +2070,12 @@ body .contentBlock .content .date {
 }
 .mainPage .start_here-button-holder .start-btn {
   display: none;
-  width: 180px;
-  height: 44px;
+  width: 235px;
+  height: 55px;
   border-radius: 39px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivXBd, serif;
+  font-family: ObjektivXBd,serif;
   font-size: 17px;
   letter-spacing: 3.26px;
   text-transform: uppercase;
@@ -2081,14 +2101,14 @@ body .contentBlock .content .date {
   transition: all 0.6s;
 }
 .mainPage .start_here-button-holder .sing-up-btn {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
 }
 .mainPage .start_here-button-holder .sing-up-btn.active {
   display: none;
 }
 .mainPage .start_here-button-holder .input-holder {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
   align-items: center;
   justify-content: space-between;
@@ -2174,7 +2194,7 @@ body .contentBlock .content .date {
   }
   body .mainPage .panelBlock p {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 21px;
     padding: 0 50px;
   }
   body .mainPage .panelBlock .breakLine {
@@ -2189,6 +2209,9 @@ body .contentBlock .content .date {
   }
   body .mainPage .panelBlock .panelFlex div {
     margin-bottom: 60px;
+  }
+  body .mainPage .panelBlock .panelFlex p {
+    font-size: 14px;
   }
   body .mainPage .storyBlock {
     flex-direction: column;
@@ -2232,7 +2255,7 @@ body .contentBlock .content .date {
   justify-content: space-between;
 }
 .nav-bar a {
-  color: #2f2f2f;
+  color: #565656;
 }
 .nav-bar .logo-holder {
   display: flex;
@@ -2244,7 +2267,7 @@ body .contentBlock .content .date {
   height: 48px;
 }
 .nav-bar .logo-holder .logo-text {
-  margin-left: 10px;
+  margin-left: 7px;
   color: #8f8f8f;
   font-family: Objektiv, serif;
   font-size: 24px;
@@ -2316,13 +2339,14 @@ body.blogPage .nav-bar .switch-block .btn:last-child:after {
     height: 29px;
   }
   body .nav-bar .logo-holder .logo-text {
-    font-size: 12px;
+    font-size: 17px;
+    margin-left: 5px;
   }
   body .nav-bar .switch-block {
     margin-right: 22px;
   }
   body .nav-bar .switch-block .btn {
-    font-size: 10px;
+    font-size: 14px;
   }
   body .nav-bar .switch-block .btn::after {
     top: 13px;
