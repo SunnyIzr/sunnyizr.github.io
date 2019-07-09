@@ -1,4 +1,4 @@
-# clasp-quiz
+# clasp-site
 
 This is a template to generate static websites.
 To get started:
