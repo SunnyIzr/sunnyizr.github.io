@@ -18,10 +18,11 @@ body {
     }
     .bannerTextArticle {
       max-width: 640px;
-      height: 96px;
       font-family: DroidIt, serif;
       font-size: 18px;
       margin: 20px 20px 23px;
+      color: #2f2f2f;
+      line-height: 33px;
     }
   }
   main {
@@ -40,6 +41,7 @@ body {
       font-size: 16px;
       padding: 0 20px;
       line-height: 27px;
+      color: #545454;
       p{
         margin-bottom: 30px;
       }

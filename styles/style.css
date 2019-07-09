@@ -1535,10 +1535,11 @@ body .bannerSection .leftBorder {
 }
 body .bannerSection .bannerTextArticle {
   max-width: 640px;
-  height: 96px;
   font-family: DroidIt, serif;
   font-size: 18px;
   margin: 20px 20px 23px;
+  color: #2f2f2f;
+  line-height: 33px;
 }
 body main {
   max-width: 640px;
@@ -1557,6 +1558,7 @@ body main .textBlock {
   font-size: 16px;
   padding: 0 20px;
   line-height: 27px;
+  color: #545454;
 }
 body main .textBlock p {
   margin-bottom: 30px;
@@ -2303,13 +2305,14 @@ body .contentBlock .content .date {
 }
 
 .headerLine:not(.quizLine) {
-  margin-top: 175px;
+  margin-top: 160px;
 }
 .headerLine:not(.quizLine) span {
   font-family: Droid, serif;
-  font-size: 24px;
+  font-size: 28px;
   display: flex;
   justify-content: center;
+  color: #565656;
 }
 .headerLine:not(.quizLine) span i {
   font-family: DroidBd, serif;
@@ -2317,7 +2320,9 @@ body .contentBlock .content .date {
 .headerLine:not(.quizLine) p {
   text-align: center;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
+  font-family: Droid, serif;
+  color: #565656;
 }
 
 body.aboutPage .nav-bar .switch-block .btn:first-child:after {

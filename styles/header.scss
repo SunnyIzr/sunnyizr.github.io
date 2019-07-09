@@ -69,12 +69,13 @@
   }
 
   .headerLine:not(.quizLine){
-    margin-top: 175px;
+    margin-top: 160px;
     span{
         font-family: Droid, serif;
-        font-size: 24px;
+        font-size: 28px;
         display: flex;
         justify-content: center;
+        color: #565656;
         i{
             font-family: DroidBd, serif;
         }
@@ -82,7 +83,9 @@
     p{
         text-align: center;
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 14px;
+        font-family: Droid, serif;
+        color: #565656;
     }
 }
 body{
