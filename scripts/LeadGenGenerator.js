@@ -34,7 +34,7 @@ var LeadGenGenerator = {
     $(".sing-up-btn").click(function() {
       $('.social-sp-content').hide()
       $(".input-holder, .sing-up-btn").css('opacity', '0.0')
-      $(".welcom-content").addClass("active");
+      $(".welcom-content, .start_here-button-holder").addClass("active");
       setTimeout(function(){
         $(".welcom-content").css('opacity', '1.0')
       }, 200)

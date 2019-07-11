@@ -1,9 +1,10 @@
 body{
-  overflow: auto;
   .about-us-section{
-    display: none;
+    display: flex;
     flex-flow: column;
     justify-content: center;
+    overflow: hidden;
+
   
     .nav-bar{
       top: 0;
@@ -18,6 +19,7 @@ body{
       justify-content: space-between;
   
       .logo-holder{
+        cursor: pointer;
         display: flex;
         margin-left: 40px;
         align-items: center;
@@ -135,6 +137,13 @@ body{
           span{
             font-family: DroidBd,serif;
           }
+          .only-for-mobila,
+          .not-for-mobila{
+            font-family: Droid,serif;
+          }
+          .only-for-mobila{
+            display: none;
+          }
         }
       }
 
@@ -147,7 +156,7 @@ body{
 
         .sunny-block,
         .katherine-block{
-          width: 335px;
+          width: 313px;
           display: flex;
           flex-flow: column;
           align-items: center;
@@ -204,7 +213,7 @@ body{
     }
   }
   .about-us-section.active{
-    display: flex;
+    overflow: auto;
   }
 }
 .horiz-line{
@@ -215,4 +224,10 @@ body{
 .horiz-line.special{
   margin: auto;
   margin-bottom: 27px;
+}
+.aboutPage{
+  overflow: auto;
+}
+.aboutPage.active{
+  overflow: hidden;
 }

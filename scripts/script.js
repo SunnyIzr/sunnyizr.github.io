@@ -23,13 +23,14 @@ $(document).ready(function(){
   } else {
     // aboutUs js
     $('.team').click(function() {
+      $('.nav-bar, .aboutPage').addClass('active');
       $('.bio-section.' + this.dataset.member).addClass('active');
       $('.about-us-section.active').removeClass('active');
-      $('html, body').animate({ scrollTop : 0 }, 200);
+      // $('html, body').animate({ scrollTop : 0 }, 0);
     });
 
     $('.back-btn').click(function() {
-      $('.bio-section.active').removeClass('active');
+      $('.bio-section.active, .nav-bar.active, .aboutPage.active').removeClass('active');
       $('.about-us-section').addClass('active');
     });
 

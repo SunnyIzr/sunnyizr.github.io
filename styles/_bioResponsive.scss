@@ -4,10 +4,13 @@
       .bio-section{
         .question-block{
           width: 270px;
+          .head-block{
+            width: 270px;
+          }
         }
         .img-conteiner{
-          width: 320px;
-          height: 320px;
+          width: 300px;
+          height: 300px;
 
           img{
             width: 100%;

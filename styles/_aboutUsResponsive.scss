@@ -1,4 +1,4 @@
-@media all and (max-width: 640px) {
+@media all and (max-width: 780px) {
   html{
     body{
       .about-us-section{
@@ -50,7 +50,6 @@
             font-size: 18px;
             &:after{
               top: 40px;
-              left: -29px;
             }
           }
           .story-block{
@@ -62,7 +61,14 @@
             p{
               font-size: 14px;
               &:last-child{
-                margin-top: 36px;
+                margin-top: 17px;
+              }
+
+              .only-for-mobila{
+                display: inline;
+              }
+              .not-for-mobila{
+                display: none;
               }
             }
           }
@@ -94,3 +100,27 @@
     }
   }
 } 
+
+@media all and (max-width: 400px) {
+  html{
+    body{
+      .about-us-section{
+        .content-block{
+          width: 300px;
+
+          .story-block{
+            p{
+              width: 281px;
+            }
+          }
+
+          .team-block{
+            .info-text{
+              width: 281px;
+            }
+          }
+        }
+      }  
+    }
+  }
+}

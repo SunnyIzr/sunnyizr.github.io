@@ -14,6 +14,7 @@
     }
 
     .logo-holder{
+      cursor: pointer;
       display: flex;
       margin-left: 40px;
       align-items: center;
@@ -100,6 +101,9 @@ body{
           }
         }
       }
+    }
+    .nav-bar.active{
+      display: none;
     }
   }
   &.blogPage{
