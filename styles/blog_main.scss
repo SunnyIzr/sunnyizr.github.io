@@ -8,13 +8,13 @@ body {
     align-items: center;
     border-bottom: 5px solid #fe8c45;
     h1 {
-      color: #2f2f2f;
+      color: #585858;
       font-family: ObjektivBd, serif;
       font-size: 22px;
       margin-bottom: 0;
     }
     h2 {
-      color: #2f2f2f;
+      color: #585858;
       font-family: Objektiv, serif;
       font-size: 12px;
       letter-spacing: .02em;
@@ -49,9 +49,10 @@ body {
     }
     .bannerTitle {
       margin-left: 10px;
-      color: #2f2f2f;
+      color: #353535;
       font-size: 16px;
       font-family: Objektiv, serif;
+      text-transform: uppercase;
     }
     .blogImg {
       margin-bottom: 30px;
@@ -60,11 +61,14 @@ body {
       }
     }
     .bannerText {
-      color: #2f2f2f;
+      color: #353535;
       font-size: 22px;
       font-family: ObjektivBd, serif;
       margin-bottom: 50px;
       margin-left: 10px;
+    }
+    .bannerText.inArticle{
+      margin-bottom: 10px;
     }
     .leftBorder {
       border-left: 5px solid #fe8c45;

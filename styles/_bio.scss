@@ -43,9 +43,9 @@
         align-items: center;
         p{
           margin-top: 9px;
-          color: #8f8f8f;
-          font-family: Lucida, serif;
-          font-size: 8px;
+          color: #505050;
+          font-family: Objektiv,serif;
+          font-size: 9px;
           text-transform: uppercase;
         }
         img{
@@ -125,8 +125,11 @@
   .img-conteiner{
     width: 599px;
     height: 596px;
-    border: 2px solid #979797;
+    // border: 2px solid #979797;
     margin-bottom: 49px;
+    img{
+      max-width: 100%;
+    }
   }
   .my-phone{
     display: flex;

@@ -70,13 +70,13 @@
   }
 
   .headerLine:not(.quizLine){
-    margin-top: 160px;
+    margin-top: 135px;
     span{
         font-family: Droid, serif;
         font-size: 28px;
         display: flex;
         justify-content: center;
-        color: #565656;
+        color: #353535;
         i{
             font-family: DroidBd, serif;
         }
@@ -86,7 +86,7 @@
         margin-top: 10px;
         font-size: 14px;
         font-family: Droid, serif;
-        color: #565656;
+        color: #353535;
     }
 }
 body{
