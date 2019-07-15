@@ -66,6 +66,11 @@
           background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
         }
       }
+      .btn.perm-active{
+        &:after{
+          display: block;
+        }
+      }
     }
   }
 

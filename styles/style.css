@@ -1620,14 +1620,17 @@ body main .textBlock span {
   font-family: ObjektivBd, serif;
   font-size: 18px;
 }
+body main .textBlock.byLine {
+  margin-bottom: -30px;
+}
 body main .textBorder {
   font-family: Objektiv, serif;
-  min-height: 150px;
   border-left: 5px solid #ff5f93;
   font-size: 22px;
   max-width: 510px;
   padding-left: 15px;
   margin: auto;
+  line-height: 35px;
 }
 body main .bottomBlock .socialBlock {
   width: 85px;
@@ -2376,6 +2379,9 @@ body .contentBlock .content .date {
   width: inherit;
   height: 1px;
   background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
+}
+.nav-bar .switch-block .btn.perm-active:after {
+  display: block;
 }
 
 .headerLine:not(.quizLine) {
