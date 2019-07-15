@@ -36,6 +36,19 @@ $(document).ready(function(){
 
     // quiz js
     $('#startQuiz, #startQuiz2').click(QuestionGenerator.startQuiz);
+  
+    
+    $('#submitEmailButton').on('click', function() {
+      var email =  $('#emailInput').val();
+      EmailSignUps.submitEmail(email);
+    });
+
+    $("#emailInput").on('keyup', function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#submitEmailButton").click();
+      }
+    });
 
     LeadGenGenerator.init();
   }

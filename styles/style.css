@@ -55,7 +55,7 @@
 body {
   font-family: Objektiv, sans-serif;
   opacity: 1;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 body.cloak {
   opacity: 0;
@@ -116,7 +116,7 @@ body.indexPage #index .headerLine.quizLine .orangeBlock {
   width: 128px;
   height: 17px;
   background-color: #fe8d45;
-  transition: width .3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 body.indexPage #index .mainQuiz .pagesNum {
   height: 35px;
@@ -473,7 +473,7 @@ body.result_active .landingPopupHolder {
   background-color: #ffffff;
   border: 1px solid #979797;
   outline: none;
-  opacity: .5;
+  opacity: 0.5;
   text-align: center;
   color: #5a5a5a;
   font-family: Objektiv, serif;
@@ -540,12 +540,12 @@ body h4 {
 
 .leadGenContent {
   display: none;
-  opacity: 0.0;
+  opacity: 0;
   transition: all 600ms ease-in-out;
 }
 
 .leadGenContent.active {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .fixed-section-break {
@@ -560,7 +560,7 @@ body h4 {
   height: unset;
 }
 .social_sp_block .mainQuiz .welcom-content {
-  opacity: 0.0;
+  opacity: 0;
   display: none;
   transition: all 600ms ease-in-out;
 }
@@ -663,7 +663,7 @@ body h4 {
   border-radius: 39px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivXBd,serif;
+  font-family: ObjektivXBd, serif;
   font-size: 17px;
   letter-spacing: 3.26px;
   text-transform: uppercase;
@@ -689,14 +689,14 @@ body h4 {
   transition: all 0.6s;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn {
-  opacity: 0.0;
+  opacity: 0;
   transition: all 0.6s;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn.active {
   display: none;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .input-holder {
-  opacity: 0.0;
+  opacity: 0;
   transition: all 0.6s;
   align-items: center;
   justify-content: space-between;
@@ -759,9 +759,9 @@ body h4 {
     margin: 0 21px;
   }
   html body .social_sp_block .mainQuiz .social_sp-content p,
-  html body .social_sp_block .mainQuiz .social_sp-content .find-help,
-  html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
-  html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
+html body .social_sp_block .mainQuiz .social_sp-content .find-help,
+html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
+html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
     min-width: 279px;
     font-size: 16px;
     line-height: 26px;
@@ -1101,11 +1101,11 @@ body .about-us-section .content-block .story-block p {
   line-height: 27px;
 }
 body .about-us-section .content-block .story-block p span {
-  font-family: DroidBd,serif;
+  font-family: DroidBd, serif;
 }
 body .about-us-section .content-block .story-block p .only-for-mobila,
 body .about-us-section .content-block .story-block p .not-for-mobila {
-  font-family: Droid,serif;
+  font-family: Droid, serif;
 }
 body .about-us-section .content-block .story-block p .only-for-mobila {
   display: none;
@@ -1228,7 +1228,7 @@ body .about-us-section.active {
     text-align: center;
   }
   html body .about-us-section .content-block .img-one,
-  html body .about-us-section .content-block .img-two {
+html body .about-us-section .content-block .img-two {
     width: 305px;
     height: 259px;
     margin-bottom: 43px;
@@ -1334,7 +1334,7 @@ body .about-us-section.active {
 .bio-section .question-block .head-block .back-btn p {
   margin-top: 9px;
   color: #505050;
-  font-family: Objektiv,serif;
+  font-family: Objektiv, serif;
   font-size: 9px;
   text-transform: uppercase;
 }
@@ -1377,7 +1377,7 @@ body .about-us-section.active {
 }
 .bio-section .question-block .question-content h4 {
   color: #2f2f2f;
-  font-family: DroidBd,serif;
+  font-family: DroidBd, serif;
   font-size: 15px;
   line-height: 21px;
   margin-bottom: 10px;
@@ -1500,7 +1500,7 @@ body .headerTitle h2 {
   color: #585858;
   font-family: Objektiv, serif;
   font-size: 12px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   margin-bottom: 20px;
 }
 body .mg-b-0 {
@@ -1664,7 +1664,7 @@ body .popupHolder {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.85);
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 body .popupHolder .popup {
   width: 640px;
@@ -1709,7 +1709,7 @@ body .popupHolder .popup input {
   background-color: #ffffff;
   border: 1px solid #979797;
   outline: none;
-  opacity: .5;
+  opacity: 0.5;
   text-align: center;
   color: #2f2f2f;
   font-family: Objektiv, serif;
@@ -1985,7 +1985,7 @@ body .contentBlock .content .date {
   border-radius: 35px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivBd,serif;
+  font-family: ObjektivBd, serif;
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
@@ -2124,10 +2124,17 @@ body .contentBlock .content .date {
 .mainPage .welcom-content.active {
   display: flex;
 }
-.mainPage .welcom-content.active .only-home-page {
-  display: block;
+.mainPage .welcom-content.active .only-home-page,
+.mainPage .welcom-content.active .errore,
+.mainPage .welcom-content.active .try-again-later {
+  display: none;
   font-size: 18px;
   font-weight: 600;
+}
+.mainPage .welcom-content.active .only-home-page.active,
+.mainPage .welcom-content.active .errore.active,
+.mainPage .welcom-content.active .try-again-later.active {
+  display: block;
 }
 .mainPage .welcom-content.active .no-home-page {
   display: none;
@@ -2143,7 +2150,7 @@ body .contentBlock .content .date {
   border-radius: 39px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivXBd,serif;
+  font-family: ObjektivXBd, serif;
   font-size: 17px;
   letter-spacing: 3.26px;
   text-transform: uppercase;
@@ -2169,14 +2176,14 @@ body .contentBlock .content .date {
   transition: all 0.6s;
 }
 .mainPage .start_here-button-holder .sing-up-btn {
-  opacity: 0.0;
+  opacity: 0;
   transition: all 0.6s;
 }
 .mainPage .start_here-button-holder .sing-up-btn.active {
   display: none;
 }
 .mainPage .start_here-button-holder .input-holder {
-  opacity: 0.0;
+  opacity: 0;
   transition: all 0.6s;
   align-items: center;
   justify-content: space-between;
@@ -2246,7 +2253,9 @@ body .contentBlock .content .date {
     width: 300px;
     height: 80px;
   }
-  html body .mainPage .topBlock .welcom-content.active .only-home-page {
+  html body .mainPage .topBlock .welcom-content.active .only-home-page,
+html body .mainPage .topBlock .welcom-content.active .errore,
+html body .mainPage .topBlock .welcom-content.active .try-again-later {
     font-size: 12px;
   }
   html body .mainPage .start_here-button-holder {

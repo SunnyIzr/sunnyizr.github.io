@@ -192,11 +192,19 @@
         
         &.active{
           display: flex;
-            .only-home-page{
-                display: block;
+            .only-home-page,
+            .errore,
+            .try-again-later
+            {
+                display: none;
                 font-size: 18px;
                 font-weight: 600;
-          }
+            }
+            .only-home-page.active,
+            .errore.active,
+            .try-again-later.active{
+                display: block;
+            }
             .no-home-page{
               display: none;
             }
