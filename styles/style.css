@@ -80,6 +80,10 @@ body.cloak {
   width: 14px;
   height: 12px;
 }
+#footer a {
+  color: #2F2F2F;
+  display: inline-block;
+}
 
 body.indexPage {
   margin: 0;
@@ -1477,6 +1481,98 @@ html body .about-us-section .content-block .img-two {
   }
   html body .bio-section .my-phone .horiz-holder {
     width: 270px;
+  }
+}
+.privacy-policy-block {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.privacy-policy-block .privacy-policy-content-holder {
+  max-width: 640px;
+  margin-top: 150px;
+}
+.privacy-policy-block .privacy-policy-content-holder h3 {
+  font-family: ObjektivBd, serif;
+  font-size: 18px;
+}
+.privacy-policy-block .privacy-policy-content-holder h4 {
+  font-family: ObjektivBd, serif;
+  font-size: 16px;
+}
+.privacy-policy-block .privacy-policy-content-holder p {
+  font-family: Objektiv, serif;
+  font-size: 16px;
+}
+.privacy-policy-block .privacy-policy-content-holder a {
+  color: black;
+  text-decoration: underline;
+}
+.privacy-policy-block .privacy-policy-content-holder table {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.privacy-policy-block .privacy-policy-content-holder table,
+.privacy-policy-block .privacy-policy-content-holder th,
+.privacy-policy-block .privacy-policy-content-holder td {
+  border: 1px solid #2F2F2F;
+  border-collapse: collapse;
+}
+
+@media all and (max-width: 730px) {
+  html body .privacy-policy-block .privacy-policy-content-holder {
+    width: 300px;
+  }
+}
+.terms_of_servise_block {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.terms_of_servise_block .terms_of_servise_content_holder {
+  max-width: 640px;
+  margin-top: 150px;
+}
+.terms_of_servise_block .terms_of_servise_content_holder h3 {
+  font-family: ObjektivBd, serif;
+  font-size: 18px;
+}
+.terms_of_servise_block .terms_of_servise_content_holder h4,
+.terms_of_servise_block .terms_of_servise_content_holder .count-header,
+.terms_of_servise_block .terms_of_servise_content_holder ol {
+  font-family: ObjektivBd, serif;
+  font-size: 16px;
+}
+.terms_of_servise_block .terms_of_servise_content_holder p,
+.terms_of_servise_block .terms_of_servise_content_holder li {
+  font-family: Objektiv, serif;
+  font-size: 16px;
+}
+.terms_of_servise_block .terms_of_servise_content_holder a {
+  color: black;
+  text-decoration: underline;
+}
+.terms_of_servise_block .terms_of_servise_content_holder table {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.terms_of_servise_block .terms_of_servise_content_holder table,
+.terms_of_servise_block .terms_of_servise_content_holder th,
+.terms_of_servise_block .terms_of_servise_content_holder td {
+  border: 1px solid #2F2F2F;
+  border-collapse: collapse;
+}
+
+@media all and (max-width: 730px) {
+  html body .terms_of_servise_block .terms_of_servise_content_holder {
+    width: 300px;
+  }
+  html body .terms_of_servise_block .terms_of_servise_content_holder h3 {
+    text-align: center;
   }
 }
 body {
