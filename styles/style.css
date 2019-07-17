@@ -2496,7 +2496,12 @@ body .contentBlock .content .date {
 }
 
 .headerLine:not(.quizLine) {
-  margin-top: 90px;
+  margin-top: 125px;
+}
+@media all and (max-width: 780px) {
+  .headerLine:not(.quizLine) {
+    margin-top: 75px;
+  }
 }
 .headerLine:not(.quizLine) span {
   font-family: Droid, serif;
@@ -2548,7 +2553,7 @@ body.blogPage .nav-bar .switch-block .btn:last-child:after {
     font-size: 14px;
   }
   body .nav-bar .switch-block .btn::after {
-    top: 13px;
+    top: 21px;
   }
 }
 

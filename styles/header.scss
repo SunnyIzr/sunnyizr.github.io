@@ -75,7 +75,10 @@
   }
 
   .headerLine:not(.quizLine){
-    margin-top: 90px;
+    margin-top: 125px;
+    @media all and (max-width:780px){
+      margin-top: 75px;
+    }
     span{
         font-family: Droid, serif;
         font-size: 28px;
