@@ -50,18 +50,24 @@
                 .start_here-button-holder {
                     margin-bottom: 40px;
                     .start-btn.grow{
-                        width: 300px;
+                        width: 320px;
                         height: 80px;
                     }
                     .input-holder{
-                        width: 300px;
+                        width: 320px;
                         height:80px;
                         .sing-up-btn{
-                            font-size:10px;
-                            height: 44px;
+                            font-size: 14px;
+                            margin-right: -2px;
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                            height: 102%;
+                            width: 100px;
+                            letter-spacing: 1px;
                         }
                         input{
-                            font-size: 10px;
+                            margin-left: 20px;
+                            font-size: 16px;
                         }
                     }
                 }

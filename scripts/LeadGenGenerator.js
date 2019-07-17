@@ -35,7 +35,6 @@ var LeadGenGenerator = {
       $('.social-sp-content').hide()
       $(".input-holder, .sing-up-btn").css('opacity', '0.0')
       $(".welcom-content, .start_here-button-holder").addClass("active");
-      fbq('track', 'Lead');
       setTimeout(function(){
         $(".welcom-content").css('opacity', '1.0')
       }, 200)

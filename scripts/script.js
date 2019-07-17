@@ -14,7 +14,7 @@ $(document).ready(function(){
   // article js
   if($('#article-page').length){
     var timeout = setTimeout(function(){
-      togglePopup();
+      // togglePopup();
       clearTimeout(timeout);
       timeout = null;
     }, 15000);
@@ -41,6 +41,7 @@ $(document).ready(function(){
     $('#submitEmailButton').on('click', function() {
       var email =  $('#emailInput').val();
       EmailSignUps.submitEmail(email);
+      fbq('track', 'Lead');
     });
 
     $("#emailInput").on('keyup', function(event) {

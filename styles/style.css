@@ -2358,19 +2358,25 @@ body .contentBlock .content .date {
     margin-bottom: 40px;
   }
   html body .mainPage .start_here-button-holder .start-btn.grow {
-    width: 300px;
+    width: 320px;
     height: 80px;
   }
   html body .mainPage .start_here-button-holder .input-holder {
-    width: 300px;
+    width: 320px;
     height: 80px;
   }
   html body .mainPage .start_here-button-holder .input-holder .sing-up-btn {
-    font-size: 10px;
-    height: 44px;
+    font-size: 14px;
+    margin-right: -2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 102%;
+    width: 100px;
+    letter-spacing: 1px;
   }
   html body .mainPage .start_here-button-holder .input-holder input {
-    font-size: 10px;
+    margin-left: 20px;
+    font-size: 16px;
   }
   html body .mainPage .panelBlock span {
     font-size: 18px;
@@ -2490,7 +2496,7 @@ body .contentBlock .content .date {
 }
 
 .headerLine:not(.quizLine) {
-  margin-top: 135px;
+  margin-top: 90px;
 }
 .headerLine:not(.quizLine) span {
   font-family: Droid, serif;
@@ -2528,11 +2534,11 @@ body.blogPage .nav-bar .switch-block .btn:last-child:after {
     margin-left: 22px;
   }
   body .nav-bar .logo-holder img {
-    width: 29px;
-    height: 29px;
+    width: 37px;
+    height: 37px;
   }
   body .nav-bar .logo-holder .logo-text {
-    font-size: 17px;
+    font-size: 20px;
     margin-left: 5px;
   }
   body .nav-bar .switch-block {
