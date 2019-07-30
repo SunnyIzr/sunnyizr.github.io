@@ -11,6 +11,12 @@ var EmailSignUps = {
         }
       }
     }).done(function(){
+      // If email submission is succesful, only then track on facebook and mixpanel
+      fbq('track', 'Lead');
+      mixpanel.track(
+          "Website Email Sign Up",
+          {"email": email}
+      );
       i = 0;
       $('.only-home-page').addClass('active');
     }).error(function(){

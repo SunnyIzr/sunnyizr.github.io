@@ -41,7 +41,6 @@ $(document).ready(function(){
     $('#submitEmailButton').on('click', function() {
       var email =  $('#emailInput').val();
       EmailSignUps.submitEmail(email);
-      fbq('track', 'Lead');
     });
 
     $("#emailInput").on('keyup', function(event) {
