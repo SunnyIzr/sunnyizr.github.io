@@ -14,10 +14,11 @@ $(document).ready(function(){
   // article js
   if($('#article-page').length){
     var timeout = setTimeout(function(){
-      // togglePopup();
+      togglePopup();
       clearTimeout(timeout);
       timeout = null;
-    }, 15000);
+    // }, 15000);
+    }, 150);
 
     $('.togglePopup').on('click', togglePopup);
   } else {
