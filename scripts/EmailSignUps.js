@@ -25,7 +25,7 @@ var EmailSignUps = {
       // Third we track the sign up event
       mixpanel.track(
           "Website Email Sign Up",
-          {"email": email}
+          {"email": email, "where": "landing"}
       );
 
       // Finally we update the $email attribute on user profile
