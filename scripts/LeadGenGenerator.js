@@ -1,18 +1,24 @@
 var LeadGenGenerator = {
   init: function(){
-    this.loadLeadGen()
-    this.displayEmailInput()
-    this.successfulSignUp()
+    this.loadLeadGen();
+    this.displayEmailInput();
+    this.successfulSignUp();
   },
   loadLeadGen: function(){
     $('#loadLeadGen').click(function(){
-      $('.leadGenContent').show()
+      $('.leadGenContent').show();
+
       $('.social_sp_block').animate({
-          scrollTop: $(".social_sp_block")[0].scrollHeight
+          scrollTop: $(this)[0].scrollHeight
       }, 700);
+
       setTimeout(function(){
-        $('.leadGenContent').addClass('active')
-      }, 200)
+        $('.leadGenContent').addClass('active');
+
+        var result = $('#resultTitle').text();
+        $('#resultSpan').html('So <span class="bold_text">' + result.toLowerCase() + '</span>, huh?');
+        $('.start_here-button-holder').removeClass('active');
+      }, 150)
     })
   },
   displayEmailInput: function(){
@@ -31,13 +37,10 @@ var LeadGenGenerator = {
     });
   },
   successfulSignUp: function(){
-    $(".sing-up-btn").click(function() {
-      $('.social-sp-content').hide()
-      $(".input-holder, .sing-up-btn").css('opacity', '0.0')
-      $(".welcom-content, .start_here-button-holder").addClass("active");
-      setTimeout(function(){
-        $(".welcom-content").css('opacity', '1.0')
-      }, 200)
+    $("#submitEmailButton2").click(function() {
+      var result = $('#emailInput2').val();
+
+      EmailSignUps.submitEmail(result);
     })
   }
 };

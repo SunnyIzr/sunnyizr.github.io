@@ -54,7 +54,7 @@
       <div class="fixed-section-break"></div>
 
       <div id='leadGenContent' class="leadGenContent social-sp-content">
-        <p class="find-help">So you’re a <span>social spender</span>, huh? We hope the tips we gave you above really do help. But we also know that all of this is hard work. It really is hard to make these kinds of lifestyle shifts. We live in a world where there are countless people spending billions of dollars on carefully crafted messaging to seduce you into spending up a frenzy on things you don’t actually need. <span>Let’s face it. It’s hard to be financially responsible.</span></p>
+        <p class="find-help"><span id="resultSpan"></span> We hope the tips we gave you above really do help. But we also know that all of this is hard work. It really is hard to make these kinds of lifestyle shifts. We live in a world where there are countless people spending billions of dollars on carefully crafted messaging to seduce you into spending up a frenzy on things you don’t actually need. <span>Let’s face it. It’s hard to be financially responsible.</span></p>
 
         <p class="find-help">And that’s exactly it. What if among all these messages convincing you to blow all your hard earned cash, you had at least one force on your side to keep you grounded financially. And that’s what we’re doing at Clasp. We’ve been working on a solution we’re super excited about for nearly a year now and have been refining it as we’ve been testing with some early users. <span>We’re striving to make this a powerful influence that can put you on the right track.</span></p>
 
@@ -76,15 +76,22 @@
         <p>Sunny and Katherine</p>
       </div>
 
-      <div class="start_here-button-holder leadGenContent">
+      <div class="welcome-content-erore-holder">
+        <div class="welcome-content-erore">
+          <p class="errore">Something went wrong. Please try again</p>
+          <p class="try-again-later">Something went wrong. Please try again later</p>
+        </div>
+      </div>
+
+      <div class="start_here-button-holder active">
         <button class="start-btn  active">SIGN UP</button>
 
         <div class="input-holder active">
-          <input type="email" placeholder="Enter your email address">
-          <button class="sing-up-btn">SUBMIT</button>
+          <input type="email" id="emailInput2" placeholder="Enter your email address" >
+          <button class="sing-up-btn" id="submitEmailButton2">SUBMIT</button>
         </div>
 
-        <button class="sing-up-btn active">SUBMIT</button>
+        <!--<button class="sing-up-btn active">SUBMIT</button>-->
       </div>
     </div> 
   </div>

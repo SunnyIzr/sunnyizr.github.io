@@ -34,6 +34,11 @@ body{
   } 
 
   &.quiz_active{
+    height: 100vh;
+    padding-top: 0px;
+    .nav-bar{
+      display: none;
+    }
     .quizStart{
       display: none;
     }

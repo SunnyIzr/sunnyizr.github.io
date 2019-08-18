@@ -41,7 +41,7 @@ $(document).ready(function(){
     
     $('#submitEmailButton').on('click', function() {
       var email =  $('#emailInput').val();
-      EmailSignUps.submitEmail(email);
+      EmailSignUps.submitEmail(email, true);
     });
 
     $("#emailInput").on('keyup', function(event) {
@@ -51,6 +51,14 @@ $(document).ready(function(){
       }
     });
 
+    $(".down_button-block-holder").click(function() {
+      setTimeout (function(){
+        $('.mainQuiz').animate({
+          scrollTop: $("#leadGenContent").offset().top + 500},
+        'slow');
+      }, 300);
+    });
+    
     LeadGenGenerator.init();
   }
 });
