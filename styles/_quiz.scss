@@ -17,11 +17,12 @@ body.indexPage{
     overflow: auto;
     background-size: 100%;
     background-position: 0% 0%;
-    background-image: url(../deploy/images/Background.png);
+    background-image: url(./images/Background.png);
     background-repeat: no-repeat;
     display: flex;
     flex-flow: column;
     align-items: center;
+    top: 0;
   }
 
   #index{
