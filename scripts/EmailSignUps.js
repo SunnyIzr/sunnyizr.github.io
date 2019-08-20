@@ -1,7 +1,7 @@
 var i = 0;
 
 var EmailSignUps = {
-  submitEmail: function (email, home){
+  submitEmail: function (email, eventName, successFunc, error1Func, error2Func, errorRefreshFunc){
     $.ajax({
       url: apiUrl + '/email_submissions',
       method: 'post',
@@ -24,8 +24,8 @@ var EmailSignUps = {
 
       // Third we track the sign up event
       mixpanel.track(
-        "Website Email Sign Up",
-        {"email": email, "where": "landing"}
+        eventName,
+        {"email": email}
       );
 
       // Finally we update the $email attribute on user profile
@@ -33,33 +33,16 @@ var EmailSignUps = {
 
       i = 0;
 
-      if(home){
-        $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
-      } else {
-        $('.welcom-content, .start_here-button-holder').addClass('active');
-      }
+      successFunc()
     }).error(function(){
       i++;
 
       if(i === 6){
-        if(home) {
-          $('.start_here-button-holder, .try-again-later, .welcom-content').addClass('active');
-        } else {
-          $('.start_here-button-holder, .welcome-content-erore-holder, .try-again-later').addClass('active');
-        }
+        error2Func()
       } else {
-        if(home) {
-          $('.start_here-button-holder, .errore, .welcom-content').addClass('active');
-        } else {
-          $('.start_here-button-holder, .welcome-content-erore-holder, .errore').addClass('active');
-        }
-
+        error1Func()
         setTimeout(function(){
-          if(home){
-            $('.errore, .welcom-content, .start_here-button-holder ').removeClass('active');
-          } else {
-            $('.start_here-button-holder, .welcome-content-erore-holder, .errore').removeClass('active');
-          }
+          errorRefreshFunc()
           $(".input-holder, .sing-up-btn").css('opacity', '1.0');
         }, 1500);
       }

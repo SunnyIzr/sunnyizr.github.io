@@ -55,7 +55,7 @@
 body {
   font-family: Objektiv, sans-serif;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 body.cloak {
   opacity: 0;
@@ -120,7 +120,7 @@ body.indexPage #index .headerLine.quizLine .orangeBlock {
   width: 128px;
   height: 17px;
   background-color: #fe8d45;
-  transition: width 0.3s ease-in-out;
+  transition: width .3s ease-in-out;
 }
 body.indexPage #index .mainQuiz .pagesNum {
   height: 35px;
@@ -466,7 +466,7 @@ body.result_active .landingPopupHolder {
   margin-bottom: 46px;
 }
 .result_active .social_sp_block p:nth-child(3) {
-  margin-bottom: 86px;
+  margin-bottom: 26px;
 }
 .result_active .popup {
   width: 640px;
@@ -504,7 +504,7 @@ body.result_active .landingPopupHolder {
   background-color: #ffffff;
   border: 1px solid #979797;
   outline: none;
-  opacity: 0.5;
+  opacity: .5;
   text-align: center;
   color: #5a5a5a;
   font-family: Objektiv, serif;
@@ -576,15 +576,6 @@ body h4 {
   padding: 0;
 }
 
-/*.leadGenContent{
-  display: none;
-  opacity: 0.0;
-  transition: all 600ms ease-in-out;
-}
-
-.leadGenContent.active{
-  opacity: 1.0;
-}*/
 .fixed-section-break {
   width: 100%;
   height: 5px;
@@ -597,14 +588,14 @@ body h4 {
   height: unset;
 }
 .social_sp_block .mainQuiz .welcom-content {
-  opacity: 0;
+  opacity: 0.0;
   display: none;
   transition: all 600ms ease-in-out;
   margin-bottom: 50px;
 }
 .social_sp_block .mainQuiz .welcom-content h3 {
-  margin-top: 56px;
-  margin-bottom: 98px;
+  margin-top: 26px;
+  margin-bottom: 28px;
   text-align: center;
 }
 .social_sp_block .mainQuiz .welcom-content p {
@@ -750,7 +741,7 @@ body h4 {
   border-radius: 39px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivXBd, serif;
+  font-family: ObjektivXBd,serif;
   font-size: 17px;
   letter-spacing: 3.26px;
   text-transform: uppercase;
@@ -776,14 +767,14 @@ body h4 {
   transition: all 0.6s;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn.active {
   display: none;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .input-holder {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
   align-items: center;
   justify-content: space-between;
@@ -846,9 +837,9 @@ body h4 {
     margin: 0 21px;
   }
   html body .social_sp_block .mainQuiz .social_sp-content p,
-html body .social_sp_block .mainQuiz .social_sp-content .find-help,
-html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
-html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
+  html body .social_sp_block .mainQuiz .social_sp-content .find-help,
+  html body .social_sp_block .mainQuiz .social_sp-content #resultDesc,
+  html body .social_sp_block .mainQuiz .social_sp-content #resultTips {
     min-width: 279px;
     font-size: 16px;
     line-height: 26px;
@@ -1188,11 +1179,11 @@ body .about-us-section .content-block .story-block p {
   line-height: 27px;
 }
 body .about-us-section .content-block .story-block p span {
-  font-family: DroidBd, serif;
+  font-family: DroidBd,serif;
 }
 body .about-us-section .content-block .story-block p .only-for-mobila,
 body .about-us-section .content-block .story-block p .not-for-mobila {
-  font-family: Droid, serif;
+  font-family: Droid,serif;
 }
 body .about-us-section .content-block .story-block p .only-for-mobila {
   display: none;
@@ -1315,7 +1306,7 @@ body .about-us-section.active {
     text-align: center;
   }
   html body .about-us-section .content-block .img-one,
-html body .about-us-section .content-block .img-two {
+  html body .about-us-section .content-block .img-two {
     width: 305px;
     height: 259px;
     margin-bottom: 43px;
@@ -1421,7 +1412,7 @@ html body .about-us-section .content-block .img-two {
 .bio-section .question-block .head-block .back-btn p {
   margin-top: 9px;
   color: #505050;
-  font-family: Objektiv, serif;
+  font-family: Objektiv,serif;
   font-size: 9px;
   text-transform: uppercase;
 }
@@ -1464,7 +1455,7 @@ html body .about-us-section .content-block .img-two {
 }
 .bio-section .question-block .question-content h4 {
   color: #2f2f2f;
-  font-family: DroidBd, serif;
+  font-family: DroidBd,serif;
   font-size: 15px;
   line-height: 21px;
   margin-bottom: 10px;
@@ -1577,15 +1568,15 @@ html body .about-us-section .content-block .img-two {
   margin-top: 150px;
 }
 .privacy-policy-block .privacy-policy-content-holder h3 {
-  font-family: ObjektivBd, serif;
+  font-family: ObjektivBd,serif;
   font-size: 18px;
 }
 .privacy-policy-block .privacy-policy-content-holder h4 {
-  font-family: ObjektivBd, serif;
+  font-family: ObjektivBd,serif;
   font-size: 16px;
 }
 .privacy-policy-block .privacy-policy-content-holder p {
-  font-family: Objektiv, serif;
+  font-family: Objektiv,serif;
   font-size: 16px;
 }
 .privacy-policy-block .privacy-policy-content-holder a {
@@ -1620,18 +1611,18 @@ html body .about-us-section .content-block .img-two {
   margin-top: 150px;
 }
 .terms_of_servise_block .terms_of_servise_content_holder h3 {
-  font-family: ObjektivBd, serif;
+  font-family: ObjektivBd,serif;
   font-size: 18px;
 }
 .terms_of_servise_block .terms_of_servise_content_holder h4,
 .terms_of_servise_block .terms_of_servise_content_holder .count-header,
 .terms_of_servise_block .terms_of_servise_content_holder ol {
-  font-family: ObjektivBd, serif;
+  font-family: ObjektivBd,serif;
   font-size: 16px;
 }
 .terms_of_servise_block .terms_of_servise_content_holder p,
 .terms_of_servise_block .terms_of_servise_content_holder li {
-  font-family: Objektiv, serif;
+  font-family: Objektiv,serif;
   font-size: 16px;
 }
 .terms_of_servise_block .terms_of_servise_content_holder a {
@@ -1679,7 +1670,7 @@ body .headerTitle h2 {
   color: #585858;
   font-family: Objektiv, serif;
   font-size: 12px;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   margin-bottom: 20px;
 }
 body .mg-b-0 {
@@ -1843,7 +1834,7 @@ body .popupHolder {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.85);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 body .popupHolder .popup {
   width: 640px;
@@ -1888,7 +1879,7 @@ body .popupHolder .popup input {
   background-color: #ffffff;
   border: 1px solid #979797;
   outline: none;
-  opacity: 0.5;
+  opacity: .5;
   text-align: center;
   color: #2f2f2f;
   font-family: Objektiv, serif;
@@ -2164,7 +2155,7 @@ body .contentBlock .content .date {
   border-radius: 35px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivBd, serif;
+  font-family: ObjektivBd,serif;
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
@@ -2329,7 +2320,7 @@ body .contentBlock .content .date {
   border-radius: 39px;
   background-image: linear-gradient(134deg, #ff5f93 0%, #fe8d45 100%);
   color: #ffffff;
-  font-family: ObjektivXBd, serif;
+  font-family: ObjektivXBd,serif;
   font-size: 17px;
   letter-spacing: 3.26px;
   text-transform: uppercase;
@@ -2355,14 +2346,14 @@ body .contentBlock .content .date {
   transition: all 0.6s;
 }
 .mainPage .start_here-button-holder .sing-up-btn {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
 }
 .mainPage .start_here-button-holder .sing-up-btn.active {
   display: none;
 }
 .mainPage .start_here-button-holder .input-holder {
-  opacity: 0;
+  opacity: 0.0;
   transition: all 0.6s;
   align-items: center;
   justify-content: space-between;
@@ -2433,8 +2424,8 @@ body .contentBlock .content .date {
     height: 80px;
   }
   html body .mainPage .topBlock .welcom-content.active .only-home-page,
-html body .mainPage .topBlock .welcom-content.active .errore,
-html body .mainPage .topBlock .welcom-content.active .try-again-later {
+  html body .mainPage .topBlock .welcom-content.active .errore,
+  html body .mainPage .topBlock .welcom-content.active .try-again-later {
     font-size: 12px;
   }
   html body .mainPage .start_here-button-holder {

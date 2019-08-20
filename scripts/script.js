@@ -18,7 +18,7 @@ $(document).ready(function(){
       clearTimeout(timeout);
       timeout = null;
     // }, 15000);
-    }, 150);
+    }, 15000);
 
     $('.togglePopup').on('click', togglePopup);
   } else {
@@ -35,30 +35,8 @@ $(document).ready(function(){
       $('.about-us-section').addClass('active');
     });
 
-    // quiz js
-    $('#startQuiz, #startQuiz2').click(QuestionGenerator.startQuiz);
-  
-    
-    $('#submitEmailButton').on('click', function() {
-      var email =  $('#emailInput').val();
-      EmailSignUps.submitEmail(email, true);
-    });
 
-    $("#emailInput").on('keyup', function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        $("#submitEmailButton").click();
-      }
-    });
-
-    $(".down_button-block-holder").click(function() {
-      setTimeout (function(){
-        $('.mainQuiz').animate({
-          scrollTop: $("#leadGenContent").offset().top + 500},
-        'slow');
-      }, 300);
-    });
-    
-    LeadGenGenerator.init();
+    LandingPage.init()
+    EmotionalSpenderQuiz.init()
   }
 });
