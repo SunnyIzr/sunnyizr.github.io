@@ -14,14 +14,19 @@ body.indexPage{
     height: 100%;
     box-sizing: border-box;
     width: 100%;
-    overflow: auto;
     background-size: 100%;
     background-position: 0% 0%;
     background-image: url(images/Background.png);
     background-repeat: no-repeat;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+  }
+
+  &.quiz_active, &.result_active{
+    .mainQuiz:not(.sp_type-block){
+      overflow: auto;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
   }
 
   #index{
