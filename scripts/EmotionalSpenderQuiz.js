@@ -170,7 +170,7 @@ var EmotionalSpenderQuiz = {
     changePageAnim('result_active', 'quiz_active');
   },
   trackSocialShare: function(){
-    $(document).on('click','.social-shares a', function(e){
+    $('.social-shares a').on('click', function(e){
       var platform = $(this).data('platform')
       mixpanel.track('Emotional Spender Quiz Social Share', {'platform': platform});
     })
