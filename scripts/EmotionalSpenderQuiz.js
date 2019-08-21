@@ -6,6 +6,7 @@ var EmotionalSpenderQuiz = {
     this.loadLeadGenCopyListener()
     this.displayEmailInputListener()
     this.submitEmailListener()
+    this.trackSocialShare()
   },
   startQuizListener: function(){
     mixpanel.track('Emotional Spender Quiz Start');
@@ -167,5 +168,11 @@ var EmotionalSpenderQuiz = {
     mixpanel.track('Emotional Spender Show Result', {'result': result.title});
 
     changePageAnim('result_active', 'quiz_active');
+  },
+  trackSocialShare: function(){
+    $(document).on('click','.social-shares a', function(e){
+      var platform = $(this).data('platform')
+      mixpanel.track('Emotional Spender Quiz Social Share', {'platform': platform});
+    })
   }
 };

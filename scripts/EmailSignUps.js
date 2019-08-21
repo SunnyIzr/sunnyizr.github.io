@@ -3,7 +3,8 @@ var i = 0;
 var EmailSignUps = {
   submitEmail: function (email, eventName, successFunc, error1Func, error2Func, errorRefreshFunc){
     $.ajax({
-      url: apiUrl + '/email_submissions',
+      url: 'https://httpstat.us/200',
+      // url: apiUrl + '/email_submissions',
       method: 'post',
       data: {
         email_submission: {
