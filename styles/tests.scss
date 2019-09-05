@@ -1,0 +1,44 @@
+*[data-variant] {
+  display: none;
+
+  &.variant-visible {
+    display: inline-block;
+
+    &[data-block] {
+      display: block !important;
+    }
+    &[data-block] {
+      display: block !important;
+    }
+
+
+    &[data-inline] {
+      display: inline;
+    }
+  }
+}
+
+*[data-variant].start_here-button-holder.active{
+  display: none !important;
+}
+
+.social_sp_block .mainQuiz{
+  .welcome-content-short.active{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 514px;
+    height: 108px;
+    border-radius: 54px;
+    margin-top: 30px;
+    border: 1px solid #979797;
+    background-color: #fff;
+    .only-home-page{
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

@@ -85,18 +85,30 @@ body.cloak {
   display: inline-block;
 }
 
-body.indexPage {
+body.quiz_active div.indexPage {
+  height: calc(100vh);
+  padding-top: 0;
+}
+
+body.quiz_active .mainQuiz:not(.sp_type-block),
+body.result_active .mainQuiz:not(.sp_type-block) {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+div.indexPage {
   margin: 0;
   padding: 0;
   height: calc(100vh - 100px);
   padding-top: 100px;
   overflow: hidden;
 }
-body.indexPage p {
+div.indexPage p {
   margin: 0;
   padding: 0;
 }
-body.indexPage .mainQuiz {
+div.indexPage .mainQuiz {
   height: 100%;
   box-sizing: border-box;
   width: 100%;
@@ -105,26 +117,22 @@ body.indexPage .mainQuiz {
   background-position: 0% 0%;
   background-image: url(images/Background.png);
   background-repeat: no-repeat;
+  -webkit-overflow-scrolling: touch;
 }
-body.indexPage.quiz_active .mainQuiz:not(.sp_type-block), body.indexPage.result_active .mainQuiz:not(.sp_type-block) {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-body.indexPage #index {
+div.indexPage #index {
   height: 100%;
 }
-body.indexPage #index .headerLine.quizLine {
+div.indexPage #index .headerLine.quizLine {
   height: 17px;
   background-color: #ffffff;
 }
-body.indexPage #index .headerLine.quizLine .orangeBlock {
+div.indexPage #index .headerLine.quizLine .orangeBlock {
   width: 128px;
   height: 17px;
   background-color: #fe8d45;
   transition: width .3s ease-in-out;
 }
-body.indexPage #index .mainQuiz .pagesNum {
+div.indexPage #index .mainQuiz .pagesNum {
   height: 35px;
   color: #908e8e;
   font-family: Lato, serif;
@@ -134,7 +142,7 @@ body.indexPage #index .mainQuiz .pagesNum {
   margin-top: 45px;
   margin-bottom: 38px;
 }
-body.indexPage #index .mainQuiz .contentInfo {
+div.indexPage #index .mainQuiz .contentInfo {
   width: 662px;
   color: #5a5a5a;
   font-family: Objektiv, serif;
@@ -144,17 +152,17 @@ body.indexPage #index .mainQuiz .contentInfo {
   animation-name: slide-in-from-right;
   animation-duration: 1s;
 }
-body.indexPage #index .mainQuiz .contentInfo.animText {
+div.indexPage #index .mainQuiz .contentInfo.animText {
   animation-name: slide-out-to-left;
   animation-duration: 1s;
   animation-delay: 1.5s;
 }
-body.indexPage #index .mainQuiz .break-line {
+div.indexPage #index .mainQuiz .break-line {
   width: 522px;
   border: 1px solid #979797;
   margin-bottom: 25px;
 }
-body.indexPage #index .mainQuiz .chooseOne {
+div.indexPage #index .mainQuiz .chooseOne {
   width: 100%;
   color: #5a5a5a;
   font-family: ObjektivIt, serif;
@@ -164,7 +172,7 @@ body.indexPage #index .mainQuiz .chooseOne {
   margin-bottom: 22px;
   font-style: italic;
 }
-body.indexPage #index .mainQuiz .storeHolder .storeBlock {
+div.indexPage #index .mainQuiz .storeHolder .storeBlock {
   opacity: 1;
   cursor: pointer;
   width: 547px;
@@ -179,7 +187,7 @@ body.indexPage #index .mainQuiz .storeHolder .storeBlock {
   animation-name: fade-in;
   animation-duration: 2s;
 }
-body.indexPage #index .mainQuiz .storeHolder .storeBlock p {
+div.indexPage #index .mainQuiz .storeHolder .storeBlock p {
   max-width: 340px;
   min-width: 340px;
   width: 340px;
@@ -190,19 +198,19 @@ body.indexPage #index .mainQuiz .storeHolder .storeBlock p {
   margin-left: 14px;
   opacity: 1;
 }
-body.indexPage #index .mainQuiz .storeHolder .storeBlock img {
+div.indexPage #index .mainQuiz .storeHolder .storeBlock img {
   width: 94px;
   height: 94px;
   opacity: 1;
 }
-body.indexPage #index .mainQuiz .storeHolder .storeBlock.active {
+div.indexPage #index .mainQuiz .storeHolder .storeBlock.active {
   transition: all 0.5s;
   border: 1px solid rgba(213, 210, 210, 0);
 }
-body.indexPage #index .mainQuiz .storeHolder .storeBlock.active p {
+div.indexPage #index .mainQuiz .storeHolder .storeBlock.active p {
   opacity: 0;
 }
-body.indexPage #index .mainQuiz .storeHolder .storeBlock.active img {
+div.indexPage #index .mainQuiz .storeHolder .storeBlock.active img {
   transition: all 1s;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -210,28 +218,28 @@ body.indexPage #index .mainQuiz .storeHolder .storeBlock.active img {
   animation-name: grow-img;
   animation-duration: 2.5s;
 }
-body.indexPage #index .mainQuiz .storeHolder.active .storeBlock {
+div.indexPage #index .mainQuiz .storeHolder.active .storeBlock {
   opacity: 0;
   background: transparent;
   border: 1px solid rgba(213, 210, 210, 0);
   pointer-events: none;
   transition: all 0.5s;
 }
-body.indexPage #index .mainQuiz .storeHolder.active .storeBlock p {
+div.indexPage #index .mainQuiz .storeHolder.active .storeBlock p {
   opacity: 0;
   transition: all 0.5s;
 }
-body.indexPage #index .mainQuiz .storeHolder.active .storeBlock img {
+div.indexPage #index .mainQuiz .storeHolder.active .storeBlock img {
   opacity: 0;
 }
-body.indexPage #index .mainQuiz .storeHolder.active .storeBlock.active {
+div.indexPage #index .mainQuiz .storeHolder.active .storeBlock.active {
   opacity: 1;
 }
-body.indexPage .exit-wrapper {
+div.indexPage .exit-wrapper {
   width: 100%;
   position: relative;
 }
-body.indexPage .exit-wrapper .exit-holder {
+div.indexPage .exit-wrapper .exit-holder {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -242,14 +250,14 @@ body.indexPage .exit-wrapper .exit-holder {
   height: 25px;
   cursor: pointer;
 }
-body.indexPage .exit-wrapper .exit-holder .exit-button {
+div.indexPage .exit-wrapper .exit-holder .exit-button {
   height: 25px;
   width: 2px;
   background-color: #908e8e;
   border-radius: 5px;
   transform: rotate(45deg);
 }
-body.indexPage .exit-wrapper .exit-holder .exit-button::before {
+div.indexPage .exit-wrapper .exit-holder .exit-button::before {
   content: "";
   position: absolute;
   height: 25px;
@@ -375,7 +383,7 @@ body.result_active .landingPopupHolder {
   }
   html .quiz_active #index .mainQuiz .storeHolder .storeBlock.active img {
     margin-left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
     animation-name: grow-img-mobile;
     animation-duration: 2.5s;
   }
@@ -424,9 +432,6 @@ body.result_active .landingPopupHolder {
   html .result_active {
     overflow: auto;
   }
-  html .result_active .mainQuiz {
-    height: unset;
-  }
   html .result_active .mainQuiz p {
     width: unset;
     min-width: 320px;
@@ -445,7 +450,7 @@ body.result_active .landingPopupHolder {
   }
 }
 @media all and (max-width: 780px) {
-  body.indexPage {
+  div.indexPage {
     padding-top: 60px;
     height: calc(100vh - 60px);
   }
@@ -784,7 +789,7 @@ body h4 {
   position: relative;
 }
 .social_sp_block .mainQuiz .start_here-button-holder.disable, .social_sp_block .mainQuiz .start_here-button-holder.active {
-  display: none !important;
+  display: none;
 }
 .social_sp_block .mainQuiz .start_here-button-holder .start-btn {
   display: none;
@@ -937,6 +942,7 @@ body h4 {
     margin-left: auto;
     margin-right: auto;
     margin-top: -5px;
+    transition: all ease-in 300ms;
   }
   html body .social_sp_block .mainQuiz .start_here-button-holder .sing-up-btn.active {
     display: block;
@@ -2681,6 +2687,44 @@ body.blogPage .nav-bar .switch-block .btn:last-child:after {
   body .nav-bar .switch-block .btn::after {
     top: 21px;
   }
+}
+*[data-variant] {
+  display: none;
+}
+*[data-variant].variant-visible {
+  display: inline-block;
+}
+*[data-variant].variant-visible[data-block] {
+  display: block !important;
+}
+*[data-variant].variant-visible[data-block] {
+  display: block !important;
+}
+*[data-variant].variant-visible[data-inline] {
+  display: inline;
+}
+
+*[data-variant].start_here-button-holder.active {
+  display: none !important;
+}
+
+.social_sp_block .mainQuiz .welcome-content-short.active {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 514px;
+  height: 108px;
+  border-radius: 54px;
+  margin-top: 30px;
+  border: 1px solid #979797;
+  background-color: #fff;
+}
+.social_sp_block .mainQuiz .welcome-content-short.active .only-home-page {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

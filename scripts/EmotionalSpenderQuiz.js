@@ -5,11 +5,14 @@ var EmotionalSpenderQuiz = {
     this.startQuizListener()
     this.loadLeadGenCopyListener()
     this.displayEmailInputListener()
+    this.mobileSignUpButtonListner()
     this.submitEmailListener()
     this.trackSocialShare()
+
+    this.submitEmailListener3()
   },
+  sessionId: null,
   startQuizListener: function(){
-    mixpanel.track('Emotional Spender Quiz Start');
     $('#startQuiz, #startQuiz2').click(EmotionalSpenderQuiz.startQuiz);
   },
   loadLeadGenCopyListener: function(){
@@ -36,10 +39,19 @@ var EmotionalSpenderQuiz = {
       }, 150)
     })
   },
+  mobileSignUpButtonListner: function(){
+    $('.mobile-signup-btn').click(function(e){
+      $('#submitEmailButton2').click()
+    })
+  },
   displayEmailInputListener: function(){
-    $(".start-btn").click(function() {
-      mixpanel.track('Emotional Spender Quiz Show Email Input');
+    $(".emotional-spender-quiz.start-btn").click(function() {
+
+      // ABTESTING emotional_spender_results
+      ABTesting.mixPanelTrack('Emotional Spender Quiz Show Email Input', {}, 'emotional_spender_results')
+
       $(".start-btn").addClass("grow");
+      $('.sing-up-btn').addClass('active')
 
       setTimeout(function(){
         $(".start-btn").css('opacity', '0.0')
@@ -55,11 +67,18 @@ var EmotionalSpenderQuiz = {
   submitEmailListener: function(){
     $("#submitEmailButton2").click(function() {
       var result = $('#emailInput2').val();
-
-      function successFunc(){
-        $('#leadGenContent').fadeOut()
-        $('.welcom-content, .start_here-button-holder').addClass('active');
+      // ABTESTING emotional_spender_results
+      if ( ABTesting.currentExperiments['emotional_spender_results'] == 'short' ){
+        var successFunc = function(){
+          $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
+        }
+      } else {
+        var successFunc = function(){
+          $('#leadGenContent').fadeOut()
+          $('.welcom-content, .start_here-button-holder').addClass('active');
+        }
       }
+
       function error1Func(){
         $('.start_here-button-holder, .welcome-content-erore-holder, .errore').addClass('active');
       }
@@ -80,6 +99,41 @@ var EmotionalSpenderQuiz = {
       }
     });
   },
+  submitEmailListener3: function(){
+    $("#submitEmailButton3").click(function() {
+      var result = $('#emailInput3').val();
+      // ABTESTING emotional_spender_results
+      if ( ABTesting.currentExperiments['emotional_spender_results'] == 'short' ){
+        var successFunc = function(){
+          $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
+        }
+      } else {
+        var successFunc = function(){
+          $('#leadGenContent').fadeOut()
+          $('.welcom-content, .start_here-button-holder').addClass('active');
+        }
+      }
+
+      function error1Func(){
+        $('.start_here-button-holder, .welcome-content-erore-holder, .errore').addClass('active');
+      }
+      function error2Func(){
+        $('.start_here-button-holder, .welcome-content-erore-holder, .try-again-later').addClass('active');
+      }
+      function errorRefreshFunc(){
+        $('.start_here-button-holder, .welcome-content-erore-holder, .errore').removeClass('active');
+      }
+      var eventName = "Emotional Spender Quiz Email Sign Up"
+      EmailSignUps.submitEmail(result, eventName, successFunc, error1Func, error2Func, errorRefreshFunc);
+      EmotionalSpenderQuiz.submitEmailToClaspSubs(result)
+    })
+    $("#emailInput3").on('keyup', function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#submitEmailButton3").click();
+      }
+    });
+  },
   submitEmailToClaspSubs: function(email){
     $.ajax({
       url: apiUrl + '/spender_quiz_email_submissions',
@@ -93,8 +147,9 @@ var EmotionalSpenderQuiz = {
     }).done(function(res){
     })
   },
-  sessionId: null,
   startQuiz: function(){
+    mixpanel.track('Emotional Spender Quiz Start');
+
     $('body').addClass('cloak');
 
     $.ajax({
@@ -165,14 +220,19 @@ var EmotionalSpenderQuiz = {
     $('#resultImg').attr('src', './images/' + result.image + '.jpg');
     $('#resultTips').html(result.tips);
     $('#resultDesc').html(result.desc);
-    mixpanel.track('Emotional Spender Show Result', {'result': result.title});
+
+    // ABTESTING emotional_spender_results
+    ABTesting.mixPanelTrack('Emotional Spender Show Result', {'result': result.title}, 'emotional_spender_results')
 
     changePageAnim('result_active', 'quiz_active');
   },
   trackSocialShare: function(){
     $('.social-shares a').on('click', function(e){
       var platform = $(this).data('platform')
-      mixpanel.track('Emotional Spender Quiz Social Share', {'platform': platform});
+
+      // ABTESTING emotional_spender_results
+      ABTesting.mixPanelTrack('Emotional Spender Quiz Social Share', {'platform': platform}, 'emotional_spender_results')
+
     })
   }
 };

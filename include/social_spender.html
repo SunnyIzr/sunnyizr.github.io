@@ -4,23 +4,23 @@
     <img id="resultImg" class="soc-sp-img" src="./images/bargain-spender.jpg">
 
     <div class="social_sp-content">
-        <div id="resultDesc">
-          <p>You are a social spender. Whether it is due to the fear of
-            missing out or peer pressure from your friends you can't
-            help but spend money in social situations. Social spenders
-            will make every effort to be included in nights out, trips,
-            and events. Even if you don't have the money set aside for that
-            vacation with your besties you will move money around to make it work.</p>
+      <div id="resultDesc">
+        <p>You are a social spender. Whether it is due to the fear of
+          missing out or peer pressure from your friends you can't
+          help but spend money in social situations. Social spenders
+          will make every effort to be included in nights out, trips,
+          and events. Even if you don't have the money set aside for that
+          vacation with your besties you will move money around to make it work.</p>
 
-          <p>Social spenders often find themselves overspending just to keep up
-            with their companions. After a night out, do you wake up regretting
-            that you spent more than you had intended? Social spenders fear missing out,
-            being excluded from their group, and being judged by their peers.</p>
-        </div>
+        <p>Social spenders often find themselves overspending just to keep up
+          with their companions. After a night out, do you wake up regretting
+          that you spent more than you had intended? Social spenders fear missing out,
+          being excluded from their group, and being judged by their peers.</p>
+      </div>
 
-      <div class="tip_on">Tips on How to Deal</div>
+      <div class="tip_on" data-variant="long" data-block>Tips on How to Deal</div>
 
-      <div id="resultTips">
+      <div id="resultTips" data-variant="long" data-block>
         <p>
           So how do you avoid the peer pressure and stick to
           your budget? First, be honest. Explain your situation
@@ -45,9 +45,28 @@
           allocate it for these events so they don't take you by surprise.</p>
       </div>
           
-      <h3>We're here to help. Find out how.</h3>
+      <h3 data-variant="long" data-block>We're here to help. Find out how.</h3>
 
-      <div class="down_button-block-holder">
+      <h3 data-variant="short" data-block>We can help</h3>
+
+      <p data-variant="short" data-block>We’d like to offer you a guide describing wise learnings on how to live your best life but still be mindful with your spending. Sign up below.</p>
+
+      <div class="start_here-button-holder" data-variant="short" data-block>
+        <button class="start-btn emotional-spender-quiz active">SIGN UP</button>
+
+        <div class="input-holder active">
+          <input type="email" id="emailInput3" placeholder="Enter your email address" >
+          <button class="sing-up-btn" id="submitEmailButton3">SUBMIT</button>
+        </div>
+
+        <button class="sing-up-btn mobile-signup-btn">SUBMIT</button>
+      </div>
+
+<!--       <div class="welcom-content welcome-content-short" data-variant="short" data-block>
+        <p class="only-home-page">&#10004; You all set. Check your email for updates</p>
+      </div> -->
+
+      <div class="down_button-block-holder" data-variant="long" data-block>
         <img id='loadLeadGen' class="down_button-img floating" src="./images/Down_Button.svg">
       </div>
 
@@ -66,18 +85,22 @@
         <p>You should expect an introductory email shortly. 
           We're super excited to stay in touch and keep you updated on our progress!
         </p>
-        <p>
+        <p data-variant="long" data-block>
           If you're interested in being an early beta tester, we'd love to have you on board!
           We do have one ask. If you enjoyed this quiz, please share and we'll send over early
           access to our product! <i class="far fa-smile"></i>
         </p>
+
+        <p data-variant="short" data-block style='margin-bottom: 35px;'>
+          If you enjoyed this quiz, please share! <i class="far fa-smile"></i>
+        </p>
         <div class="social-shares">
-          <a data-platform='twitter' data-size="large" href="https://twitter.com/intent/tweet?text=We're all emotional spenders. What emotions drive your spending? #emotionalspending https://www.clasp.app/emotional-spender.html" onclick="window.open(this.href, 'mywin','left=20,top=20,width=750,height=500,toolbar=1,resizable=0'); return false;"><div class='icon-container'><i class="fab fa-twitter"></i></div></a>
+          <a data-platform='twitter' data-size="large" href="https://twitter.com/intent/tweet?text=We're all emotional spenders. What emotions drive your spending? https://www.clasp.app/emotional-spender.html" onclick="window.open(this.href, 'mywin','left=20,top=20,width=750,height=500,toolbar=1,resizable=0'); return false;"><div class='icon-container'><i class="fab fa-twitter"></i></div></a>
           <a data-platform='linkedin' href="https://www.linkedin.com/shareArticle??mini=true&url=https://www.clasp.app/emotional-spender.html&title=Emotional%20Spending&summary=My%20favorite%20developer%20program&source=LinkedIn" onclick="window.open(this.href, 'mywin','left=20,top=20,width=750,height=500,toolbar=1,resizable=0'); return false;"><div class='icon-container'><i class="fab fa-linkedin-in"></i></div></a>
           <a data-platform='facebook' href="https://www.facebook.com/sharer/sharer.php?app_id=672354603261984&sdk=joey&u=https://www.clasp.app/emotional-spender.html&display=popup&ref=plugin&src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=750,height=580')"><div class='icon-container'><i class="fab fa-facebook-f"></i></div></a>
         </div>
-        <p>Best,</p>
-        <p>Sunny and Katherine</p>
+        <p data-variant="long" data-block>Best,</p>
+        <p data-variant="long" data-block>Sunny and Katherine</p>
       </div>
 
       <div class="welcome-content-erore-holder">
@@ -88,14 +111,14 @@
       </div>
 
       <div class="start_here-button-holder active">
-        <button class="start-btn  active">SIGN UP</button>
+        <button class="start-btn emotional-spender-quiz active">SIGN UP</button>
 
         <div class="input-holder active">
           <input type="email" id="emailInput2" placeholder="Enter your email address" >
           <button class="sing-up-btn" id="submitEmailButton2">SUBMIT</button>
         </div>
 
-        <!--<button class="sing-up-btn active">SUBMIT</button>-->
+        <button class="sing-up-btn mobile-signup-btn">SUBMIT</button>
       </div>
     </div> 
   </div>

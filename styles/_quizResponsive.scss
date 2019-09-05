@@ -70,7 +70,7 @@
 
                 img{
                   margin-left: 50%;
-                  transform: translateX(-50%);
+                  transform: translateX(-30%);
                   animation-name: grow-img-mobile;
                   animation-duration: 2.5s;
                 }
@@ -145,7 +145,6 @@
     .result_active{
       overflow: auto;
       .mainQuiz{
-        height: unset;
         p{
           width: unset;
           min-width: 320px;
@@ -178,7 +177,7 @@
 }
 
 @media all and (max-width: 780px) {
-  body.indexPage{
+  div.indexPage{
     padding-top: 60px;
     height: calc(100vh - 60px);
   }

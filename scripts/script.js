@@ -1,4 +1,10 @@
+// Prod
 const apiUrl = 'https://clasp-subs.herokuapp.com';
+
+// Dev
+// const apiUrl = 'https://morning-tor-82718.herokuapp.com/';
+
+
 
 const changePageAnim = function (class_name, remove_class) {
   setTimeout(function(){
@@ -38,5 +44,6 @@ $(document).ready(function(){
 
     LandingPage.init()
     EmotionalSpenderQuiz.init()
+    ABTesting.init()
   }
 });

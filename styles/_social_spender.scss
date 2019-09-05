@@ -208,7 +208,8 @@ body{
       position: relative;
 
       &.disable, &.active{
-        display: none !important;
+        // display: none !important;
+        display: none;
       }
       .start-btn{
         display: none;
@@ -371,10 +372,12 @@ body{
               margin-left: auto;
               margin-right: auto;
               margin-top: -5px;
+              transition: all ease-in 300ms;
 
             }
             .sing-up-btn.active{
               display: block;
+              // opacity: 1.0
             }
             .input-holder{
               justify-content: center;

@@ -1,4 +1,19 @@
-body.indexPage{
+body.quiz_active{
+  div.indexPage{
+    height: calc(100vh);
+    padding-top: 0;
+  }
+}
+
+body.quiz_active,
+body.result_active{
+  .mainQuiz:not(.sp_type-block){
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.indexPage{
   margin: 0;
   padding: 0;
   height: calc(100vh - 100px);
@@ -19,14 +34,7 @@ body.indexPage{
     background-position: 0% 0%;
     background-image: url(images/Background.png);
     background-repeat: no-repeat;
-  }
-
-  &.quiz_active, &.result_active{
-    .mainQuiz:not(.sp_type-block){
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-    }
+    -webkit-overflow-scrolling: touch;
   }
 
   #index{
