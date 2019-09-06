@@ -1,10 +1,4 @@
-// Prod
-const apiUrl = 'https://clasp-subs.herokuapp.com';
-
-// Dev
-// const apiUrl = 'https://morning-tor-82718.herokuapp.com/';
-
-
+const apiUrl = '@@apiUrl';
 
 const changePageAnim = function (class_name, remove_class) {
   setTimeout(function(){
