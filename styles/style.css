@@ -1996,11 +1996,9 @@ body .popupHolder.submit-success .success .submit .text {
   letter-spacing: normal;
   text-transform: unset;
 }
-body .popupHolder.submit-error p {
-  margin: 35px 0 0;
-}
 body .popupHolder.submit-error .error {
   display: block;
+  margin: -23px 0 15px;
 }
 body .popupHolder.submit-error .error .submitEr h2 {
   color: #ff1963;

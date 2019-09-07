@@ -1,4 +1,3 @@
-
 var ABTesting = {
   init: function(){
     this.newExperiment("emotional_spender_results", 'short', 'long');

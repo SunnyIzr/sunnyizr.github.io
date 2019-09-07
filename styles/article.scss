@@ -208,10 +208,10 @@ body {
 
     &.submit-error {
       p {
-        margin: 35px 0 0;
       }
       .error {
         display: block;
+        margin: -23px 0 15px;
         .submitEr {
           h2 {
             color: #ff1963;
