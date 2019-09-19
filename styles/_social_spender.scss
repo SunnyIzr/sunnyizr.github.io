@@ -16,6 +16,44 @@ body{
   //overflow: auto;
   .mainQuiz{
     height: unset;
+    .social-shares{
+      text-align: center;
+      margin-bottom: 80px;
+      a{
+        display: inline-block;
+        margin: 0 20px;
+        .icon-container{
+          width: 65px;
+          height: 65px;
+          border: 1px solid #fe6f77;
+          position: relative;
+          border-radius: 100%;
+        }
+        i{
+          font-size: 35px;
+          position: absolute;
+          top: 55%;
+          left: 53%;
+          transform: translate(-50%, -50%);
+          color: #fe6f77;
+          transition: all ease-in 200ms;
+        }
+        .fa-facebook-f{
+          left: 49%;
+        }
+      }
+      a:hover{
+        .icon-container{
+          border-color: transparent;
+        }
+        i{
+          font-size: 50px;
+        }
+        .fa-twitter{color: #1DA1F2}
+        .fa-linkedin-in{color: #0077B5}
+        .fa-facebook-f{color: #3C5A99}
+      }
+    }
 
     .welcom-content{
       opacity: 0.0;
@@ -41,44 +79,7 @@ body{
         font-size: 21px;
         color: #fe6f77;
       }
-      .social-shares{
-        text-align: center;
-        margin-bottom: 20px;
-        a{
-          display: inline-block;
-          margin: 0 20px;
-          .icon-container{
-            width: 65px;
-            height: 65px;
-            border: 1px solid #fe6f77;
-            position: relative;
-            border-radius: 100%;
-          }
-          i{
-            font-size: 35px;
-            position: absolute;
-            top: 55%;
-            left: 53%;
-            transform: translate(-50%, -50%);
-            color: #fe6f77;
-            transition: all ease-in 200ms;
-          }
-          .fa-facebook-f{
-            left: 49%;
-          }
-        }
-        a:hover{
-          .icon-container{
-            border-color: transparent;
-          }
-          i{
-            font-size: 50px;
-          }
-          .fa-twitter{color: #1DA1F2}
-          .fa-linkedin-in{color: #0077B5}
-          .fa-facebook-f{color: #3C5A99}
-        }
-      }
+
       .only-home-page{
         display: none;
       }

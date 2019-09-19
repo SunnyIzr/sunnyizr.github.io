@@ -598,6 +598,48 @@ body h4 {
 .social_sp_block .mainQuiz {
   height: unset;
 }
+.social_sp_block .mainQuiz .social-shares {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.social_sp_block .mainQuiz .social-shares a {
+  display: inline-block;
+  margin: 0 20px;
+}
+.social_sp_block .mainQuiz .social-shares a .icon-container {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #fe6f77;
+  position: relative;
+  border-radius: 100%;
+}
+.social_sp_block .mainQuiz .social-shares a i {
+  font-size: 35px;
+  position: absolute;
+  top: 55%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  color: #fe6f77;
+  transition: all ease-in 200ms;
+}
+.social_sp_block .mainQuiz .social-shares a .fa-facebook-f {
+  left: 49%;
+}
+.social_sp_block .mainQuiz .social-shares a:hover .icon-container {
+  border-color: transparent;
+}
+.social_sp_block .mainQuiz .social-shares a:hover i {
+  font-size: 50px;
+}
+.social_sp_block .mainQuiz .social-shares a:hover .fa-twitter {
+  color: #1DA1F2;
+}
+.social_sp_block .mainQuiz .social-shares a:hover .fa-linkedin-in {
+  color: #0077B5;
+}
+.social_sp_block .mainQuiz .social-shares a:hover .fa-facebook-f {
+  color: #3C5A99;
+}
 .social_sp_block .mainQuiz .welcom-content {
   opacity: 0.0;
   display: none;
@@ -622,48 +664,6 @@ body h4 {
 .social_sp_block .mainQuiz .welcom-content .fa-smile {
   font-size: 21px;
   color: #fe6f77;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a {
-  display: inline-block;
-  margin: 0 20px;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a .icon-container {
-  width: 65px;
-  height: 65px;
-  border: 1px solid #fe6f77;
-  position: relative;
-  border-radius: 100%;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a i {
-  font-size: 35px;
-  position: absolute;
-  top: 55%;
-  left: 53%;
-  transform: translate(-50%, -50%);
-  color: #fe6f77;
-  transition: all ease-in 200ms;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a .fa-facebook-f {
-  left: 49%;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a:hover .icon-container {
-  border-color: transparent;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a:hover i {
-  font-size: 50px;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a:hover .fa-twitter {
-  color: #1DA1F2;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a:hover .fa-linkedin-in {
-  color: #0077B5;
-}
-.social_sp_block .mainQuiz .welcom-content .social-shares a:hover .fa-facebook-f {
-  color: #3C5A99;
 }
 .social_sp_block .mainQuiz .welcom-content .only-home-page {
   display: none;
