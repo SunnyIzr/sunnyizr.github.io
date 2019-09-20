@@ -1,7 +1,7 @@
 var BlogSection = {
   init: function(){
-    this.togglePopupListener()
-    this.emailSubmitEventListener()
+    this.togglePopupListener();
+    this.emailSubmitEventListener();
   },
   emailSubmitEventListener: function(){
     $('#emailSignup').on('submit', function(event){
@@ -15,8 +15,8 @@ var BlogSection = {
     EmailSignUps.submitEmail(email, 'Blog Email Sign Up', BlogSection.renderSuccess, BlogSection.renderError, BlogSection.renderError, BlogSection.renderError)
   },
   togglePopupListener: function(){
-    if($('.post-template').length){
-      if ( BlogSection.getCookie('claspblogemail') != 'true'){
+    // if($('.post-template').length){
+      if (!BlogSection.getCookie('claspblogemail')){
         var timeout = setTimeout(function(){
           BlogSection.togglePopup();
           clearTimeout(timeout);
@@ -24,9 +24,23 @@ var BlogSection = {
           BlogSection.setCookie()
         }, 15000);
         $('.closeImg.togglePopup').on('click', BlogSection.togglePopup);
+        $('.sign-up.togglePopup').on('click',BlogSection.validate )
       }
-    }
+    // }
   }, 
+  validateEmail: function(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  },
+  validate: function(){    
+    var email = $("#artInput").val();
+    console.log(validateEmail(email))
+    if (validateEmail(email)){
+      BlogSection.renderSuccess();
+    }else{
+      BlogSection.renderError();
+    }
+  },
   togglePopup: function(){
     $('body').toggleClass('activePopup');
   },

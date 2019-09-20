@@ -86,6 +86,7 @@ body {
     }
   }
   .popupHolder {
+    z-index: 8;
     position: fixed;
     top: 0;
     left: 0;
@@ -99,12 +100,15 @@ body {
     background: rgba(255, 255, 255, 0.85);
     transition: opacity .3s ease-in-out;
     .popup {
-      width: 640px;
-      height: 232px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 588px;
+      height: 504px;
       overflow: hidden;
       position: relative;
       text-align: center;
-      border: 1px solid #979797;
+      border: 1px solid #d8d8d8;
       background-color: #ffffff;
       box-sizing: border-box;
       .closeImg {
@@ -122,45 +126,86 @@ body {
         border-radius: 30px 0 0 50px;
         background-color: rgba(254, 141, 69, 0.05);
       }
-      p {
-        color: #353535;
+      .backImg{
+        position: absolute;
+        background-image: url(../deploy/images/Background_forPopup.svg);
+        height: 290px;
+        width: 100%;
+        transform: rotateY(180deg);
+        bottom: 0;
+      }
+      .for-desctop{
+        color: #5b5b5b;
         font-family: ObjektivBd, serif;
-        font-size: 14px;
+        font-size: 25px;
         letter-spacing: 1.75px;
         line-height: 16px;
-        text-transform: uppercase;
         text-align: center;
-        margin: 45px 0 29px;
+        margin: 45px 0 0;
+        &:nth-child(2){
+          margin: 16px 0 42px 0;
+        }
+      }
+      .only-mobila{
+        display: none;
+      }
+      .breakLine{
+        width: 245px;
+        border-radius: 5px;
+        margin-bottom: 23px;
+      }
+      .inf-content-desctop{
+        text-align: left;
+        width: 458px;
+        height: 82px;
+        color: #2f2f2f;
+        font-family:Objektiv, serif;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        margin: 0 0 12px 0; 
+      }
+      .inf-content-mobila{
+        display: none;
       }
       input {
         display: flex;
-        width: 400px;
+        width: 300px;
         height: 47px;
         margin: auto;
         background-color: #ffffff;
-        border: 1px solid #979797;
+        border: none;
+        border-bottom: 1px solid #5e5e5e;
         outline: none;
         opacity: .5;
-        text-align: center;
         color: #2f2f2f;
         font-family: Objektiv, serif;
-        font-size: 14px;
+        font-size: 18px;
       }
       button {
-        width: 180px;
-        height: 44px;
-        border-radius: 10px;
-        background-color: #fe8d45;
-        margin: 20px auto;
+        width: 290px;
+        height: 77px;
+        border-radius: 39px;
+        background-image: linear-gradient(134deg,#ff5f93 0,#fe8d45 100%);
+        box-shadow: 0px 12px 35px -8px rgba(0,0,0,0.5);
+        margin: 50px auto auto;
         outline: none;
         border: 0;
         cursor: pointer;
         color: #ffffff;
         font-family: ObjektivBd, serif;
-        font-size: 12px;
+        font-weight: 700;
+        font-size: 19px;
         text-align: center;
         letter-spacing: 1px;
         text-transform: uppercase;
+        z-index: 9;
+        .mobila{
+          display: none;
+        }
+        .desctop{
+          display: block;
+        }
       }
       .error {
         display: none;
@@ -171,55 +216,101 @@ body {
     }
 
     &.submit-success {
+      .breakLine{
+        display: none;
+      }
+      button{
+        display: none;
+      }
       p {
         display: none;
       }
       input {
         display: none;
       }
-      button {
-        display: none;
-      }
       .success {
         display: block;
+        z-index: 10;
+        .breakLine{
+          display: block;
+        }
         h1 {
-          color: #2f2f2f;
+          color: #5b5b5b;
           font-family: ObjektivBd, serif;
-          font-size: 14px;
+          font-size: 25px;
+          font-weight: 700;
           letter-spacing: 1.75px;
           line-height: 16px;
-          text-transform: uppercase;
-          margin: 40px auto 30px;
+          margin: 60px auto 35px;
         }
         .submit {
           .text {
             display: block;
-            color: #2f2f2f;
+            color: #3e3b3b;
             font-family: Objektiv, serif;
-            font-size: 14px;
-            line-height: 16px;
-            margin: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            margin: 20px 0;
             letter-spacing: normal;
             text-transform: unset;
+            &:nth-child(3){
+              width: 385px;
+              height: 100px;
+              margin-bottom: 69px;
+            }
+          }
+          .done-wrapper{
+            display: flex;
+            justify-content: center;
+            .done{
+              position: relative;
+              width: 3px;
+              height: 13px;
+              transform: rotate(218deg);
+              background-color: #2f2f2f;
+              &:after{
+                top: 0px;
+                left: 0px;
+                content: "";
+                width: 7px;
+                height: 3px;
+                position: absolute;
+                background-color: #2f2f2f;
+              }
+            }
+          }
+          button{
+            display: block;
+            z-index: 10;
           }
         }
       }
     }
 
     &.submit-error {
-      p {
-      }
       .error {
         display: block;
-        margin: -23px 0 15px;
-        .submitEr {
+        margin: 19px 0 15px;
+        .submitEr { 
+          width: 300px; 
+          margin-left: 79px;
           h2 {
-            color: #ff1963;
+            color: #ff7e5f;
             font-family: Objektiv, serif;
             font-size: 14px;
             line-height: 16px;
+            text-align: left;
           }
         }
+      }
+      button{
+        margin: 10px auto auto;
+      }
+    }
+    &.submit-error.submit-success{
+      .error{
+        display: none;
       }
     }
   }
@@ -229,6 +320,128 @@ body {
     .popupHolder {
       opacity: 1;
       pointer-events: auto;
+    }
+  }
+  .signUpBlock{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 75px;
+    height: 380px;
+    background-image: url(images/BackgroundSign.png);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    & > div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    & > div{
+      &:first-child{
+        width: 60%;
+        padding-right: 20px;
+        @media screen and (max-width:600px){
+          width:unset;
+        }
+        p{
+            margin-bottom: 0;
+        }
+      }
+    }
+    p{
+      font-size: 16px;
+      @media screen and (max-width:600px){
+        font-size: 14px;
+      }
+    }
+    h3{
+      color: #5b5b5b;
+      margin-bottom: 50px;
+      font-size: 25px;
+      width: 60%;
+      @media screen and (max-width:600px){
+        font-size: 22px;
+      }
+    }
+    .breakLine{
+      width:245px;
+      margin: unset;
+      border-radius: 2px;
+    }
+  }
+  .signUpBtn{
+    cursor: pointer;
+    color: #fff;
+    font-family: Objektiv,serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2.72px;
+    text-transform: uppercase;
+    width: 290px;
+    height: 77px;
+    border-radius: 39px;
+    background-image: linear-gradient(134deg,#ff5f93 0,#fe8d45 100%);
+    border: none;
+    outline: 0;
+    letter-spacing: 3.26px;
+    margin-top: 50px;
+    @media screen and (max-width:600px){
+      width: 272px;
+    }
+  }
+  input{
+    display: flex;
+    width: 300px;
+    height: 47px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #5e5e5e;
+    outline: 0;
+    opacity: .5;
+    color: #2f2f2f;
+    font-family: Objektiv,serif;
+    font-size: 18px;
+    @media screen and (max-width:600px){
+      width: 280px;
+    }
+  }
+  .afterSignUp{
+    transform: translateX(100%);
+    position: relative;
+    bottom: 380px;
+    background-color: white;
+    transition: transform 0.3s ease-in;
+    &.active{
+      transform: translateX(0);
+    }
+    .signUpBtn{
+      margin-top: 100px;
+    }
+  }
+  .forSign{
+    overflow: hidden;
+    height: 380px;
+    margin-bottom: 60px;
+  }
+}
+@media all and (max-width:900px){
+  body{
+    .forSign{
+      height: 450px;
+      margin-bottom: 120px;
+    }
+    .signUpBlock{
+      flex-direction: column;
+      padding: 0 20px;
+      height: 420px;
+      h3{
+        width: unset;
+      }
+      div{
+        margin: auto;
+      }
+    }
+    .afterSignUp{
+      bottom: 418px;
     }
   }
 }

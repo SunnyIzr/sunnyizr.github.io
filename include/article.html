@@ -188,36 +188,85 @@
     </div>
 
   </div>
+ 
 
   <div class="popupHolder" id="emailPopup">
       <div class="popup">
         <div class="backgroundImg"></div>
-
+        <div class="backImg"></div>
         <div class="closeImg togglePopup">
           <img src="./icons/Close_Dark.png" alt="">
         </div>
-        <div>
-          <p>Stay in the Know</p>
+        <div class="content-wrapper">
+          <p class="for-desctop">An authentic perspective on</p>
+          <p class="for-desctop">managing money</p>
+          <p class="only-mobila">Whant to be brilliant with money?</p>
+          <div class="breakLine"></div>
+          <p class="inf-content-desctop">
+            Being honest with yourself is the first step to being smarter
+            wither money. We'll show you how with our tips. Let's get better
+            together.  
+          </p>
+          <p class="inf-content-mobila">
+            To get your results and tips customized 
+            to your emotional spending habits, enter 
+            your name and email below. 
+          </p>
+          <input type="email" placeholder="Your Email">
           <div class="error">
               <div class="submitEr">
-                  <h2>Hm…that doesn’t seem to be a valid email address. Try again?</h2>
+                  <h2>This field is required.</h2>
               </div>
           </div>
-          <input type="email" placeholder="EMAIL">
         </div>
 
-        <button class="togglePopup">Join Email List</button>
+        <button class="togglePopup"><span class="desctop">SIGN UP</span><span class="mobila">MAKE ME BETTER</span></button>
 
         <div class="success">
-          <h1>And Away We Go</h1>
+          <h1>And away we go</h1>
+          <div class="breakLine"></div>
           <div class="submit">
+              <div class="done-wrapper">
+                <div class="done"></div>
+              </div>
               <p class="text">
-                <span id="submit-email">katherine.kendall@gmail.com</span> has just been added to our mail list.
+                All set!
               </p>
-              <p class="text">Look for Clasp in your inbox. </p>
-              <p class="text">This is the beginning of a beautiful friendship…</p>
+              <p class="text">
+                This is the beginning of a beautifull friendship. 
+                In the meantime, are you curious to know what emotions
+                 drive your spending? Take our quiz to find out
+              </p>
+              <button class="togglePopup">TAKE THE QUIZ</button>
           </div>
         </div>
       </div>
     </div>
 </main>
+<div class="forSign">
+    <div class="signUpBlock">
+        <div class="">
+          <h3>An authentic perspective on managing money</h3>
+          <div class="breakLine"></div>
+          <p>Being honest with yourself is the first step to being smarter wither money.
+            We’ll show you how with our tips. Let’s get better together. </p>
+        </div>
+        <div class="">
+          <input type="text" placeholder="Your Email" id="articleEmail">
+          <button class="signUpBtn" id="articleSignBtn">SIGN UP</button>
+        </div>
+      </div>
+      <div class="afterSignUp signUpBlock"> 
+        <div>
+          <h3>And away we go</h3>
+          <div class="breakLine"></div>
+          <p>All set! </p>
+          <p>This is the beginning of a beautiful friendship. 
+            In the meantime, are you curious to know what emotions drive your spending? 
+            Take our quiz to find out.</p>
+        </div>
+        <div>
+            <a href="../deploy/emotional-spender.html"><button class="signUpBtn">Take the quiz</button></a>
+        </div>
+      </div>
+</div>

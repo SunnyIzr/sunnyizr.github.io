@@ -10,7 +10,7 @@ const changePageAnim = function (class_name, remove_class) {
 
 
 $(document).ready(function(){
-  // BlogSection.init()
+  BlogSection.init()
   LandingPage.init()
   EmotionalSpenderQuiz.init()
   ABTesting.init()

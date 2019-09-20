@@ -26,36 +26,103 @@
         margin: 0 40px;
       }
     }
-    .popupHolder {
-      .popup {
-        width: 100%;
-        input {
-          width: 90%;
-        }
-      }
+  }
+}
 
-      &.submit-success {
-        .success {
-          h1 {
-            margin: 30px auto;
+@media all and (max-width: 620px) {
+  body {
+    main {
+      .popupHolder{
+        .popup{
+          width: 320px;
+          height: 529px;
+          .content-wrapper{
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            .for-desctop{
+              display: none;
+            }
+            .only-mobila{
+              margin-top: 70px;
+              display: block;
+              width: 253px;
+              height: 64px;
+              color: #5b5b5b;
+              text-align: left;
+              font-size: 20px;
+              font-weight: 700;
+              font-family: ObjektivBd, serif;
+            }
+            .breakLine{
+              width: 245px;
+            }
+            .inf-content-desctop{
+              display: none;
+            }
+            .inf-content-mobila{
+              display: block;
+              width: 250px;
+              text-align: left;
+              color: #2f2f2f;
+              font-family: Objektiv, serif;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 23px;
+            }
+            input{
+              width: 245px;
+              font-size: 16px;
+            } 
           }
-          .submit {
-            .text {
-              font-size: 12px;
+          button{
+            width: 272px;
+            .mobila{
+              display: block;
+              font-size: 17px;
+            }
+            .desctop{
+              display: none;
             }
           }
         }
-      }
-
-      &.submit-error {
-        .error {
-          .submitEr {
-            h2 {
-              font-size: 12px;
+        &.submit-error{
+          .error{
+            .submitEr{
+              width: 265px;
+              margin-left: 19px;
             }
           }
         }
-      }
+        &.submit-success{
+          .popup{
+            .content-wrapper{
+              .only-mobila{
+                display: none;
+    
+              }
+              .inf-content-mobila{
+                display: none;
+              }
+            }
+            .success{
+              h1{
+                font-size: 22px;
+              }
+              .submit{
+                .text{
+                  font-size: 14px;
+                  &:nth-child(3){
+                    width: 272px;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+      } 
     }
   }
 }
