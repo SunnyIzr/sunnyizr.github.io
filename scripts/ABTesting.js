@@ -1,6 +1,6 @@
 var ABTesting = {
   init: function(){
-    this.newExperiment("emotional_spender_results", 'short', 'long');
+    // this.newExperiment("emotional_spender_results", 'short', 'long');
   },
   currentExperiments: {},
   newExperiment: function(name, variant1_name, variant2_name){
