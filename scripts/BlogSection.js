@@ -4,25 +4,24 @@ var BlogSection = {
     this.emailSubmitEventListener();
   },
   emailSubmitEventListener: function(){
-    $('#emailSignup').on('submit', function(event){
+    $('#blogEmailSignup').on('submit', function(event){
       event.preventDefault()
-      BlogSection.submitEmail()
+      var email = $(this).find('input').val()
+      BlogSection.submitEmail(email)
     })
   },
-  submitEmail: function(){
-    var email = $(".post-template input[type=email]").val()
-    $('#submit-email').html(email)
+  submitEmail: function(email){
     EmailSignUps.submitEmail(email, 'Blog Email Sign Up', BlogSection.renderSuccess, BlogSection.renderError, BlogSection.renderError, BlogSection.renderError)
   },
   togglePopupListener: function(){
-    // if($('.post-template').length){
       if (!BlogSection.getCookie('claspblogemail')){
         var timeout = setTimeout(function(){
           BlogSection.togglePopup();
           clearTimeout(timeout);
           timeout = null;
           BlogSection.setCookie()
-        }, 15000);
+        // }, 15000);
+        }, 150);
         $('.closeImg.togglePopup').on('click', BlogSection.togglePopup);
         $('.sign-up.togglePopup').on('click',BlogSection.validate )
       }
@@ -43,6 +42,7 @@ var BlogSection = {
   },
   togglePopup: function(){
     $('body').toggleClass('activePopup');
+    $('input[type=email]').focus()
   },
   renderSuccess: function(){
     $('.popupHolder').addClass('submit-success')

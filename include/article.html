@@ -197,30 +197,32 @@
         <div class="closeImg togglePopup">
           <img src="./icons/Close_Dark.png" alt="">
         </div>
-        <div class="content-wrapper">
-          <p class="for-desctop">An authentic perspective on</p>
-          <p class="for-desctop">managing money</p>
-          <p class="only-mobila">Whant to be brilliant with money?</p>
-          <div class="breakLine"></div>
-          <p class="inf-content-desctop">
-            Being honest with yourself is the first step to being smarter
-            wither money. We'll show you how with our tips. Let's get better
-            together.  
-          </p>
-          <p class="inf-content-mobila">
-            To get your results and tips customized 
-            to your emotional spending habits, enter 
-            your name and email below. 
-          </p>
-          <input type="email" placeholder="Your Email">
-          <div class="error">
-              <div class="submitEr">
-                  <h2>This field is required.</h2>
-              </div>
+        <form id='blogEmailSignup'>
+          <div class="content-wrapper">
+            <p class="for-desctop">An authentic perspective on</p>
+            <p class="for-desctop">managing money</p>
+            <p class="only-mobila">An authentic perspective on managing money</p>
+            <div class="breakLine"></div>
+            <p class="inf-content-desctop">
+              Being honest with yourself is the first step to being smarter
+              wither money. We'll show you how with our tips. Let's get better
+              together.  
+            </p>
+            <p class="inf-content-mobila">
+              Being honest with yourself is the first step to being smarter
+              wither money. We'll show you how with our tips. Let's get better
+              together.  
+            </p>
+            <input type="email" placeholder="Your Email" required>
+            <div class="error">
+                <div class="submitEr">
+                    <h2>This email does not appear to be valid. Please try again.</h2>
+                </div>
+            </div>
           </div>
-        </div>
 
-        <button class="togglePopup"><span class="desctop">SIGN UP</span><span class="mobila">MAKE ME BETTER</span></button>
+          <button class="togglePopup" type='submit'><span class="desctop">SIGN UP</span><span class="mobila">SIGN UP</span></button>
+        </form>
 
         <div class="success">
           <h1>And away we go</h1>
@@ -237,7 +239,7 @@
                 In the meantime, are you curious to know what emotions
                  drive your spending? Take our quiz to find out
               </p>
-              <button class="togglePopup">TAKE THE QUIZ</button>
+              <button class="togglePopup"><a href='https://www.clasp.app/emotional-spender.html'>TAKE THE QUIZ</a></button>
           </div>
         </div>
       </div>

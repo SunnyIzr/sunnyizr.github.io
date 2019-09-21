@@ -2038,8 +2038,9 @@ body .popupHolder .popup {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 588px;
-  height: 504px;
+  width: 100%;
+  max-width: 750px;
+  height: 560px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -2069,6 +2070,12 @@ body .popupHolder .popup .backImg {
   width: 100%;
   transform: rotateY(180deg);
   bottom: 0;
+}
+body .popupHolder .popup .content-wrapper {
+  margin-top: 80px;
+}
+body .popupHolder .popup #blogEmailSignup {
+  position: relative;
 }
 body .popupHolder .popup .for-desctop {
   color: #5b5b5b;
@@ -2106,7 +2113,7 @@ body .popupHolder .popup .inf-content-mobila {
 }
 body .popupHolder .popup input {
   display: flex;
-  width: 300px;
+  width: 350px;
   height: 47px;
   margin: auto;
   background-color: #ffffff;
@@ -2117,6 +2124,8 @@ body .popupHolder .popup input {
   color: #2f2f2f;
   font-family: Objektiv, serif;
   font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 body .popupHolder .popup button {
   width: 290px;
@@ -2162,6 +2171,7 @@ body .popupHolder.submit-success input {
   display: none;
 }
 body .popupHolder.submit-success .success {
+  margin-top: -45px;
   display: block;
   z-index: 10;
 }
@@ -2217,13 +2227,16 @@ body .popupHolder.submit-success .success .submit button {
   display: block;
   z-index: 10;
 }
+body .popupHolder.submit-success .success .submit button a:-webkit-any-link {
+  color: #ffffff;
+}
 body .popupHolder.submit-error .error {
   display: block;
   margin: 19px 0 15px;
 }
 body .popupHolder.submit-error .error .submitEr {
   width: 300px;
-  margin-left: 79px;
+  margin-left: 53px;
 }
 body .popupHolder.submit-error .error .submitEr h2 {
   color: #ff7e5f;
@@ -2284,11 +2297,21 @@ body .signUpBlock h3 {
   margin-bottom: 50px;
   font-size: 25px;
   width: 60%;
+  font-family: ObjektivBd,serif;
+  letter-spacing: 1.75px;
 }
 @media screen and (max-width: 600px) {
   body .signUpBlock h3 {
     font-size: 22px;
   }
+}
+body .signUpBlock p {
+  color: #2f2f2f;
+  font-family: Objektiv,serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  padding-right: 100px;
 }
 body .signUpBlock .breakLine {
   width: 245px;
@@ -2352,6 +2375,8 @@ body .forSign {
   overflow: hidden;
   height: 380px;
   margin-bottom: 60px;
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
 }
 
 @media all and (max-width: 900px) {
@@ -2402,14 +2427,14 @@ body .forSign {
 }
 @media all and (max-width: 620px) {
   body main .popupHolder .popup {
-    width: 320px;
-    height: 529px;
+    height: 615px;
   }
   body main .popupHolder .popup .content-wrapper {
     width: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-top: 15px;
   }
   body main .popupHolder .popup .content-wrapper .for-desctop {
     display: none;
@@ -2417,7 +2442,7 @@ body .forSign {
   body main .popupHolder .popup .content-wrapper .only-mobila {
     margin-top: 70px;
     display: block;
-    width: 253px;
+    width: 300px;
     height: 64px;
     color: #5b5b5b;
     text-align: left;
@@ -2433,7 +2458,7 @@ body .forSign {
   }
   body main .popupHolder .popup .content-wrapper .inf-content-mobila {
     display: block;
-    width: 250px;
+    width: 300px;
     text-align: left;
     color: #2f2f2f;
     font-family: Objektiv, serif;
@@ -2442,7 +2467,7 @@ body .forSign {
     line-height: 23px;
   }
   body main .popupHolder .popup .content-wrapper input {
-    width: 245px;
+    width: 300px;
     font-size: 16px;
   }
   body main .popupHolder .popup button {
@@ -2455,15 +2480,22 @@ body .forSign {
   body main .popupHolder .popup button .desctop {
     display: none;
   }
+  body main .popupHolder.submit-error .error {
+    margin: 0;
+    margin-bottom: 30px;
+  }
   body main .popupHolder.submit-error .error .submitEr {
-    width: 265px;
-    margin-left: 19px;
+    width: 300px;
+    margin-left: 0;
   }
   body main .popupHolder.submit-success .popup .content-wrapper .only-mobila {
     display: none;
   }
   body main .popupHolder.submit-success .popup .content-wrapper .inf-content-mobila {
     display: none;
+  }
+  body main .popupHolder.submit-success .popup .success {
+    margin-top: 20px;
   }
   body main .popupHolder.submit-success .popup .success h1 {
     font-size: 22px;
