@@ -4,12 +4,8 @@ var EmotionalSpenderQuiz = {
   init: function(){
     this.startQuizListener()
     this.loadLeadGenCopyListener()
-    this.displayEmailInputListener()
-    this.mobileSignUpButtonListner()
-    this.submitEmailListener()
+    this.submitEmailAndNameListener()
     this.trackSocialShare()
-
-    this.submitEmailListener3()
   },
   sessionId: null,
   startQuizListener: function(){
@@ -17,7 +13,7 @@ var EmotionalSpenderQuiz = {
   },
   loadLeadGenCopyListener: function(){
     $('#loadLeadGen').click(function(){
-      mixpanel.track('Emotional Spender Quiz Show Lead Gen');
+      mixpanel.track('Emotional Spender Quiz Show More Content');
       $('.leadGenContent').show();
 
       $('.social_sp_block').animate({
@@ -39,112 +35,26 @@ var EmotionalSpenderQuiz = {
       }, 150)
     })
   },
-  mobileSignUpButtonListner: function(){
-    $('.mobile-signup-btn').click(function(e){
-      $('#submitEmailButton2').click()
-    })
-  },
-  displayEmailInputListener: function(){
-    $(".emotional-spender-quiz.start-btn").click(function() {
+  submitEmailAndNameListener: function(){
+    $('#spenderQuizEmailSubmission').on('submit', function(event){
+      event.preventDefault()
+      var email = $("#emailOfSpender").val();
+      var phone = "1" + $("#PhoneOfSpender").cleanVal();
+      var name = $("#NameOfSpender").val();
 
-      // ABTESTING emotional_spender_results
-      ABTesting.mixPanelTrack('Emotional Spender Quiz Show Email Input', {}, 'emotional_spender_results')
+      function successFunc(){
+        $(".spender-email-block" ).addClass("validation-complete");
+        mixpanel.track('Emotional Spender Show Result');
+      }
 
-      $(".start-btn").addClass("grow");
-      $('.sing-up-btn').addClass('active')
-
-      setTimeout(function(){
-        $(".start-btn").css('opacity', '0.0')
-        $('.input-holder input').focus()
-      }, 700);
-
-      setTimeout(function(){
-        $(".input-holder, .sing-up-btn").css('opacity', '1.0')
-        $(".start-btn").css('z-index', '-1')
-      }, 900)
-    });
-  },
-  submitEmailListener: function(){
-    $("#submitEmailButton2").click(function() {
-      var result = $('#emailInput2').val();
-      // ABTESTING emotional_spender_results
-      if ( ABTesting.currentExperiments['emotional_spender_results'] == 'short' ){
-        var successFunc = function(){
-          $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
-        }
+      function errorFunc(){
+        $(".email-block-holder" ).addClass("error-active");  
+      }
+      if (validateEmail(email) && phone.length && !isNaN(phone) && name.length) {
+        UserSignUps.submitData(name, phone, email, 'Emotional Spender Quiz Email Sign Up', null, false, EmotionalSpenderQuiz.sessionId, successFunc, errorFunc )
       } else {
-        var successFunc = function(){
-          $('#leadGenContent').fadeOut()
-          $('.welcom-content, .start_here-button-holder').addClass('active');
-        }
+        errorFunc()
       }
-
-      function error1Func(){
-        $('.start_here-button-holder, .welcome-content-erore-holder, .errore').addClass('active');
-      }
-      function error2Func(){
-        $('.start_here-button-holder, .welcome-content-erore-holder, .try-again-later').addClass('active');
-      }
-      function errorRefreshFunc(){
-        $('.start_here-button-holder, .welcome-content-erore-holder, .errore').removeClass('active');
-      }
-      var eventName = "Emotional Spender Quiz Email Sign Up"
-      EmailSignUps.submitEmail(result, eventName, successFunc, error1Func, error2Func, errorRefreshFunc);
-      EmotionalSpenderQuiz.submitEmailToClaspSubs(result)
-    })
-    $("#emailInput2").on('keyup', function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        $("#submitEmailButton2").click();
-      }
-    });
-  },
-  submitEmailListener3: function(){
-    $("#submitEmailButton3").click(function() {
-      var result = $('#emailInput3').val();
-      // ABTESTING emotional_spender_results
-      if ( ABTesting.currentExperiments['emotional_spender_results'] == 'short' ){
-        var successFunc = function(){
-          $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
-        }
-      } else {
-        var successFunc = function(){
-          $('#leadGenContent').fadeOut()
-          $('.welcom-content, .start_here-button-holder').addClass('active');
-        }
-      }
-
-      function error1Func(){
-        $('.start_here-button-holder, .welcome-content-erore-holder, .errore').addClass('active');
-      }
-      function error2Func(){
-        $('.start_here-button-holder, .welcome-content-erore-holder, .try-again-later').addClass('active');
-      }
-      function errorRefreshFunc(){
-        $('.start_here-button-holder, .welcome-content-erore-holder, .errore').removeClass('active');
-      }
-      var eventName = "Emotional Spender Quiz Email Sign Up"
-      EmailSignUps.submitEmail(result, eventName, successFunc, error1Func, error2Func, errorRefreshFunc);
-      EmotionalSpenderQuiz.submitEmailToClaspSubs(result)
-    })
-    $("#emailInput3").on('keyup', function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        $("#submitEmailButton3").click();
-      }
-    });
-  },
-  submitEmailToClaspSubs: function(email){
-    $.ajax({
-      url: apiUrl + '/spender_quiz_email_submissions',
-      method: 'post',
-      data: {
-        session_id: EmotionalSpenderQuiz.sessionId,
-        response: {
-          email: email
-        }
-      }
-    }).done(function(res){
     })
   },
   startQuiz: function(){
@@ -220,9 +130,11 @@ var EmotionalSpenderQuiz = {
     $('#resultImg').attr('src', './images/' + result.image + '.jpg');
     $('#resultTips').html(result.tips);
     $('#resultDesc').html(result.desc);
+    setTimeout(function(){
+      $('#NameOfSpender').focus()
+    }, 1000)
 
-    // ABTESTING emotional_spender_results
-    ABTesting.mixPanelTrack('Emotional Spender Show Result', {'result': result.title}, 'emotional_spender_results')
+    mixpanel.track('Emotional Spender Show Email Capture', {'result': result.title});
 
     changePageAnim('result_active', 'quiz_active');
   },
@@ -230,9 +142,7 @@ var EmotionalSpenderQuiz = {
     $('.social-shares a').on('click', function(e){
       var platform = $(this).data('platform')
 
-      // ABTESTING emotional_spender_results
-      ABTesting.mixPanelTrack('Emotional Spender Quiz Social Share', {'platform': platform}, 'emotional_spender_results')
-
+      mixpanel.track('Emotional Spender Quiz Social Share', {'platform': platform});
     })
   }
 };

@@ -1,9 +1,9 @@
 var LandingPage = {
   init: function(){
-    this.displayEmailInputListener()
-    this.submitEmailListener()
+    this.displayPhoneInputListener()
+    this.submitPhoneListener()
   },
-  displayEmailInputListener: function(){
+  displayPhoneInputListener: function(){
     $(".home-page.start-btn").click(function() {
       mixpanel.track('Home Page Show Email Input');
       $(".start-btn").addClass("grow");
@@ -16,32 +16,31 @@ var LandingPage = {
       setTimeout(function(){
         $(".input-holder, .sing-up-btn").css('opacity', '1.0')
         $(".start-btn").css('z-index', '-1')
+        $('.topText').addClass('show_instructions')
       }, 900)
     });
   },
-  submitEmailListener: function(){
-    $("#emailInput").on('keyup', function(event) {
+  submitPhoneListener: function(){
+    $("#phoneInput").on('keyup', function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
-        $("#submitEmailButton").click();
+        $("#submitPhoneButton").click();
       }
     });
-    $('#submitEmailButton').on('click', function() {
-      var email =  $('#emailInput').val();
+    $('#submitPhoneButton').on('click', function() {
+      var phone =  "1" + $('#phoneInput').cleanVal();
       function successFunc(){
         $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
       }
-      function error2Func(){
-        $('.start_here-button-holder, .try-again-later, .welcom-content').addClass('active');
-      }
-      function error1Func(){
+      function errorFunc(){
         $('.start_here-button-holder, .errore, .welcom-content').addClass('active');
+        setTimeout(function(){
+          $('.errore, .welcom-content, .start_here-button-holder ').removeClass('active');
+        }, 1000)
       }
-      function errorRefreshFunc(){
-        $('.errore, .welcom-content, .start_here-button-holder ').removeClass('active');
-      }
-      var eventName = "Website Email Sign Up"
-      EmailSignUps.submitEmail(email, eventName, successFunc, error1Func, error2Func, errorRefreshFunc);
+
+      var eventName = "Website Landing Page Sign Up"
+      UserSignUps.submitData(null, phone, null, eventName, null, true, null, successFunc, errorFunc);
     });
   },
 }

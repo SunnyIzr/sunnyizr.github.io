@@ -1,54 +1,60 @@
 var BlogSection = {
   init: function(){
-    this.togglePopupListener();
-    this.emailSubmitEventListener();
+    if( ($('#article-page').length > 0) ||  ($('.home-template').length > 0)){
+      this.togglePopupListener();
+      this.emailSubmitPopupEventListener();
+      this.emailSubmitBlockEventListener()
+    }
   },
-  emailSubmitEventListener: function(){
+  emailSubmitPopupEventListener: function(){
     $('#blogEmailSignup').on('submit', function(event){
       event.preventDefault()
       var email = $(this).find('input').val()
-      BlogSection.submitEmail(email)
+      BlogSection.submitEmail(email, true)
     })
   },
-  submitEmail: function(email){
-    EmailSignUps.submitEmail(email, 'Blog Email Sign Up', BlogSection.renderSuccess, BlogSection.renderError, BlogSection.renderError, BlogSection.renderError)
+  emailSubmitBlockEventListener: function(){
+    $('#bottomBlogEmailSignup').on('submit', function(event){
+      event.preventDefault()
+      var email = $(this).find('input').val()
+      BlogSection.submitEmail(email, false)
+    })
   },
-  togglePopupListener: function(){
-      if (!BlogSection.getCookie('claspblogemail')){
-        var timeout = setTimeout(function(){
-          BlogSection.togglePopup();
-          clearTimeout(timeout);
-          timeout = null;
-          BlogSection.setCookie()
-        // }, 15000);
-        }, 150);
-        $('.closeImg.togglePopup').on('click', BlogSection.togglePopup);
-        $('.sign-up.togglePopup').on('click',BlogSection.validate )
-      }
-    // }
-  }, 
-  validateEmail: function(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  },
-  validate: function(){    
-    var email = $("#artInput").val();
-    console.log(validateEmail(email))
-    if (validateEmail(email)){
-      BlogSection.renderSuccess();
-    }else{
-      BlogSection.renderError();
+  submitEmail: function(email, popup){
+    if (popup == true){
+      UserSignUps.submitData(null, null, email, 'Blog Email Sign Up', 'Pop Up', false, null, BlogSection.renderPopupSuccess, BlogSection.renderPopupError)
+    } else {
+      UserSignUps.submitData(null, null, email, 'Blog Email Sign Up', 'Bottom Block', false, null, BlogSection.renderBlockSuccess, BlogSection.renderBlockError)
     }
   },
+  togglePopupListener: function(){
+    if (!BlogSection.getCookie('claspblogemail')){
+      var timeout = setTimeout(function(){
+        BlogSection.togglePopup();
+        clearTimeout(timeout);
+        timeout = null;
+        BlogSection.setCookie()
+      }, 15000);
+      $('.closeImg.togglePopup').on('click', BlogSection.togglePopup);
+    }
+  }, 
   togglePopup: function(){
-    $('body').toggleClass('activePopup');
-    $('input[type=email]').focus()
+    if($('#article-page').length > 0){
+      $('body').toggleClass('activePopup');
+      $('input[type=email]').focus()
+    }
   },
-  renderSuccess: function(){
+  renderPopupSuccess: function(){
     $('.popupHolder').addClass('submit-success')
   },
-  renderError: function(){
+  renderPopupError: function(){
     $('.popupHolder').addClass('submit-error')
+  },
+  renderBlockSuccess: function(){
+    $(".afterSignUp").addClass("active");
+  },
+  renderBlockError: function(){
+    $('.signUpBlock').addClass('submit-error')
   },
   setCookie: function(){
     var now = new Date();
@@ -67,6 +73,14 @@ var BlogSection = {
         if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
     }
     return "";
+  },
+  trackSocialShare: function(){
+    $('#article-page .social-shares a').on('click', function(e){
+      var platform = $(this).data('platform')
+
+      mixpanel.track('Blog Social Share', {'platform': platform});
+
+    })
   }
 }
 

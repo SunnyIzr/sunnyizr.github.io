@@ -7,12 +7,13 @@ grunt.initConfig({
     dev: {
       mixpanelKey: '6dafb8fe83375b0d33e8abeae5036ac8',
       apiUrl: 'https://morning-tor-82718.herokuapp.com',
-      emailUrl: 'https://httpstat.us/200'
+      emailUrl: 'https://morning-tor-82718.herokuapp.com/website_submissions'
+      // emailUrl: 'https://httpstat.us/400'
     },
     prod: {
       mixpanelKey: '3c4e2180eea88822aa5664dfd53a162d',
       apiUrl: 'https://clasp-subs.herokuapp.com',
-      emailUrl: 'https://clasp-subs.herokuapp.com/email_submissions'
+      emailUrl: 'https://clasp-subs.herokuapp.com/website_submissions'
     }
   },
   watch: {

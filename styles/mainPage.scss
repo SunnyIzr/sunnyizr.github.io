@@ -17,6 +17,17 @@
               color: #565656;
               font-size: 19px;
             }
+            .instructions{
+              display: none;
+            }
+        }
+        .topText.show_instructions{
+          .instructions{
+            display: inline;
+          }
+          .initial{
+            display: none;
+          }
         }
         div{
             &:first-child{
