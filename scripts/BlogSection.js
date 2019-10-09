@@ -28,6 +28,7 @@ var BlogSection = {
     }
   },
   togglePopupListener: function(){
+    // if (true){
     if (!BlogSection.getCookie('claspblogemail')){
       var timeout = setTimeout(function(){
         BlogSection.togglePopup();
@@ -40,8 +41,15 @@ var BlogSection = {
   }, 
   togglePopup: function(){
     if($('#article-page').length > 0){
+      if ( $('body').hasClass('activePopup') ){
+        mixpanel.track('Blog Popup Off', {});
+      } else {
+        mixpanel.track('Blog Popup On', {});
+      }
       $('body').toggleClass('activePopup');
-      $('input[type=email]').focus()
+      if ( $(window).width() > 500 ){
+        $('.activePopup #blogEmailSignup input[type=email]').focus()
+      }
     }
   },
   renderPopupSuccess: function(){

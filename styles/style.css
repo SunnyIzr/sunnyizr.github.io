@@ -2328,6 +2328,7 @@ body .signUpBlock #bottomBlogEmailSignup {
 @media screen and (max-width: 900px) {
   body .signUpBlock #bottomBlogEmailSignup {
     text-align: center;
+    margin-top: 50px;
   }
 }
 body .signUpBlock input {

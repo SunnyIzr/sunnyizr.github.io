@@ -8,6 +8,7 @@ var EmotionalSpenderQuiz = {
     this.trackSocialShare()
   },
   sessionId: null,
+  result: null,
   startQuizListener: function(){
     $('#startQuiz, #startQuiz2').click(EmotionalSpenderQuiz.startQuiz);
   },
@@ -44,7 +45,10 @@ var EmotionalSpenderQuiz = {
 
       function successFunc(){
         $(".spender-email-block" ).addClass("validation-complete");
+        var result = EmotionalSpenderQuiz.result
+        mixpanel.people.set({ "Emotional Spender Result": result});
         mixpanel.track('Emotional Spender Show Result');
+        EmotionalSpenderQuiz.loadShareASalePixel()
       }
 
       function errorFunc(){
@@ -126,6 +130,8 @@ var EmotionalSpenderQuiz = {
     });
   },
   populatesResult: function(result){
+    resultTitle = result.title.toLowerCase().replace("you're a ", "")
+    EmotionalSpenderQuiz.result = resultTitle
     $('#resultTitle').text(result.title);
     $('#resultImg').attr('src', './images/' + result.image + '.jpg');
     $('#resultTips').html(result.tips);
@@ -144,5 +150,14 @@ var EmotionalSpenderQuiz = {
 
       mixpanel.track('Emotional Spender Quiz Social Share', {'platform': platform});
     })
+  },
+  loadShareASalePixel: function(){
+    var ssid = shareasaleGetCookie('shareasaleSSCID')
+    var lid = mixpanel.get_distinct_id()
+    $('body').append("<img src='https://www.shareasale.com/sale.cfm?tracking=" + lid + "&amount=0.00&merchantID=92256&transtype=lead&sscidmode=6&sscid=" + ssid + " width='1' height='1'>")
+    $.getScript("https://shareasale-analytics.com/j.js", function() {
+    });
   }
 };
+
+function shareasaleGetCookie(e){var r=e+"=";var a=decodeURIComponent(document.cookie);var o=a.split(";");for(var n=0;n<o.length;n++){var t=o[n];while(t.charAt(0)==" "){t=t.substring(1)}if(t.indexOf(r)==0){return t.substring(r.length,t.length)}}return""}
