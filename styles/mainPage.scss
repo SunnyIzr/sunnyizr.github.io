@@ -17,13 +17,25 @@
               color: #565656;
               font-size: 19px;
             }
-            .instructions{
+            .instructions,
+            .instructions2{
               display: none;
             }
         }
         .topText.show_instructions{
           .instructions{
             display: inline;
+          }
+          .initial{
+            display: none;
+          }
+        }
+        .topText.show_instructions2{
+          .instructions2{
+            display: inline;
+          }
+          .instructions{
+            display: none;
           }
           .initial{
             display: none;
@@ -273,6 +285,7 @@
         border-radius: 54px;
         border: 1px solid #979797;
         background-color: #ffffff;
+
     
         .sing-up-btn{
           display: block;
@@ -291,6 +304,9 @@
           outline: none;
           margin-right: 14px;
         }
+        .email-sign-up{
+          display: none;
+        }
         input{
           margin-left: 50px;
           width: 266px;
@@ -306,6 +322,18 @@
       .input-holder.active{
         display: flex;
         margin: auto;
+      }
+      .input-holder.show-email{
+        input{
+          display: none;
+        }
+        .sing-up-btn{
+          display: none;
+        }
+        .email-sign-up{
+          display: block;
+        }
+
       }
     }
     .start_here-button-holder.active{

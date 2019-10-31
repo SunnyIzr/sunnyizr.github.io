@@ -2760,13 +2760,23 @@ body .contentBlock .content .date {
   color: #565656;
   font-size: 19px;
 }
-.mainPage .topBlock .topText .instructions {
+.mainPage .topBlock .topText .instructions,
+.mainPage .topBlock .topText .instructions2 {
   display: none;
 }
 .mainPage .topBlock .topText.show_instructions .instructions {
   display: inline;
 }
 .mainPage .topBlock .topText.show_instructions .initial {
+  display: none;
+}
+.mainPage .topBlock .topText.show_instructions2 .instructions2 {
+  display: inline;
+}
+.mainPage .topBlock .topText.show_instructions2 .instructions {
+  display: none;
+}
+.mainPage .topBlock .topText.show_instructions2 .initial {
   display: none;
 }
 .mainPage .topBlock div:first-child {
@@ -3013,6 +3023,9 @@ body .contentBlock .content .date {
   outline: none;
   margin-right: 14px;
 }
+.mainPage .start_here-button-holder .input-holder .email-sign-up {
+  display: none;
+}
 .mainPage .start_here-button-holder .input-holder input {
   margin-left: 50px;
   width: 266px;
@@ -3027,6 +3040,15 @@ body .contentBlock .content .date {
 .mainPage .start_here-button-holder .input-holder.active {
   display: flex;
   margin: auto;
+}
+.mainPage .start_here-button-holder .input-holder.show-email input {
+  display: none;
+}
+.mainPage .start_here-button-holder .input-holder.show-email .sing-up-btn {
+  display: none;
+}
+.mainPage .start_here-button-holder .input-holder.show-email .email-sign-up {
+  display: block;
 }
 .mainPage .start_here-button-holder.active {
   display: none;

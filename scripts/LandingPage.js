@@ -2,6 +2,7 @@ var LandingPage = {
   init: function(){
     this.displayPhoneInputListener()
     this.submitPhoneListener()
+    this.submitEmailListener()
   },
   displayPhoneInputListener: function(){
     $(".home-page.start-btn").click(function() {
@@ -30,7 +31,10 @@ var LandingPage = {
     $('#submitPhoneButton').on('click', function() {
       var phone =  "1" + $('#phoneInput').cleanVal();
       function successFunc(){
-        $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
+        $('.topText').addClass('show_instructions2')
+        $('.input-holder').addClass('show-email')
+        $('#emailInput').focus()
+
       }
       function errorFunc(){
         $('.start_here-button-holder, .errore, .welcom-content').addClass('active');
@@ -43,4 +47,27 @@ var LandingPage = {
       UserSignUps.submitData(null, phone, null, eventName, null, true, null, successFunc, errorFunc);
     });
   },
+  submitEmailListener: function(){
+    $("#emailInput").on('keyup', function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#submitEmailButton").click();
+      }
+    });
+    $('#submitEmailButton').on('click', function() {
+      var email =  $('#emailInput').val()
+      function successFunc(){
+        $('.only-home-page, .welcom-content, .start_here-button-holder').addClass('active');
+      }
+      function errorFunc(){
+        $('.start_here-button-holder, .errore, .welcom-content').addClass('active');
+        setTimeout(function(){
+          $('.errore, .welcom-content, .start_here-button-holder ').removeClass('active');
+        }, 1000)
+      }
+
+      
+      UserSignUps.submitEmailAfterSignUp(email, successFunc, errorFunc);
+    });
+  }
 }

@@ -82,5 +82,19 @@ var UserSignUps = {
     }).error(function(){
       errorFunc()
     })
+  },
+  submitEmailAfterSignUp: function(email, successFunc, errorFunc){
+    $.ajax({
+      url: '@@emailUrl',
+      method: 'post',
+      data: {"website_submission": {"email": email}}
+    }).done(function(res){
+      successFunc()
+      trackingSubmission = {"email": email}
+      mixpanel.track("Website Landing Page Sign Up - Email", trackingSubmission);
+      mixpanel.people.set({ "$email": email });
+    }).error(function(){
+      errorFunc()
+    })
   }
 };
