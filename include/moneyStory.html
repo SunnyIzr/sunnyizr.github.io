@@ -1,0 +1,55 @@
+<div class="moneyStory-wrapper active">
+  <h2 class="tittle">Tell us your money story.</h2>
+
+  <div class="break-line"></div>
+
+  <p class="sub-tittle">To get your results and tips customized to your emotional</p>
+
+  <form id="nl-form" class="nl-form">
+    <div class="content-wrapper">
+      I am 
+      <input type="text" value="" placeholder="age" style="display: none;"/>
+      years ald living in 
+      <input type="text" value="" placeholder="state" style="display: none;" />
+      and i make 
+      <input type="text" value="" placeholder="annual income" style="display: none;"/>
+      a year. I am
+
+      <select style="display: none;">
+        <option value="1" selected>marital status</option>
+        <option value="2">single</option>
+        <option value="3">married</option>
+      </select>
+
+      and i
+
+      <select style="display: none;">
+        <option value="1" selected>home ownership status</option>
+        <option value="2">don't own a home</option>
+        <option value="3">own a home</option>
+      </select>.
+
+      I have
+      <input type="text" value="" placeholder="amount in savings" style="display: none;"/>
+      in savings.
+      <div class="nl-overlay"></div>
+    </div>
+
+    <div class="nl-submit-wrap">
+      <button class="nl-submit" id="submButton">SEE MY RESULTS!</button>
+    </div>
+  </form>
+</div>
+
+<script src="../scripts/modernizr.custom.js"></script>
+<script src="../scripts/nlform.js"></script>
+<script>
+  new NLForm(document.getElementById('nl-form'));
+
+
+  $('#submButton').on('click', function(e){
+    e.preventDefault();
+    $('.moneyStory-wrapper').removeClass('active');
+    $('.moneyResults-wrapper').addClass('active');
+  });
+</script>

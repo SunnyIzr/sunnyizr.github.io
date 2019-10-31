@@ -1,0 +1,12 @@
+include "head.html"
+<script>
+  var vars = {}
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    vars[key] = value;
+  });
+  var phone = vars['i']
+  mixpanel.identify(phone)
+  mixpanel.track('Testflight Link Clicked', {'testlink_url': 'https://testflight.apple.com/join/a7ilFfus'});
+  window.location='https://testflight.apple.com/join/a7ilFfus'
+</script>
+</html>

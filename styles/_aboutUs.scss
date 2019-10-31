@@ -1,0 +1,233 @@
+body{
+  .about-us-section{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: hidden;
+
+  
+    .nav-bar{
+      top: 0;
+      width: 100%;
+      position: fixed;
+      height: 100px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+      display: flex;
+      z-index: 9;
+      align-items: center;
+      justify-content: space-between;
+  
+      .logo-holder{
+        cursor: pointer;
+        display: flex;
+        margin-left: 40px;
+        align-items: center;
+  
+        img{
+          width: 48px;
+          height: 48px;
+        }
+  
+        .logo-text{
+          margin-left: 10px;
+          color: #8f8f8f;
+          font-family: Objektiv, serif;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+  
+      .switch-block{
+        margin-right: 56px;
+        display: flex;
+        align-items: center;
+  
+        .btn{
+          cursor: pointer;
+          position: relative;
+          margin-right: 35px;
+          color: #2f2f2f;
+          font-family: Objektiv, serif;
+          font-size: 16px;
+          font-weight: 400;
+  
+          &:last-child{
+            margin-right: 0px;   
+          }
+        }
+  
+        .btn.active{
+  
+          &:after{
+            content: "";
+            top: 23px;
+            left: 0;
+            position: absolute;
+            width: 50px;
+            height: 1px;
+            background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
+          }
+        }
+      }
+    }
+  
+    .content-block{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      max-width: 1024px;
+      margin: auto;
+      margin-top: 100px;  
+
+      .title{
+        width: 348px;
+        color: #2f2f2f;
+        font-family: Objektiv, serif;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 59px;
+        margin-bottom: 43px;
+        text-align: center;
+      }
+
+      .img-one,
+      .img-two{
+        width: 474px;
+        height: 330px;
+      }
+      .img-one{
+        margin-bottom: 58px;
+      }
+      .img-two{
+        margin-bottom: 94px;
+      }
+
+      .title-content{
+        position: relative;
+        color: #2f2f2f;
+        font-family: ObjektivBd, serif;
+        font-size: 24px;
+        font-weight: 700;
+
+        &:after{
+          content: "";
+          position: absolute;
+          top: 46px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          height: 2px;
+          background-image: linear-gradient(177deg, #ff5f93 0%, #fe8d45 100%);
+        }
+      }
+
+      .story-block{
+        display: flex;
+        justify-content: space-between;
+        width: 750px;
+        margin-top: 62px;
+        margin-bottom: 134px;
+        p{
+          width: 350px;
+          color: #2f2f2f;
+          font-family: Droid, serif;
+          font-size: 16px;
+          line-height: 27px;
+          span{
+            font-family: DroidBd,serif;
+          }
+          .only-for-mobila,
+          .not-for-mobila{
+            font-family: Droid,serif;
+          }
+          .only-for-mobila{
+            display: none;
+          }
+        }
+      }
+
+      .team-block{
+        display: flex;
+        width: 750px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        .sunny-block,
+        .katherine-block{
+          width: 313px;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          .img-border{
+            width: 180px;
+            height: 180px;
+            border-radius: 100%;
+            border: 1px solid #d8d8d8;
+            margin-bottom: 33px;
+          }
+          .name-holder{
+            color: #2f2f2f;
+            font-family: ObjektivBd, serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          .info-text{
+            margin-top: 41px;
+            color: #2f2f2f;
+            font-family: Droid, serif;
+            font-size: 16px;
+            line-height: 27px;
+          }
+          .team-holder{
+            width: 270px;
+            margin-top: 20px;
+            margin-bottom: 88px;
+            .team{
+              cursor: pointer;
+              color: #2f2f2f;
+              font-family: DroidBd, serif;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 20px;
+            }  
+          }
+        }
+        .sunny-block{
+          margin-right: 54px;
+        }
+        .katherine-block{
+          margin-left: 55px;
+        }
+        .vertical-line{
+          width: 1px;
+          height: 200px;
+          background-color: #d8d8d8;
+          margin-top: 120px;
+        }
+        
+      }
+
+    }
+  }
+  .about-us-section.active{
+    overflow: auto;
+  }
+}
+.horiz-line{
+  width: 150px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
+.horiz-line.special{
+  margin: auto;
+  margin-bottom: 27px;
+}
+.aboutPage{
+  overflow: auto;
+}
+.aboutPage.active{
+  overflow: hidden;
+}

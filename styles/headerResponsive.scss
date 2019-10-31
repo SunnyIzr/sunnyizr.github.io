@@ -1,0 +1,27 @@
+@media all and (max-width:780px){
+    body{
+        .nav-bar{
+            height: 60px;
+            .logo-holder{
+                margin-left: 22px;
+                img{
+                    width: 37px;
+                    height: 37px;
+                }
+                .logo-text{
+                    font-size:20px;
+                    margin-left: 5px;
+                }
+            }
+            .switch-block{
+                margin-right: 22px;
+                .btn{
+                    font-size:14px;
+                    &::after{
+                        top:21px;
+                    }
+                }
+            }
+        }
+    }
+}

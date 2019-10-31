@@ -1,0 +1,207 @@
+body.quiz_active{
+  div.indexPage{
+    height: calc(100vh);
+    padding-top: 0;
+  }
+}
+
+body.quiz_active,
+body.result_active{
+  .mainQuiz:not(.sp_type-block){
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.indexPage{
+  margin: 0;
+  padding: 0;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  overflow: hidden;
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
+
+  .mainQuiz{
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: auto;
+    background-size: 100%;
+    background-position: 0% 0%;
+    background-image: url(images/Background.png);
+    background-repeat: no-repeat;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #index{
+    height: 100%;
+    .headerLine.quizLine{
+      height: 17px;
+      background-color: #ffffff;
+
+      .orangeBlock{
+        width: 128px;
+        height: 17px;
+        background-color: #fe8d45;
+        transition: width .3s ease-in-out;
+      }
+    }
+
+    .mainQuiz{
+      .pagesNum{
+        height: 35px;
+        color: #908e8e;
+        font-family: Lato, serif;
+        font-size: 23px;
+        line-height: 31px;
+        text-align: center;
+        margin-top: 45px;
+        margin-bottom: 38px;
+      }
+
+      .contentInfo{
+        width: 662px;
+        color: #5a5a5a;
+        font-family: Objektiv, serif;
+        font-size: 18px;
+        line-height: 31px;
+        margin-bottom: 45px;
+        animation-name:slide-in-from-right;
+        animation-duration: 1s;
+
+        &.animText{
+          animation-name:slide-out-to-left;
+          animation-duration: 1s;
+          animation-delay: 1.5s;
+        }
+      }
+
+      .break-line{
+        width: 522px;
+        border: 1px solid #979797;
+        margin-bottom: 25px;
+      }
+
+      .chooseOne{
+        width: 100%;
+        color: #5a5a5a;
+        font-family: ObjektivIt, serif;
+        font-size: 16px;
+        line-height: 31px;
+        text-align: center;
+        margin-bottom: 22px;
+        font-style: italic;
+      }
+      .storeHolder{
+        .storeBlock{
+          opacity: 1;
+          cursor: pointer;
+          width: 547px;
+          height: 94px;
+          border-radius: 47px;
+          border: 1px solid rgba(213, 210, 210, 1);
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-bottom: 46px;
+          background: #fff;
+          animation-name: fade-in;
+          animation-duration: 2s;
+          p{
+            max-width: 340px;
+            min-width: 340px;
+            width: 340px;
+            color: #5a5a5a;
+            font-family: Objektiv, serif;
+            font-size: 16px;
+            line-height: 23px;
+            margin-left: 14px;
+            opacity: 1;
+          }
+
+          img{
+            width: 94px;
+            height: 94px;
+            opacity: 1;
+          }
+
+          &.active{
+            transition: all 0.5s;
+            border: 1px solid rgba(213, 210, 210, 0);
+            p{
+              opacity: 0;
+            }
+            img{
+              transition: all 1s;
+              margin-left: 50%;
+              transform: translateX(-50%);
+              opacity: 1;
+              animation-name: grow-img;
+              animation-duration: 2.5s;
+            }
+          }
+        }
+
+        &.active{
+          .storeBlock{
+            opacity: 0;
+            background: transparent;
+            border: 1px solid rgba(213, 210, 210, 0);
+            pointer-events: none;
+            transition: all 0.5s;
+
+            p{
+              opacity: 0;
+              transition: all 0.5s;
+            }
+            img{
+              opacity: 0;
+            }
+
+            &.active{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .exit-wrapper{
+    width: 100%;
+    position: relative;
+
+    .exit-holder{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 30px;
+    top: 38px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+      .exit-button{
+        height: 25px;
+        width: 2px;
+        background-color: #908e8e;
+        border-radius: 5px;
+        transform: rotate(45deg);
+
+        &::before{
+          content: "";
+          position: absolute;
+          height: 25px;
+          width: 2px;
+          background-color: #908e8e;
+          border-radius: 5px;
+          transform: rotate(-95deg);
+        }
+      }
+    }
+  }
+}
