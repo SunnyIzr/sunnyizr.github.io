@@ -47,6 +47,10 @@ body{
   opacity: 1;
   transition: opacity .3s ease-in-out;
 
+  button {
+    outline: none !important;
+  }
+
   &.cloak{
     opacity: 0;
   }

@@ -1,0 +1,80 @@
+<div class="moneyResults-wrapper">
+  <h2 class="tittle">Here are your results</h2>
+
+  <div class="break-line"></div>
+
+  <canvas id="myChart"></canvas>
+
+  <div class="chartBar-description">
+    <div class="line"></div>
+    <p class="info">*Based on Federal Reserve Survey of Consumer Finances </p>
+  </div>
+
+  <div class="text-wrapper">
+    <p class="subtitle">
+      You’re saving less than your peers. That’s okay you’re so close to get on track, let’s work together!
+    </p>
+
+    <p class="content">
+      You are a social spender. Whether it is due to the fear of missing out or peer pressure from your friends
+      you can’t help but spend money in social situations. Social spenders will make every effort to be included 
+      in nights out, trips, and events. Even if you don’t have the money set aside for that vacation with your 
+      besties you will move money around to make it work.
+    </p>
+  </div>
+
+  <div class="nl-submit-wrap">
+    <button class="nl-submit" type="submit">START HERE</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Your savings', 'Your peers*', 'Recommended',],
+        datasets: [{
+          backgroundColor: '#d8d8d8',
+          borderColor: 'rgb(255, 99, 132)',
+          data: [500, 7500, 20500]
+        }]
+      },
+
+      // Configuration options go here
+      options: {
+        legend:{
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [{
+            display: false,
+            gridLines: {
+              display: false
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              display: false,
+              drawBorder: false
+            }
+          }]
+        },
+        plugins: {
+          datalabels: {
+            align: 'top',
+            anchor: 'end',
+            formatter: function(value) {
+              return "$" + value;
+            }
+          }
+        }
+      }
+    });
+  </script>
+</div>

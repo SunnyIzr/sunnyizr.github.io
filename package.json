@@ -4,6 +4,8 @@
   "description": "Clasp Quiz",
   "main": "index.js",
   "dependencies": {
+    "chart.js": "^2.9.1",
+    "chartjs-plugin-datalabels": "0.7.0",
     "grunt": "~0.4.4",
     "grunt-contrib-sass": "~0.7.3"
   },
