@@ -14,22 +14,5 @@ $(document).ready(function(){
   LandingPage.init()
   EmotionalSpenderQuiz.init()
   ABTesting.init()
-
-  // article js
-  if($('#article-page').length){
-  } else {
-    // aboutUs js
-    // $('.team').click(function() {
-    //   $('.nav-bar, .aboutPage').addClass('active');
-    //   $('.bio-section.' + this.dataset.member).addClass('active');
-    //   $('.about-us-section.active').removeClass('active');
-    //   // $('html, body').animate({ scrollTop : 0 }, 0);
-    // });
-
-    // $('.back-btn').click(function() {
-    //   $('.bio-section.active, .nav-bar.active, .aboutPage.active').removeClass('active');
-    //   $('.about-us-section').addClass('active');
-    // });
-    
-  }
+  AboutPage.init()
 });

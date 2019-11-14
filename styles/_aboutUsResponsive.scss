@@ -30,7 +30,7 @@
         }
         .content-block{
           .title{
-            margin-top: 38px;
+            margin-top: 0px;
             margin-bottom: 39px;
             font-size: 18px;
             width: 261px;
@@ -55,8 +55,9 @@
           .story-block{
             flex-flow: column;
             align-items: center;
-            margin-bottom: 88px;
+            margin-bottom: 20px;
             width: unset;
+            margin-top: 35px;
 
             p{
               font-size: 14px;
@@ -76,6 +77,24 @@
           .team-block{
             flex-flow: column;
             width: unset;
+
+            .sunny-block,
+            .katherine-block{
+              .info-text{
+                font-size: 14px;
+                line-height: 27px;
+                margin-top: 20px;
+              }
+              .img-border{
+                margin-bottom: 5px;
+              }
+              .team-holder{
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 45px;
+              }
+            }
+
 
             .sunny-block{
               margin-right: 0;

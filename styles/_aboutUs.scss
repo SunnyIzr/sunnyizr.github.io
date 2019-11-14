@@ -81,20 +81,21 @@ body{
       margin-top: 100px;  
 
       .title{
-        width: 348px;
-        color: #2f2f2f;
+        width: 400px;
+        color: #4a4a4a;
         font-family: Objektiv, serif;
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 400;
         margin-top: 59px;
         margin-bottom: 43px;
         text-align: center;
       }
 
-      .img-one,
+      .img-one{
+        width: 600px;
+      }
       .img-two{
-        width: 474px;
-        height: 330px;
+        width: 600px
       }
       .img-one{
         margin-bottom: 58px;
@@ -105,7 +106,7 @@ body{
 
       .title-content{
         position: relative;
-        color: #2f2f2f;
+        color: #4a4a4a;
         font-family: ObjektivBd, serif;
         font-size: 24px;
         font-weight: 700;
@@ -127,10 +128,10 @@ body{
         justify-content: space-between;
         width: 750px;
         margin-top: 62px;
-        margin-bottom: 134px;
+        margin-bottom: 60px;
         p{
           width: 350px;
-          color: #2f2f2f;
+          color: #565656;
           font-family: Droid, serif;
           font-size: 16px;
           line-height: 27px;
@@ -165,10 +166,13 @@ body{
             height: 180px;
             border-radius: 100%;
             border: 1px solid #d8d8d8;
-            margin-bottom: 33px;
+            margin-bottom: 18px;
+            img{
+              width: 100%;
+            }
           }
           .name-holder{
-            color: #2f2f2f;
+            color: #4a4a4a;
             font-family: ObjektivBd, serif;
             font-size: 18px;
             font-weight: 700;
@@ -176,18 +180,18 @@ body{
           }
           .info-text{
             margin-top: 41px;
-            color: #2f2f2f;
+            color: #565656;
             font-family: Droid, serif;
             font-size: 16px;
             line-height: 27px;
           }
           .team-holder{
-            width: 270px;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 88px;
             .team{
               cursor: pointer;
-              color: #2f2f2f;
+              color: #4a4a4a;
               font-family: DroidBd, serif;
               font-size: 16px;
               font-weight: 700;

@@ -1,5 +1,6 @@
 .mainPage{
     margin:142px auto;
+    margin-bottom: 0;
     .topBlock{
         text-align:center;
         margin-top: 45px;
@@ -162,6 +163,8 @@
         display:flex;
         margin: 115px auto 175px;
         max-width: 1024px;
+        margin-top: 50px;
+        margin-bottom: 65px;
 
         div{
             &:first-child{
@@ -179,15 +182,18 @@
               margin-bottom: 17px;
               font-size: 16px;
               line-height: 27px;
+              color: #565656;
             }
             span{
                 &:first-child{
                     font-size: 24px;
                     font-family: ObjektivBd, serif;
+                    color: #4a4a4a;
                 }
                 &:last-child{
                     font-family: DroidBd, serif;
                     font-size: 18px;
+                    color: #4a4a4a;
                 }
             }
             .breakLine{

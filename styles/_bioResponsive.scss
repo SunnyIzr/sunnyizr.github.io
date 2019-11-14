@@ -6,6 +6,23 @@
           width: 270px;
           .head-block{
             width: 270px;
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+          .img-border{
+            width: 180px;
+            height: 180px;
+            margin-bottom: 10px;
+          }
+          .question-content{
+            h4{
+              font-size: 14px;
+              line-height: 27px;
+            }
+            p{
+              font-size: 14px;
+              line-height: 27px;
+            }
           }
         }
         .img-conteiner{
