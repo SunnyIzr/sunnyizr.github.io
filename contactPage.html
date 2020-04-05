@@ -84,86 +84,29 @@
 
     </div>
 
-    <div class="pressPage">
-      <h3 class="title-content">PRESS</h3>
-      <div class="press-block-wrapper">
+    <div class="contactWrapper">
+      <h3 class="title-content">CONTACT</h3>
 
-        <div class="press-block">
-          <div class="press-content">
-            <div class="content-logo">
-              <img src="./images/life-and-money-logo.svg">
-            </div>
-            <div class="content-text">
-              “Clasp can help you make sense of how you feel about money, 
-              your emotional triggers, and your most influential financial 
-              role models — all necessary pre-work to help you think more 
-              critically about how to match your money with your values.”
-            </div>
-          </div>
-
-          <div class="press-author">
-            <div class="author-name">
-              Kara Stevens
-            </div>
-            <div class="publisher">
-              Life and Money by Citi
-            </div>
-            <div class="date">
-              Feb 26, 2020
-            </div>
-          </div>
+      <div id="contact-body">
+        <div class="contact-email contact-block"  id="contactEmailBlock">
+          <span class="email-title">Email</span>
+          <input id="contactValidEmail" class="android-input" />
+          <img class="email-delete delete-text" src="./icons/icon-clear-field.svg" />
         </div>
 
-        <div class="press-block">
-          <div class="press-content">
-            <div class="content-logo">
-              <img src="./images/bi-blue-background-horizontal@3x.jpg">
-            </div>
-            <div class="content-text">
-              “100 hours of talking to millennials about money 
-              showed most of them want one of 2 things: financial 
-              freedom or homeownership”
-            </div>
-          </div>
-
-          <div class="press-author">
-            <div class="author-name">
-              Liz Knueven
-            </div>
-            <div class="publisher">
-              Business Insider
-            </div>
-            <div class="date">
-              Feb 25, 2020
-            </div>
-          </div>
+        <div class="contact-name contact-block" id="contactNameBlock">
+          <span class="name-title">Name</span>
+          <input id="contactName" class="name-input" />
+          <img class="name-delete delete-text" src="./icons/icon-clear-field.svg" />
         </div>
 
-        <div class="press-block">
-          <div class="press-content">
-            <div class="content-logo">
-              <img src="./images/bi-blue-background-horizontal@3x.jpg">
-            </div>
-            <div class="content-text">
-              “100 hours of talking to millennials about money 
-              showed most of them want one of 2 things: financial 
-              freedom or homeownership”
-            </div>
-          </div>
-
-          <div class="press-author">
-            <div class="author-name">
-              Liz Knueven
-            </div>
-            <div class="publisher">
-              Business Insider
-            </div>
-            <div class="date">
-              Feb 25, 2020
-            </div>
-          </div>
+        <div class="contact-massage contact-block"  id="contactMessageBlock">
+          <span class="message-title">Message</span>
+          <textarea id="contactMassage" class="message-input"></textarea>
+          <img class="message-delete delete-text" src="./icons/icon-clear-field.svg" />
         </div>
-
+        
+        <button class="valid-button">SEND</button>
       </div>
     </div>
 
@@ -189,10 +132,10 @@
       <p class='copyright believe'>You are good with money</p>
       <img src="./images/heart.svg">
     </div>
-      
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="script.min.js"></script>
-
+    
     <script>
       mixpanel.track('Page Visit', {'where': 'About Page'});
     </script>
