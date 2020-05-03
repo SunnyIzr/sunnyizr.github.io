@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>
@@ -60,7 +74,7 @@
 </head>
 
 
-  <body>
+  <body data-page='contact'>
     <div class="new-nav-bar">
       <div class="social-block">
         <a href="https://www.instagram.com/clasp_app/" target="_blank">
@@ -88,6 +102,15 @@
       <h3 class="title-content">CONTACT</h3>
 
       <div id="contact-body">
+        <div class="successBox">
+          <div class="img-holder">
+            <img src="./icons/icon-success.svg">
+          </div>
+          <div class="successBox-text">
+            Sent! We usually get back to you within a day.
+          </div>
+        </div>
+
         <div class="contact-email contact-block"  id="contactEmailBlock">
           <span class="email-title">Email</span>
           <input id="contactValidEmail" class="android-input" />
@@ -102,11 +125,28 @@
 
         <div class="contact-massage contact-block"  id="contactMessageBlock">
           <span class="message-title">Message</span>
-          <textarea id="contactMassage" class="message-input"></textarea>
+          <textarea id="contactMessage" class="message-input"></textarea>
           <img class="message-delete delete-text" src="./icons/icon-clear-field.svg" />
         </div>
         
         <button class="valid-button">SEND</button>
+
+        <div class="btn-loader">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -131,6 +171,21 @@
       <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
       <p class='copyright believe'>You are good with money</p>
       <img src="./images/heart.svg">
+    </div>
+
+    <div class="cookie-block-wrapper disable">
+      <div class="cookie-body">
+        <div class="cookie-text">
+            We use cookies to ensure that we give you the 
+            best experience on our website. By continuing 
+            to use our site, you accept our cookie policy.
+            <a class="cookie-link">View cookie policy.</a>
+        </div>
+        <div class="cookie-btn-wrapper">
+          <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
+          <a class="cookie-link-btn">View cookie policy</a>
+        </div>
+      </div> 
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

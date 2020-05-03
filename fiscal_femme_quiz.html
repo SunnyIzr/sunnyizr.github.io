@@ -73,55 +73,159 @@
   
 </head>
 
-
-  <body>
-
-    <div class="androidPage">
-      <div class="header">
-        <div class="back-block">
-          <a class="back-btn" onclick="LandingPage.backBtn()">
-            <div class="back-arrow"></div>
-          </a>
-          <p class="back-text">
-            BACK
-          </p>
-        </div>
+<body data-page='fiscal-femme-quiz'>
+  <div class="fiscal-quiz-page">
+  	<div class="logo-border">
+  		<div class="logo-white-block">
+        <img class="fiscal-logo active" src="./icons/icon-question.svg"/>
+        <img class="fiscal-end-logo" src="./icons/icon-wait.svg"/>
       </div>
-      <div id="android-body">
-        <img class="android" src="./icons/icon-android.svg">
-          <div class="android-email">
-            <span class="email-title">Email</span>
-            <input id="androidValid" class="android-input" onclick="LandingPage.emailActive()"/>
-            <img class="email-delete" src="./icons/icon-clear-field.svg" onclick="LandingPage.emailDelete()"/>
+  	</div>
+    <div class="content-wrapper">
+      <div class="buy-this-block active">
+          <div class="buy-title">
+            Should i buy this?
           </div>
-          
-          <button class="valid-email" onclick="LandingPage.addWaitListBtnActive()">Add me to the waitlist</button>
-
-          <div class="btn-loader">
-            <div class="lds-spinner">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+          <div class="buy-brakeLine"></div>
+          <div class="buy-subtitle">
+            PRESENTED BY
+          </div>
+          <div class="companyBlock">
+            <img class="fiscal-img" src="./icons/logo-ff.jpg"/>
+            <div class="plusBlock">+</div>
+            <img class="clasp-img" src="./icons/egg-logo-bright.svg"/>
+          </div>
+          <div class="buy-text">
+            Deciding whether or not to buy something? 
+            Before making the purchase, go through our 
+            five question quiz. You'll get our recommendation 
+            in the results so you can feel confident about 
+            your spending decision. 
+          </div>
+          <button class="buyStart" onclick="FiscalFemmeQuiz.startFiscalQuizBtn()">START</button>
+      </div>
+    
+      <div class="quiz-questions-block">
+        <div class="question active">
+            <p class="quiz-titleBlock"></p>
+    
+            <div class="questionTitle">
+              
+            </div>
+    
+            <div class="questionValBlock" data-question="Four">
             </div>
         </div>
       </div>
+    
+      <div class="quiz-end-block">
+        <div class="quizEndSubtitle">
+          Our Recommendation
+        </div>
+        <div class="buy-title">
+          
+        </div>
+        <div class="buy-brakeLine"></div>
+        <div class="varEnd">
+          <div class="varEndTitle">
+            Mood
+          </div>
+          <div class="moodRecap varEndAnswer">
+            
+          </div>
+    
+          <div class="varEndTitle">
+            Timeliness
+          </div>
+          <div class="timelinessRecap varEndAnswer">
+            
+          </div>
+    
+          <div class="varEndTitle">
+            Other Goals
+          </div>
+          <div class="goalsRecap varEndAnswer">
+            
+          </div>
+    
+          <div class="varEndTitle">
+            Gut Check
+          </div>
+          <div class="gutRecap varEndAnswer">
+            
+          </div>
+        </div>
+        <div class="buy-text">
+          
+        </div>
+        <div class="buy-subtitle">
+          More from
+        </div>
+        <div class="companyBlock">
+          <img class="fiscal-img" src="./icons/logo-ff.jpg"/>
+          <div class="plusBlock">+</div>
+          <img class="clasp-img" src="./icons/egg-logo-bright.svg"/>
+        </div>
+        <div class="tips-block">
+          <div class="tips-title">
+            Get more tips for mindful spending
+          </div>
+          <div class="endInputBlock">
+            <input type="email" placeholder="EMAIL">
+          </div>
+          <button class="singUp-btn">
+            SIGN UP
+          </button>
+          <div class="tips-block-subtitle">
+            You’ll be added to the Fiscal Femme email list and get timely, practical financial tips. 
+            No junk, no spam.
+          </div>
+    
+        </div>
+        <div class="DownloadClaspBlock">
+          <div class="Download-title">
+            Download Clasp
+          </div>
+          <div class="Download-subtitle">
+            Achieve goals you never thought possible - one step at a time
+          </div>
+          <button class="Download-btn">
+            Text Me the App
+          </button>
+    
+          <div class="mobilOnly">
+            <img src="./images/apple.svg"/>
+          </div>
+          <div class="imgTitle">
+            Find out more
+          </div>
+          <div class="phoneImgBlock">
+            <img src="./images/hero-i-phone-x-clay@3x.png">
+          </div>
+        </div>
+        <footer>
+          <div class="footer-brakeLine"></div>
+          <div class="footer-lightText">
+            Copyright ©2020 Clasp Inc. All rights reserved.
+          </div>
+          <div class="footer-Text">
+            You are good with money
+          </div>
+          <div class="footer-img">
+            <img src="./images/heart.svg">
+          </div> 
+        </footer>
+      </div>
     </div>
-      
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="script.min.js"></script>
+  	
+  </div>
 
-    <script>
-      mixpanel.track('Page Visit', {'where': 'About Page'});
-    </script>
-  </body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="script.min.js"></script>
+
+  <script>
+    mixpanel.track('Page Visit', {'where': 'Fiscal Femme Quiz'});
+  </script>
+</body>
 
 </html>

@@ -9,6 +9,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>

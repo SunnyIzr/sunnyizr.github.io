@@ -73,14 +73,67 @@
   
 </head>
 
-<script>
-  var vars = {}
-  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-    vars[key] = value;
-  });
-  var phone = vars['i']
-  mixpanel.identify(phone)
-  mixpanel.track('Testflight Link Clicked', {'testlink_url': 'https://testflight.apple.com/join/a7ilFfus'});
-  window.location='https://testflight.apple.com/join/a7ilFfus'
-</script>
+
+  <body class="privacyPage">
+    <div class="nav-bar">
+            <a class="logo-holder" href="/">
+              <img src="./images/Logo.png">
+              <p class="logo-text">clasp</p>
+            </a>
+          
+            <div class="switch-block">
+              <div class="btn"><a href="./about.html">about</a></div>
+              <div class="btn"><a href="/blog/">blog</a></div>
+            </div>
+    </div>
+
+    <div class="privacy-policy-block">
+      <div class="privacy-policy-content-holder">
+        <h3>
+          CLASP COMPLAINTS POLICY
+        </h3>
+      
+        <p>
+          Updated: March 21, 2020
+        </p>
+      
+        <p>The goal of Clasp Inc. (the Company) "Complaints Policy" is to be responsive to our customers and to quickly and fairly address all concerns or complaints they may have. We are always striving to improve the Company's level of service and seek to build strong relationships with our customers. The Company recognizes our customers' right to make a complaint about any aspect of their experience in dealing with the Company's where that customer's interests appear to have been adversely affected. The Company acknowledges that demonstrating a high caliber of customer service is paramount and our policies will be based on respect for our customers. It is the policy of the Company to handle all customer complaints with care and to resolve these matters promptly and, when applicable, within regulatory requirements.
+        </p>
+      
+        <p>In striving for a high caliber of customer service, here are the goals the Company is committed to:
+          <ul>
+            <li>Listen to the customer's point of view</li>
+            <li>Respect the customer at all times</li>
+            <li>Ensure that the Company responds to the customer in a timely fashion</li>
+            <li>Provide clarity on the services the Company provides</li>
+          </ul>
+        </p>
+
+        <p>
+          <span class="count-header">Complaints Process</span> 
+          Customers should direct all complaints and concerns to the Clasp Team by emailing <a style='display:inline;' href='mailto:hello@clasp.app'>hello@clasp.app</a>. Once the Company receives initial outreach a case will be created internally and assigned to a case manager. The case manager will respond to the customer within 3 business days of the initial complaint. The case manager will attempt to resolve the complaint within the first contact, when possible.
+        </p>
+
+        <p>
+        The Company remains dedicated to pursuing a resolution for each complaint that is in the best interest of all parties involved. </p>
+      </div>
+    </div>
+
+    <div class="horiz-line special"></div>
+    <div id='footer'>
+      <div class='social-icons'>
+        <div class='social-icon'><a target="_blank" href='https://www.instagram.com/clasp_app/'><i class="fab fa-instagram"></i></a></div>
+        <div class='social-icon'><a target="_blank" href='https://www.facebook.com/clasptheapp/'><i class="fab fa-facebook-square"></i></a></div>
+        <div class='social-icon'><a target="_blank" href='https://twitter.com/clasp_app'><i class="fab fa-twitter-square"></i></a></div>
+      </div>
+      <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
+      <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
+      <p class='copyright believe'>At Clasp, we believe in you</p>
+      <img src="./images/Heart.png">
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="script.min.js"></script>
+  </body>
+
 </html>

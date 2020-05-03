@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>
@@ -87,7 +101,7 @@
     <div class="about-us-section active">
       <div class="content-block">
 
-        <h3 class="title-content">Our Team</h3>
+        <h3 class="title-content">Founding Team</h3>
 
         <div class="team-block">
           <div class="sunny-block">
@@ -159,11 +173,6 @@
             an inkling of a new idea emerged. However, Sunny wanted to test this
             new idea and sought advice on how to interview people about their
             finances. 
-            <br><br>
-            And so Sunny was connected to Katherine through a mutual
-            friend. Katherine was intrigued by Sunny's desire to learn and place empathy
-            at the core of his idea. Too many times founders are scared to be
-            wrong, and here was someone who practically invited it.
             <br><br>
             We connected  through a mutual friend. Katherine was intrigued by Sunny's 
             desire to learn and place empathy at the core of his idea. Too many times 
@@ -249,7 +258,10 @@
           <span>Financial Wellness = Emotional Wellness</span>
           <br><br>
           
-          At Clasp, we believe financial wellness and emotional wellness are intertwined. To get to the heart of financial matters involves getting to the heart of what drives us: our emotions.
+          At Clasp, we believe financial wellness and emotional wellness are intertwined. 
+          To get to the heart of financial matters involves getting to the heart of what 
+          drives us: our emotions.
+          <br><br>
         </p>
 
         <p>
@@ -270,186 +282,231 @@
     </div>
 
     <div class="bio-section kate">
+
+      <div class="head-block">
+        <div class="back-block">
+          <div class="back-btn">
+            <div class="back-arrow"></div> 
+          </div>
+          <p class="back-text">BACK</p>
+        </div>
+      </div>
+
       <div class="bio-popup">
-          <div class="question-block">
-              <div class="head-block">
-                <div class="back-btn">
-                  <img src="./images/arrow.png">
-                  <p>BACK</p>
-                </div>
-                <div class="title-content">
-                  Our Team
-                </div>
-              </div>
-              <div class="img-border">
-                  <img src="./images/Katherine.png">
-              </div>
-              <p class="name-holder">Katherine Kendall</p>
-              <div class="horiz-line"></div>
-              <div class="question-content">
-                <h4>Why did you start Clasp?</h4>
-                <p>For me, financial apps always focused on "other" 
-                  people who had their finances completely optimized 
-                  and figured out. But if you're not one of those 
-                  "others", financial apps can be overwhelming and sad. 
-                  I wanted to get away from the "you can't" and "you shouldn't" 
-                  and more into helping people understand themselves. It's not 
-                  bad to buy something, as long as that reason is thoughtful 
-                  and purposeful. Being in control of your finances doesn't 
-                  mean you can't ever buy anything; it means you understand 
-                  why you're spending.</p>
-          
-                <h4>Why did you choose to work with Sunny?</h4>
-                <p>Sunny is just that - Sunny! He's always bright 
-                  and optimistic; no challenge is too great. Any time 
-                  I have a new idea, he listens with an open mind. We 
-                  get each other; and yet we balance each other out.</p>
-          
-                <h4>What is your money story?</h4>
-                <p>I've always had a complicated relationship with money, 
-                  and as a result have a mix of good habits and not-so-good 
-                  habits. Money was never really discussed directly when I was 
-                  growing up, so a lot of what I know, I've had to learn on my own. 
-                  I've made a lot of big mistakes before I discovered what works 
-                  for me. I define success as knowing yourself and unpacking your 
-                  bad habits; <span>why did I do that?</span> It's tough work, but on the 
-                  upside you understand how to forgive yourself, recognize 
-                  your good habits, and build from there.</p>
-          
-                <h4>What's your spending style?</h4>
-                <p>I'm definitely not a minimalist, and I'm definitely not a "stuff" 
-                  person. I'm a frivolist! I'm a sucker for ridiculous items that 
-                  make me laugh. I bought a series of tiny poseable plastic skeletons 
-                  from Japan and I pose them in a few potted plants around my house. 
-                  Are they necessary? Absolutely not! Do they make me smile every 
-                  time I see them? Yes! Are they worth it? YES!</p>
-          
-                <h4>What's your best money hack?</h4>
-                <p style='margin-bottom: 50px;'>Honestly, giving myself a monthly allowance has been the most helpful. 
-                  I basically automate a monthly allowance to a separate account and that 
-                  is my fun money - shoes or dining out with friends…whatever I want. 
-                  But it needs to come out of that account. Plus if I sell something 
-                  or earn anything extra, I put it back into my fun money account.</p>
-              </div>
-    <!--           <div class="fin-arr">
-                  My #financialarrangements
-              </div> -->
-              <!-- <div class="horiz-line"></div> -->
+        <div class="question-block">
+          <div class="img-border">
+              <img src="./images/Katherine.png">
+          </div>
+          <p class="name-holder">Katherine Kendall</p>
+          <p class="work-light-text">Co-Founder</p>
+          <div class="horiz-line"></div>
+          <div class="question-content">
+            <h4>Why did you start Clasp?</h4>
+            <p>For me, financial apps always focused on "other" 
+              people who had their finances completely optimized 
+              and figured out. But if you're not one of those 
+              "others", financial apps can be overwhelming and sad. 
+              I wanted to get away from the "you can't" and "you shouldn't" 
+              and more into helping people understand themselves. It's not 
+              bad to buy something, as long as that reason is thoughtful 
+              and purposeful. Being in control of your finances doesn't 
+              mean you can't ever buy anything; it means you understand 
+              why you're spending.</p>
+      
+            <h4>Why did you choose to work with Sunny?</h4>
+            <p>Sunny is just that - Sunny! He's always bright 
+              and optimistic; no challenge is too great. Any time 
+              I have a new idea, he listens with an open mind. We 
+              get each other; and yet we balance each other out.</p>
+      
+            <h4>What is your money story?</h4>
+            <p>I've always had a complicated relationship with money, 
+              and as a result have a mix of good habits and not-so-good 
+              habits. Money was never really discussed directly when I was 
+              growing up, so a lot of what I know, I've had to learn on my own. 
+              I've made a lot of big mistakes before I discovered what works 
+              for me. I define success as knowing yourself and unpacking your 
+              bad habits; <span>why did I do that?</span> It's tough work, but on the 
+              upside you understand how to forgive yourself, recognize 
+              your good habits, and build from there.</p>
+      
+            <h4>What's your spending style?</h4>
+            <p>I'm definitely not a minimalist, and I'm definitely not a "stuff" 
+              person. I'm a frivolist! I'm a sucker for ridiculous items that 
+              make me laugh. I bought a series of tiny poseable plastic skeletons 
+              from Japan and I pose them in a few potted plants around my house. 
+              Are they necessary? Absolutely not! Do they make me smile every 
+              time I see them? Yes! Are they worth it? YES!</p>
+      
+            <h4>What's your best money hack?</h4>
+            <p style='margin-bottom: 50px;'>Honestly, giving myself a monthly allowance has been the most helpful. 
+              I basically automate a monthly allowance to a separate account and that 
+              is my fun money - shoes or dining out with friends…whatever I want. 
+              But it needs to come out of that account. Plus if I sell something 
+              or earn anything extra, I put it back into my fun money account.</p>
+          </div>
+
+          <div class="title-k">Katherine’s Financial Arrangement</div>
+          <div class="horiz-line"></div>
+          <div class="fin-img-block">
+            <img src="../deploy/images/financial-arrangement@2x.jpg">
+          </div>
+
+          <div class="wallet-block">
+            <p class="wallet-title">My phone case is my wallet, with a few extras tucked in:</p>
+
+            <h1 class="wallet-subtitle">
+              1. Mobile
+            </h1>
+            <p class="wallet-text">
+              I have an iPhone;  the lock screen is my dear dog Lolly
+            </p>
+
+            <h1 class="wallet-subtitle">
+              2. Financial EDC (Every Day Carry)
+            </h1>
+            <ul class="wallet-list">
+              <li>Debit card for joint account with husband</li>
+              <li>Debit card for my personal account</li>
+              <li>Airline loyalty credit card for business expenses</li>
+              <p>(FINE sometimes I put a pair of shoes on them)</p>
+              <li>Drivers license</li>
+              <p>(I really wish I could smile in this photo)</p>
+            </ul>
+
+            <h1 class="wallet-subtitle">
+              3. 	&#36;20  bill 
+            </h1>
+            <p class="wallet-text">
+              I never carry much cash with me but there are times when I need it. bioKatherine.html0 is enough to cover most small-sized emergencies (usually tipping)
+            </p>
+
+            <h1 class="wallet-subtitle">
+              4. Metrocard and Bus Ticket
+            </h1>
+            <p class="wallet-text">
+              Also file under: emergency
+            </p>
+
+            <h1 class="wallet-subtitle">
+              5. “Zoltar Speaks” Fortune
+            </h1>
+            <p class="wallet-text">
+              From a boardwalk arcade game in Santa Monica. 
+              I was with my husband on the boardwalk and tucked 
+              it into my wallet. The fortune is not particularly 
+              meaningful; in fact it reads like an artificial 
+              intelligence program wrote it. Maybe I’m scared 
+              to throw it away?
+            </p>
+
+            <h1 class="wallet-subtitle">
+              6. Note from Son
+            </h1>
+            <p class="wallet-text">
+              Drawn for me when he was six years old. 
+              I would tuck notes into his lunchbox and he 
+              decided I should have one too. I believe it 
+              is a cat from Neko Atsume along with a rhebus 
+              message - “I love you infinity”
+            </p>
+
+            <h1 class="wallet-subtitle">
+              7. Postage Stamps
+            </h1>
+            <p class="wallet-text">
+              Carryover habit from my mom. How many times do 
+              you really need a postage stamp? More often than 
+              you think you do. Plus, you’re an instant hero to 
+              your friends and work colleagues.  
+            </p>
+          </div>
+        </div>
+
+        
+          <div class="new-footer-menu">
+            <div>
+              <a href="">press</a>
             </div>
-     <!--        <div class="img-conteiner">
-              <img src="./images/IG_Wallet.png">
-            </div> -->
-     <!--        <div class="my-phone">
-              <p>My phone case is my wallet, with a few extras tucked in:</p>
-              <ol>
-                <li>iPhone</li>
-                <p>I have an iPhone 8; the lock screen is my dear dog Lolly</p>
-                <li class="to-top">Financial EDC (Every Day Carry)</li>
-                <ul>
-                  <li>- Debit card for joint account with husband</li>
-                  <li>- Debit card for my personal account</li>
-                  <li>- Airline loyalty credit card for business expenses
-                    <br> 
-                      (FINE sometimes I put a pair of shoes on them)
-                  </li>
-                  <li>- Drivers license<br>
-                      (I really wish I could smile in this photo)</li>
-                </ul>
-                <li class="to-top">bioKatherine.html0 bill</li>
-                <p>
-                  I never carry much cash with me but 
-                  there are times when I need it. bioKatherine.html0 
-                  is enough to cover most small-sized 
-                  emergencies (usually tipping)
-                </p>
-                <li class="to-top">Metrocard and Bus Ticket</li>
-                <p>Also file under: emergency</p>
-                <li class="to-top">Zoltar Speaks Fortune</li>
-                <p>
-                  From a boardwalk arcade game in Santa Monica. 
-                  I was with my husband on the boardwalk and tucked 
-                  it into my wallet. The fortune is not particularly 
-                  meaningful; in fact it reads like an artificial 
-                  intelligence program wrote it. Maybe 
-                  I'm scared to throw it away?
-                </p>
-                <li class="to-top">Note from Son</li>
-                <p>Drawn for me when he was six years old. 
-                  I would tuck notes into his lunchbox and 
-                  he decided I should have one too. I believe 
-                  it is a cat from Neko Atsume along with a 
-                  rhebus message - "I love you infinity"
-                </p>
-                <li class="to-top">Postage Stamps</li>
-                <p>
-                  Carryover habit from my mom. How many times 
-                  do you really need a postage stamp? More often 
-                  than you think you do. Plus, you're an instant 
-                  hero to your friends and work colleagues.
-                </p>
-              </ol>
-            </div> -->
-            <div class="horiz-line special"></div>
-            <div id='footer'>
-              <div class='social-icons'>
-                <div class='social-icon'><a target="_blank" href='https://www.instagram.com/clasp_app/'><i class="fab fa-instagram"></i></a></div>
-                <div class='social-icon'><a target="_blank" href='https://www.facebook.com/clasptheapp/'><i class="fab fa-facebook-square"></i></a></div>
-                <div class='social-icon'><a target="_blank" href='https://twitter.com/clasp_app'><i class="fab fa-twitter-square"></i></a></div>
-              </div>
-              <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
-              <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
-              <p class='copyright believe'>At Clasp, we believe in you</p>
-              <img src="./images/Heart.png">
+            <div>
+              <a href="mailto:hello@clasp.app">contact us</a>
             </div>
+            <div>
+              <a href="./privacy-policy.html">privacy policy</a>
+            </div>
+            <div>
+              <a href="./terms-of-service.html">terms & conditions</a>
+            </div>
+          </div>
+
+          <div class="horiz-line special"></div>
+
+          <div id='newFooter'>
+            <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+            <p class='copyright believe'>You are good with money</p>
+            <img src="./images/heart.svg">
+          </div>
       </div> 
     </div>
 
     <div class="bio-section sunny">
-      <div class="bio-popup"> 
-          <div class="question-block">
-              <div class="head-block">
-                <div class="back-btn">
-                  <img src="./images/arrow.png">
-                  <p>BACK</p>
-                </div>
-                <div class="title-content">
-                  Our Team
-                </div>
-              </div>
-              <div class="img-border">
-                  <img src="./images/Sunny.png">
-              </div>
-              <p class="name-holder">Sunny Israni</p>
-              <div class="horiz-line"></div>
-              <div class="question-content">
-                <h4>Why did you start Clasp?</h4>
-                <p>For me this is personal. When my last company failed, I went from making a lot of money to drowning in business debt in a short amount of time. And that feeling of powerlessness is something I think about a lot as it really clouded my perspective in trying to find a path forward out of what seemed like an impossible situation. Ultimately, I was able to get myself out and redefine my approach to money, an approach that is more self-aware and empowering. My reasons for starting Clasp is to help others redefine their relationship with money in a holistic way that is honest and rooted in emotional self-awareness.</p>
-          
-                <h4>Why did you choose to work with Katherine?</h4>
-                <p>Katherine is one of the most thoughtful women I know. She has this ability to take a problem and deconstruct it to a much deeper level in a way I would have never even thought. When building this company it was so important for me to collaborate with someone who has a deeper perspective on the world and Katherine has just that. I thoroughly enjoy working with her.</p>
-          
-                <h4>What is your money story?</h4>
-                <p>Since my parents were immigrant entrepreneurs, we moved around quite a bit (internationally) and I experienced a lot of income volatility growing up. Because of this, I've always been acutely aware of the relationship between finances and emotional well-being.  But after my last company failed pretty badly in 2016, I hit rock bottom financially, and it was at this point I really felt the weight of how money problems can create a tremendous emotional burden. And while I've since recovered both financially and emotionally, I strongly believe that managing your own personal finances is inherently an emotional process. And honoring that link between money and mindset is paramount to redefining financial behavior.</p>
-          
-                <h4>What's your spending style?</h4>
-                <p>My spending style can be summed up in one word, seasonal. If you look at my credit card statements, you'd be convinced that entirely different humans are using my cards during the summer versus the colder months. And that's because generally during the year, I'm a workaholic and when I'm in the zone, I just don't have time to spend money. But during summer, all bets are off and I totally let loose. I'm super inclined to buy that extra round of drinks or that pricey pair of sunglasses because YOLO!</p>
-          
-                <h4>What's your best money hack?</h4>
-                <p style='margin-bottom: 50px;'>I used to have this terrible habit of spending while I was sad. What took months of disciplined savings would be wiped out in a single evening shopping spree after a bad day. So I promised myself I would kick this habit, I mean it's okay for me to feel sad about a bad day but it's not okay for me to be destructive about it. My solution? I keep a list on the notes app in my phone of ten free things I can do when I'm feeling sad. And I promise myself that whenever I'm feeling sad, I would do at least 5 of the things on the list *before* making any financial purchases. And so far, I've only had one bad shopping spree in the past year!</p>
-              </div>
+
+      <div class="head-block">
+        <div class="back-block">
+          <div class="back-btn">
+            <div class="back-arrow"></div> 
+          </div>
+          <p class="back-text">BACK</p>
+        </div>
+      </div>
+
+      <div class="bio-popup">
+        <div class="question-block">
+            <div class="img-border">
+                <img src="./images/Sunny.png">
             </div>
-            <div class="horiz-line special"></div>
-            <div id='footer'>
-              <div class='social-icons'>
-                <div class='social-icon'><a target="_blank" href='https://www.instagram.com/clasp_app/'><i class="fab fa-instagram"></i></a></div>
-                <div class='social-icon'><a target="_blank" href='https://www.facebook.com/clasptheapp/'><i class="fab fa-facebook-square"></i></a></div>
-                <div class='social-icon'><a target="_blank" href='https://twitter.com/clasp_app'><i class="fab fa-twitter-square"></i></a></div>
-              </div>
-              <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
-              <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
-              <p class='copyright believe'>At Clasp, we believe in you</p>
-              <img src="./images/Heart.png">
+            <p class="name-holder">Sunny Israni</p>
+            <p class="work-light-text">Co-Founder, CEO</p>
+            <div class="horiz-line"></div>
+            <div class="question-content">
+              <h4>Why did you start Clasp?</h4>
+              <p>For me this is personal. When my last company failed, I went from making a lot of money to drowning in business debt in a short amount of time. And that feeling of powerlessness is something I think about a lot as it really clouded my perspective in trying to find a path forward out of what seemed like an impossible situation. Ultimately, I was able to get myself out and redefine my approach to money, an approach that is more self-aware and empowering. My reasons for starting Clasp is to help others redefine their relationship with money in a holistic way that is honest and rooted in emotional self-awareness.</p>
+        
+              <h4>Why did you choose to work with Katherine?</h4>
+              <p>Katherine is one of the most thoughtful women I know. She has this ability to take a problem and deconstruct it to a much deeper level in a way I would have never even thought. When building this company it was so important for me to collaborate with someone who has a deeper perspective on the world and Katherine has just that. I thoroughly enjoy working with her.</p>
+        
+              <h4>What is your money story?</h4>
+              <p>Since my parents were immigrant entrepreneurs, we moved around quite a bit (internationally) and I experienced a lot of income volatility growing up. Because of this, I've always been acutely aware of the relationship between finances and emotional well-being.  But after my last company failed pretty badly in 2016, I hit rock bottom financially, and it was at this point I really felt the weight of how money problems can create a tremendous emotional burden. And while I've since recovered both financially and emotionally, I strongly believe that managing your own personal finances is inherently an emotional process. And honoring that link between money and mindset is paramount to redefining financial behavior.</p>
+        
+              <h4>What's your spending style?</h4>
+              <p>My spending style can be summed up in one word, seasonal. If you look at my credit card statements, you'd be convinced that entirely different humans are using my cards during the summer versus the colder months. And that's because generally during the year, I'm a workaholic and when I'm in the zone, I just don't have time to spend money. But during summer, all bets are off and I totally let loose. I'm super inclined to buy that extra round of drinks or that pricey pair of sunglasses because YOLO!</p>
+        
+              <h4>What's your best money hack?</h4>
+              <p style='margin-bottom: 50px;'>I used to have this terrible habit of spending while I was sad. What took months of disciplined savings would be wiped out in a single evening shopping spree after a bad day. So I promised myself I would kick this habit, I mean it's okay for me to feel sad about a bad day but it's not okay for me to be destructive about it. My solution? I keep a list on the notes app in my phone of ten free things I can do when I'm feeling sad. And I promise myself that whenever I'm feeling sad, I would do at least 5 of the things on the list *before* making any financial purchases. And so far, I've only had one bad shopping spree in the past year!</p>
             </div>
+        </div>
+        <div class="new-footer-menu">
+          <div>
+            <a href="">press</a>
+          </div>
+          <div>
+            <a href="mailto:hello@clasp.app">contact us</a>
+          </div>
+          <div>
+            <a href="./privacy-policy.html">privacy policy</a>
+          </div>
+          <div>
+            <a href="./terms-of-service.html">terms & conditions</a>
+          </div>
+        </div>
+
+        <div class="horiz-line special"></div>
+
+        <div id='newFooter'>
+          <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+          <p class='copyright believe'>You are good with money</p>
+          <img src="./images/heart.svg">
+        </div>
       </div>
     </div>
 
@@ -474,6 +531,21 @@
       <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
       <p class='copyright believe'>You are good with money</p>
       <img src="./images/heart.svg">
+    </div>
+
+    <div class="cookie-block-wrapper disable">
+      <div class="cookie-body">
+        <div class="cookie-text">
+            We use cookies to ensure that we give you the 
+            best experience on our website. By continuing 
+            to use our site, you accept our cookie policy.
+            <a class="cookie-link">View cookie policy.</a>
+        </div>
+        <div class="cookie-btn-wrapper">
+          <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
+          <a class="cookie-link-btn">View cookie policy</a>
+        </div>
+      </div> 
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
