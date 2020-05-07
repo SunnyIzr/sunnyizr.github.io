@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>
@@ -62,15 +76,26 @@
 
 <body>
   <div class="nav-bar">
-          <a class="logo-holder" href="/">
-            <img src="./images/Logo.png">
-            <p class="logo-text">clasp</p>
-          </a>
-        
-          <div class="switch-block">
-            <div class="btn"><a href="./about.html">about</a></div>
-            <div class="btn"><a href="/blog/">blog</a></div>
-          </div>
+    <div class="social-block">
+      <a href="https://www.instagram.com/clasp_app/" target="_blank">
+        <img src="./images/icon-instagram.svg" alt="instagram">
+      </a>
+      <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+        <img src="./images/icon-twitter.svg" alt="twitter">
+      </a>
+      <a href="https://twitter.com/clasp_app" target="_blank">
+        <img src="./images/icon-facebook.svg" alt="facebook">
+      </a>
+    </div>
+    <a class="logo-holder" href="/">
+      <img src="./images/sm-logo-wordmark.svg">
+    </a>
+
+    <div class="switch-block">
+      <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+      <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+    </div>
+
   </div>
 
   <!-- <header>
@@ -117,7 +142,7 @@
           101 class, I was pumped! I studiously calculated how much a
            single    would be worth by the time I retired—assuming a 
            12% rate of return and factoring in the 100% match, it would
-            be worth a whopping $326 I discovered. Holy crap! What if 
+            be worth a <a href='#'>this is a link</a>whopping $326 I discovered. Holy crap! What if 
             I had   ,000 in there, that would be more than $300k. And what 
             about $5,000? Well, that would put me over a million dollars!</p> 
 
@@ -354,12 +379,27 @@
   </div>
 
 
+  <div id="prefooter" class='prefooter-menu'>
+    <div>
+      <a href="">press</a>
+    </div>
+    <div>
+      <a href="mailto:hello@clasp.app">contact us</a>
+    </div>
+    <div>
+      <a href="./privacy-policy.html">privacy policy</a>
+    </div>
+    <div>
+      <a href="./terms-of-service.html">terms & conditions</a>
+    </div>
+  </div>
+
   <div class="horiz-line special"></div>
+
   <div id='footer'>
-    <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
-    <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
-    <p class='copyright believe'>At Clasp, we believe in you</p>
-    <img src="./images/Heart.png">
+    <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+    <p class='copyright believe'>You are good with money</p>
+    <img src="./images/heart.svg">
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

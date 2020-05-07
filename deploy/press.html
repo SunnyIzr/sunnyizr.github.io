@@ -74,7 +74,7 @@
 </head>
 
 
-  <body class="privacyPage">
+  <body class='press' data-page='press'>
     <div class="nav-bar">
       <div class="social-block">
         <a href="https://www.instagram.com/clasp_app/" target="_blank">
@@ -98,35 +98,86 @@
 
     </div>
 
-    <div class="privacy-policy-block">
-      <div class="privacy-policy-content-holder">
-        <h3>
-          CLASP COMPLAINTS POLICY
-        </h3>
-      
-        <p>
-          Updated: March 21, 2020
-        </p>
-      
-        <p>The goal of Clasp Inc. (the Company) "Complaints Policy" is to be responsive to our customers and to quickly and fairly address all concerns or complaints they may have. We are always striving to improve the Company's level of service and seek to build strong relationships with our customers. The Company recognizes our customers' right to make a complaint about any aspect of their experience in dealing with the Company's where that customer's interests appear to have been adversely affected. The Company acknowledges that demonstrating a high caliber of customer service is paramount and our policies will be based on respect for our customers. It is the policy of the Company to handle all customer complaints with care and to resolve these matters promptly and, when applicable, within regulatory requirements.
-        </p>
-      
-        <p>In striving for a high caliber of customer service, here are the goals the Company is committed to:
-          <ul>
-            <li>Listen to the customer's point of view</li>
-            <li>Respect the customer at all times</li>
-            <li>Ensure that the Company responds to the customer in a timely fashion</li>
-            <li>Provide clarity on the services the Company provides</li>
-          </ul>
-        </p>
+    <div class="pressPage">
+      <h3 class="title-content">PRESS</h3>
+      <div class="press-block-wrapper">
 
-        <p>
-          <span class="count-header">Complaints Process</span> 
-          Customers should direct all complaints and concerns to the Clasp Team by emailing <a style='display:inline;' href='mailto:hello@clasp.app'>hello@clasp.app</a>. Once the Company receives initial outreach a case will be created internally and assigned to a case manager. The case manager will respond to the customer within 3 business days of the initial complaint. The case manager will attempt to resolve the complaint within the first contact, when possible.
-        </p>
+        <div class="press-block">
+          <div class="press-content">
+            <div class="content-logo">
+              <img src="./images/life-and-money-logo.svg">
+            </div>
+            <div class="content-text">
+              “Clasp can help you make sense of how you feel about money, 
+              your emotional triggers, and your most influential financial 
+              role models — all necessary pre-work to help you think more 
+              critically about how to match your money with your values.”
+            </div>
+          </div>
 
-        <p>
-        The Company remains dedicated to pursuing a resolution for each complaint that is in the best interest of all parties involved. </p>
+          <div class="press-author">
+            <div class="author-name">
+              Kara Stevens
+            </div>
+            <div class="publisher">
+              Life and Money by Citi
+            </div>
+            <div class="date">
+              Feb 26, 2020
+            </div>
+          </div>
+        </div>
+
+        <div class="press-block">
+          <div class="press-content">
+            <div class="content-logo">
+              <img src="./images/bi-blue-background-horizontal@3x.jpg">
+            </div>
+            <div class="content-text">
+              “100 hours of talking to millennials about money 
+              showed most of them want one of 2 things: financial 
+              freedom or homeownership”
+            </div>
+          </div>
+
+          <div class="press-author">
+            <div class="author-name">
+              Liz Knueven
+            </div>
+            <div class="publisher">
+              Business Insider
+            </div>
+            <div class="date">
+              Feb 25, 2020
+            </div>
+          </div>
+        </div>
+
+        <div class="press-block">
+          <div class="press-content">
+            <div class="content-logo">
+              <img src="./images/bi-blue-background-horizontal@3x.jpg">
+            </div>
+            <div class="content-text">
+              “100 hours of talking to millennials about money 
+              showed most of them want one of 2 things: financial 
+              freedom or homeownership”
+            </div>
+          </div>
+
+          <div class="press-author">
+            <div class="author-name">
+              Liz Knueven
+            </div>
+            <div class="publisher">
+              Business Insider
+            </div>
+            <div class="date">
+              Feb 25, 2020
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -167,9 +218,13 @@
         </div>
       </div> 
     </div>
-
+      
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="script.min.js"></script>
+
+    <script>
+      mixpanel.track('Page Visit', {'where': 'About Page'});
+    </script>
   </body>
 
 </html>

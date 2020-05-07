@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143751468-1');
+  </script>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '496561561079511');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=496561561079511&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- MixPanel Tracking Code -->
+  <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+  0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+  for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+  MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+  mixpanel.init("6dafb8fe83375b0d33e8abeae5036ac8");</script>
+
+  <!-- End MixPanel Tracking Code -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico">
+
+  <title>Clasp &#8226; Be brilliant with your money</title>
+
+  <link href='style.min.css' rel='stylesheet' type='text/css'>
+  
+  <meta name="description" content="Clasp provides financial tools that bring mindfulness to your spending. We believe in you."/>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bad25507da.js"></script>
+
+  
+  <!-- <meta property="og:image" content="images/hero-graphic-mobile.png" /> -->
+
+  <!-- AlephBet -->
+  <script type="text/javascript" src="./scripts/alephbet.min.js"></script>
+  
+</head>
+
+
+<body id='fiscal-femme-body' data-page='fiscal-femme-quiz'>
+  <div id='fiscal-quiz-page' class="fiscal-quiz-page">
+    <div class="logo-border" id="progressBarContainner">
+      <div class="logo-white-block">
+        <img class="fiscal-logo active" src="./icons/icon-question.svg"/>
+        <img class="fiscal-end-logo" src="./icons/icon-wait.svg"/>
+      </div>
+    </div>
+    
+    <div class="content-wrapper">
+      <div class="buy-this-block active">
+          <div class="buy-title">
+            Should I buy this?
+          </div>
+          <div class="buy-brakeLine"></div>
+          <div class="buy-subtitle">
+            PRESENTED BY
+          </div>
+          <div class="companyBlock">
+            <img class="fiscal-img" src="./icons/logo-ff.jpg"/>
+            <div class="plusBlock">+</div>
+            <img class="clasp-img" src="./icons/egg-logo-bright.svg"/>
+          </div>
+          <div class="buy-text">
+            Deciding whether or not to buy something? 
+            Before making the purchase, go through our 
+            five question quiz. You'll get our recommendation 
+            in the results so you can feel confident about 
+            your spending decision. 
+          </div>
+          <button class="buyStart" onclick="FiscalFemmeQuiz.startFiscalQuizBtn()">START</button>
+      </div>
+
+      <div class="quiz-questions-block">
+        <div class="question active">
+            <p class="quiz-titleBlock"></p>
+
+            <div class="questionTitle">
+              
+            </div>
+
+            <div class="questionValBlock" data-question="Four">
+            </div>
+        </div>
+      </div>
+
+      <div class="quiz-end-block">
+        <div class="quizEndSubtitle">
+          Our Recommendation
+        </div>
+        <div class="buy-title">
+          
+        </div>
+        <div class="buy-brakeLine"></div>
+        <div class="varEnd">
+          <div class="varEndTitle">
+            Mood
+          </div>
+          <div class="moodRecap varEndAnswer">
+            
+          </div>
+
+          <div class="varEndTitle">
+            Timeliness
+          </div>
+          <div class="timelinessRecap varEndAnswer">
+            
+          </div>
+
+          <div class="varEndTitle">
+            Other Goals
+          </div>
+          <div class="goalsRecap varEndAnswer">
+            
+          </div>
+
+          <div class="varEndTitle">
+            Gut Check
+          </div>
+          <div class="gutRecap varEndAnswer">
+            
+          </div>
+        </div>
+        <div class="buy-text">
+          
+        </div>
+        <div class="buy-subtitle">
+          More from
+        </div>
+        <div class="companyBlock">
+          <img class="fiscal-img" src="./icons/logo-ff.jpg"/>
+          <div class="plusBlock">+</div>
+          <img class="clasp-img" src="./icons/egg-logo-bright.svg"/>
+        </div>
+        <div class="tips-block">
+          <div class="tips-title">
+            Get more tips for mindful spending
+          </div>
+          <div class="endInputBlock">
+            <input id="fiscalValid" type="email" placeholder="EMAIL" onclick="FiscalFemmeQuiz.submitEmailToFf()">
+          </div>
+          <div class="buttonHolder">
+            <div class="singedUpText">You have successfully signed up!</div>
+            <button class="singUp-btn" onclick="FiscalFemmeQuiz.activeFiscalBtn()">
+              SIGN UP
+            </button>
+
+            <div class="btn-loaderFiscal">
+              <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>  
+          <div class="tips-block-subtitle">
+            You’ll be added to the Fiscal Femme email list and get timely, practical financial tips. 
+            No junk, no spam.
+          </div>
+
+        </div>
+        <div class="DownloadClaspBlock">
+          <div class="Download-title">
+            Download Clasp
+          </div>
+          <div class="Download-subtitle">
+            Achieve goals you never thought possible - one step at a time
+          </div>
+         
+          <div class="start_here-button-holder actualHomePage">
+            <button class="iosButton" onclick="LandingPage.iosBtn()">
+              <span class="iosButton-text">Text Me the App</span>
+              <span class="iosButton-textGrow">Text the link</span>
+            </button>
+
+            <div class="phoneNumber-block">
+              <div class="phoneNumWrapper">
+                <input type="text" placeholder="US Mobile Phone" id="phoneNum" autofocus="autofocus">
+              </div>
+              
+              <button class="link-num-btn" onclick="LandingPage.submitPhone('ff_quiz')">
+                Text the link
+              </button>
+            </div>
+            
+            <div class="btn-loader">
+                <div class="lds-spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+            </div>
+
+            <div class="sentTo-block">
+              text sent to <span class="phoneNumVal"></span>  
+            </div>
+          </div>
+
+          <div class="mobilOnly">
+            <img src="./images/apple.svg"/>
+          </div>
+          <div class="imgTitle">
+            <a href="./home_new.html">
+              Find out more
+            </a>  
+          </div>
+          <div class="phoneImgBlock">
+            <img src="./images/hero-i-phone-x-clay@3x.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="script.min.js"></script>
+
+  <script>
+    mixpanel.track('Page Visit', {'where': 'Fiscal Femme Quiz'});
+  </script>
+</body>
+
+</html>

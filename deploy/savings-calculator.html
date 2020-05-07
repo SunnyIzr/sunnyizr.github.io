@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>
@@ -60,23 +74,59 @@
 </head>
 
 
-<body class="savingPage">
+<body class="savingPage" data-page='savings-calculator'>
   <div class="nav-bar">
-          <a class="logo-holder" href="/">
-            <img src="./images/Logo.png">
-            <p class="logo-text">clasp</p>
-          </a>
-        
-          <div class="switch-block">
-            <div class="btn"><a href="./about.html">about</a></div>
-            <div class="btn"><a href="/blog/">blog</a></div>
-          </div>
+    <div class="social-block">
+      <a href="https://www.instagram.com/clasp_app/" target="_blank">
+        <img src="./images/icon-instagram.svg" alt="instagram">
+      </a>
+      <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+        <img src="./images/icon-twitter.svg" alt="twitter">
+      </a>
+      <a href="https://twitter.com/clasp_app" target="_blank">
+        <img src="./images/icon-facebook.svg" alt="facebook">
+      </a>
+    </div>
+    <a class="logo-holder" href="/">
+      <img src="./images/sm-logo-wordmark.svg">
+    </a>
+
+    <div class="switch-block">
+      <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+      <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+    </div>
+
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="script.min.js"></script>
 
-  <div class="moneyStory-wrapper active">
+  <div class="intro-wrapper active">
+    <h2 class="tittle">Are you saving enough?</h2>
+    
+    <div class="break-line"></div>
+
+    <div class="content-wrapper">
+      <p class="content">
+        Are you saving enough? Based on the Survey of Consumer Finances conducted by the Federal Reserve,
+        the amount you have in savings is directly related to your age, where you live, how much you make, 
+          your marital status and whether or not you own a home. Find out how much others have stashed away in
+          savings in your peer group.
+      </p>
+      <p class="content">
+        We believe that money isn't talked about enough. So our goal is to increase transparency. Let's start the conversation around money.
+      </p>
+    </div>
+    
+    <div class="nl-submit-wrap">
+      <button class="nl-submit" id="submitIntroButton">START HERE</button>
+    </div>
+  </div>
+    
+     
+
+
+  <div class="moneyStory-wrapper">
     <h2 class="tittle">Tell us your money story.</h2>
 
     <div class="break-line"></div>
@@ -85,139 +135,134 @@
     <form id="nl-form" class="nl-form">
       <div class="content-wrapper">
         I am 
-        <input type="text" value="" placeholder="age" style="display: none;"/>
+        <input name='age' type="text" value="" placeholder="age" style="display: none;"/>
         years ald living in the
-        <select style="display: none;">
+        <select name='region' style="display: none;">
           <option value="1" selected>region</option>
-          <option value="Northeast">Northeast</option>
-          <option value="Midwest">Midwest</option>
-          <option value="West">West</option>
-          <option value="South">South</option>
+          <option value="northeast">Northeast</option>
+          <option value="midwest">Midwest</option>
+          <option value="west">West</option>
+          <option value="south">South</option>
         </select>
         and I make
-        <input type="text" value="" placeholder="income" style="display: none;"/>
-        a year. I am
+        <input name='income' type="text" value="" placeholder="income" style="display: none;"/>
+        dollars per year. I am
 
-        <select style="display: none;">
+        <select name='marital_status' style="display: none;">
           <option value="1" selected>marital status</option>
-          <option value="2">single</option>
-          <option value="3">married</option>
+          <option value="single">single</option>
+          <option value="married">married</option>
         </select>
 
         and I
 
-        <select style="display: none;">
+        <select name='home_ownership' style="display: none;">
           <option value="1" selected>home ownership status</option>
-          <option value="2">don't own a home</option>
-          <option value="3">own a home</option>
+          <option value="renter">don't own a home</option>
+          <option value="owner">own a home</option>
         </select>.
 
         I have
-        <input type="text" value="" placeholder="this much" style="display: none;"/>
-        in savings.
+        <input type="text" name='current_savings' value="" placeholder="this much" style="display: none;"/>
+        dollars in savings.
         <div class="nl-overlay"></div>
       </div>
 
       <div class="nl-submit-wrap">
-        <button class="nl-submit" id="submButton">SEE MY RESULTS!</button>
+        <button class="nl-submit" id="submButton">GET ANALYSIS</button>
       </div>
     </form>
   </div>
 
-  <script src="../scripts/modernizr.custom.js"></script>
-  <script src="../scripts/nlform.js"></script>
+  <script src="./scripts/modernizr.custom.js"></script>
+  <script src="./scripts/nlform.js"></script>
   <script>
-    new NLForm(document.getElementById('nl-form'));
-
-
-    $('#submButton').on('click', function(e){
-      e.preventDefault();
-      $('.moneyStory-wrapper').removeClass('active');
-      $('.moneyResults-wrapper').addClass('active');
-    });
+    
   </script>
 
 
   <div class="moneyResults-wrapper">
-    <h2 class="tittle">Here are your results</h2>
+      <h2 class="tittle">Here is the analysis.</h2>
 
-    <div class="break-line"></div>
+      <div class="flex-wrapper">
+        <div class="chart-wrapper">
+          <canvas id="myChart"></canvas>
+    
+          <div class="chartBar-description">
+            <div class="line"></div>
+            <p class="info">*Based on Federal Reserve Survey of Consumer Finances </p>
+          </div>
+        </div>
+    
+        <div class="text-wrapper">
+          <p class="savings-performance-copy subtitle">
+            You’re saving less than your peers. Let’s get you on track, and make this happen!
+          </p>
+          <div class="break-line"></div>
+          <p class="content">
+            How much you have in savings depends on a lot of factors. So it can often be confusing and even discouraging when thinking about making sure you have enough stocked away for a rainy day. But setting the intention with a clear goal in mind is a great start. And just as important, changing your mindset around money as well as your approach to bad spending habits is sure to be fruitful.
+          </p>
+        </div>
+      </div>
+      <div class='border-line'></div>
+      <div class="content-wrapper bottom-content">
+        <div class="text-wrapper">
+          <p class="subtitle">
+              We Can Help.
+          </p>
+          <p class="content">
+            We get it. It's hard to be financially responsible. Especially when millions of marketing dollars are being spent every day to convince you to buy stuff you don’t need. But what if among all these messages convincing you to blow all your hard earned cash, you had at least one force on your side to keep you grounded financially. A solution that is focused on making sure you’re spending money more intentionally. And that's what we're doing at Clasp. We've been working on a solution we're super excited about for nearly a year now and have been refining it as we've been testing with some early users.
+          </p>
+          <p class='content'>
+            We're striving to make this a powerful influence that can put you on the right track. Start below. It’s free.
+          </p>
+        </div>
+      </div>
+      <div class='mainPage'>
+        <div class='topBlock'>
+          <div class="topText">
+            <p>
+                <span class='initial'>
+                  &nbsp; &nbsp;
+                </span>
+                <span class='instructions'>
+                    We'll text you a link to download.
+                </span>
+                <span class='instructions2'>
+                    Provide us your email address.
+                </span>
+            </p>
+          </div>
+          <div class="start_here-button-holder savingsCalc">
+            <button class="start-btn home-page active centerButton">START HERE</button>
 
-    <canvas id="myChart"></canvas>
+            <div class="input-holder active">
+              <input type="tel" id="phoneInput" class='phone_us' placeholder="Enter your phone number">
+              <button class="sing-up-btn" id="submitPhoneButton">LET'S GO</button>
+              <input class='email-sign-up' type="email" id="emailInput" placeholder="Enter your email address">
+              <button class="email-sign-up sing-up-btn" id="submitEmailButton">COMPLETE</button>
+            </div>
 
-    <div class="chartBar-description">
-      <div class="line"></div>
-      <p class="info">*Based on Federal Reserve Survey of Consumer Finances </p>
-    </div>
 
-    <div class="text-wrapper">
-      <p class="subtitle">
-        You’re saving less than your peers. That’s okay you’re so close to get on track, let’s work together!
-      </p>
 
-      <p class="content">
-        You are a social spender. Whether it is due to the fear of missing out or peer pressure from your friends
-        you can’t help but spend money in social situations. Social spenders will make every effort to be included 
-        in nights out, trips, and events. Even if you don’t have the money set aside for that vacation with your 
-        besties you will move money around to make it work.
-      </p>
-    </div>
-
-    <div class="nl-submit-wrap">
-      <button class="nl-submit" type="submit">START HERE</button>
-    </div>
+            <button class="sing-up-btn active">LET'S GO</button>
+          </div>
+          <div class="welcom-content">
+            <p class="only-home-page">&#10004; You're now on the early access list for Clasp!</p>
+            <p class="errore">Something went wrong. Please try again</p>
+            <p class="try-again-later">Something went wrong. Please try again later</p>
+          </div>
+        </div>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-    <script>
-      const ctx = document.getElementById('myChart').getContext('2d');
-
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Your savings', 'Your peers*', 'Recommended',],
-          datasets: [{
-            backgroundColor: '#d8d8d8',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [500, 7500, 20500]
-          }]
-        },
-
-        // Configuration options go here
-        options: {
-          legend:{
-            display: false,
-          },
-          tooltips: {
-            enabled: false,
-          },
-          scales: {
-            yAxes: [{
-              display: false,
-              gridLines: {
-                display: false
-              }
-            }],
-            xAxes: [{
-              gridLines: {
-                display: false,
-                drawBorder: false
-              }
-            }]
-          },
-          plugins: {
-            datalabels: {
-              align: 'top',
-              anchor: 'end',
-              formatter: function(value) {
-                return "$" + value;
-              }
-            }
-          }
-        }
-      });
-    </script>
   </div>
+
+
+  <script>
+    mixpanel.track('Page Visit', {'where': 'Savings Calculator'});
+  </script>
 
 </body>
 

@@ -9,6 +9,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>
@@ -68,18 +82,29 @@
 </head>
 
 
-  <body>
+  <body data-page='emotional-spender-quiz'>
     <div class="indexPage">
       <div class="nav-bar">
-              <a class="logo-holder" href="/">
-                <img src="./images/Logo.png">
-                <p class="logo-text">clasp</p>
-              </a>
-            
-              <div class="switch-block">
-                <div class="btn"><a href="./about.html">about</a></div>
-                <div class="btn"><a href="/blog/">blog</a></div>
-              </div>
+        <div class="social-block">
+          <a href="https://www.instagram.com/clasp_app/" target="_blank">
+            <img src="./images/icon-instagram.svg" alt="instagram">
+          </a>
+          <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+            <img src="./images/icon-twitter.svg" alt="twitter">
+          </a>
+          <a href="https://twitter.com/clasp_app" target="_blank">
+            <img src="./images/icon-facebook.svg" alt="facebook">
+          </a>
+        </div>
+        <a class="logo-holder" href="/">
+          <img src="./images/sm-logo-wordmark.svg">
+        </a>
+
+        <div class="switch-block">
+          <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+          <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+        </div>
+
       </div>
 
       <div class="mainQuiz sp_type-block">
@@ -237,7 +262,7 @@
             <div class="fixed-section-break"></div>
 
             <div id='leadGenContent' class="leadGenContent social-sp-content">
-              <p class="find-help"><span id="resultSpan"></span> We hope the tips we gave you above really do help. But we also know that all of this is hard work. It's hard to make these lifestyle shifts. We're in a world where there billions of dollars are spent on carefully crafted messaging to seduce you into spending up a frenzy on things you don't actually need. <span>Let's face it. It's hard to be financially responsible.</span></p>
+              <p class="find-help"><span id="resultSpan"></span> We hope the tips we gave you above really do help. But we also know that all of this is hard work. It's hard to make these lifestyle shifts. We're in a world where there are billions of dollars are spent on carefully crafted messaging to seduce you into spending up a frenzy on things you don't actually need. <span>Let's face it. It's hard to be financially responsible.</span></p>
 
               <p class="find-help">And that's exactly it. What if among all these messages convincing you to blow all your hard earned cash, you had at least one force on your side to keep you grounded financially. And that's what we're doing at Clasp. We've been working on a solution we're super excited about for nearly a year now and have been refining it as we've been testing with some early users. <span>We're striving to make this a powerful influence that can put you on the right track.</span></p>
 

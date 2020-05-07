@@ -73,14 +73,127 @@
   
 </head>
 
-<script>
-  var vars = {}
-  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-    vars[key] = value;
-  });
-  var phone = vars['i']
-  mixpanel.identify(phone)
-  mixpanel.track('Testflight Link Clicked', {'testlink_url': 'https://testflight.apple.com/join/a7ilFfus'});
-  window.location='https://testflight.apple.com/join/a7ilFfus'
-</script>
+
+  <body class='contact' data-page='contact'>
+    <div class="nav-bar">
+      <div class="social-block">
+        <a href="https://www.instagram.com/clasp_app/" target="_blank">
+          <img src="./images/icon-instagram.svg" alt="instagram">
+        </a>
+        <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+        </a>
+        <a href="https://twitter.com/clasp_app" target="_blank">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+        </a>
+      </div>
+      <a class="logo-holder" href="/">
+        <img src="./images/sm-logo-wordmark.svg">
+      </a>
+
+      <div class="switch-block">
+        <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+        <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+      </div>
+
+    </div>
+
+    <div class="contactWrapper">
+      <h3 class="title-content">CONTACT</h3>
+
+      <div id="contact-body">
+        <div class="successBox">
+          <div class="img-holder">
+            <img src="./icons/icon-success.svg">
+          </div>
+          <div class="successBox-text">
+            Sent! We usually get back to you within a day.
+          </div>
+        </div>
+
+        <div class="contact-email contact-block"  id="contactEmailBlock">
+          <span class="email-title">Email</span>
+          <input id="contactValidEmail" class="android-input" />
+          <img class="email-delete delete-text" src="./icons/icon-clear-field.svg" />
+        </div>
+
+        <div class="contact-name contact-block" id="contactNameBlock">
+          <span class="name-title">Name</span>
+          <input id="contactName" class="name-input" />
+          <img class="name-delete delete-text" src="./icons/icon-clear-field.svg" />
+        </div>
+
+        <div class="contact-massage contact-block"  id="contactMessageBlock">
+          <span class="message-title">Message</span>
+          <textarea id="contactMessage" class="message-input"></textarea>
+          <img class="message-delete delete-text" src="./icons/icon-clear-field.svg" />
+        </div>
+        
+        <button class="valid-button">SEND</button>
+
+        <div class="btn-loader">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prefooter" class='prefooter-menu'>
+      <div>
+        <a href="">press</a>
+      </div>
+      <div>
+        <a href="mailto:hello@clasp.app">contact us</a>
+      </div>
+      <div>
+        <a href="./privacy-policy.html">privacy policy</a>
+      </div>
+      <div>
+        <a href="./terms-of-service.html">terms & conditions</a>
+      </div>
+    </div>
+
+    <div class="horiz-line special"></div>
+
+    <div id='footer'>
+      <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+      <p class='copyright believe'>You are good with money</p>
+      <img src="./images/heart.svg">
+    </div>
+
+    <div class="cookie-block-wrapper disable">
+      <div class="cookie-body">
+        <div class="cookie-text">
+            We use cookies to ensure that we give you the 
+            best experience on our website. By continuing 
+            to use our site, you accept our cookie policy.
+            <a class="cookie-link">View cookie policy.</a>
+        </div>
+        <div class="cookie-btn-wrapper">
+          <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
+          <a class="cookie-link-btn">View cookie policy</a>
+        </div>
+      </div> 
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="script.min.js"></script>
+    
+    <script>
+      mixpanel.track('Page Visit', {'where': 'About Page'});
+    </script>
+  </body>
+
 </html>

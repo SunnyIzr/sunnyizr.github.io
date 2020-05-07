@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+
+  <!-- Blocking analytic scripts for GDPR -->
+  <script>
+      window.YETT_BLACKLIST = [
+        /www\.google-analytics\.com/,
+        /www\.googletagmanager\.com/,
+        /www\.facebook\.com/,
+        /www\.facebook\.net/,
+        /connect\.facebook\.net/,
+        /cdn\.mxpnl\.com/,
+      ]
+  </script>
+  <script src="https://unpkg.com/yett"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751468-1"></script>
   <script>
@@ -62,15 +76,26 @@
 
   <body class="privacyPage">
     <div class="nav-bar">
-            <a class="logo-holder" href="/">
-              <img src="./images/Logo.png">
-              <p class="logo-text">clasp</p>
-            </a>
-          
-            <div class="switch-block">
-              <div class="btn"><a href="./about.html">about</a></div>
-              <div class="btn"><a href="/blog/">blog</a></div>
-            </div>
+      <div class="social-block">
+        <a href="https://www.instagram.com/clasp_app/" target="_blank">
+          <img src="./images/icon-instagram.svg" alt="instagram">
+        </a>
+        <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+        </a>
+        <a href="https://twitter.com/clasp_app" target="_blank">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+        </a>
+      </div>
+      <a class="logo-holder" href="/">
+        <img src="./images/sm-logo-wordmark.svg">
+      </a>
+
+      <div class="switch-block">
+        <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+        <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+      </div>
+
     </div>
 
     <div class="privacy-policy-block">
@@ -80,7 +105,7 @@
         </h3>
       
         <p>
-          Updated: June 26, 2019
+          Updated: February 21, 2020
         </p>
       
         <p>Clasp, located at 535 West 49th Street, Apt 2FE, 
@@ -339,6 +364,26 @@
           for more information about conversion tracking provided by Google.
         </p>
       
+        <h4>
+          Cookies and Similar Technologies:
+        </h4>
+
+        <p>
+          "Cookies" are pieces of information that may be placed on your computer by a service for the purpose of facilitating and enhancing your communication and interaction with that service. Many services use cookies for these purposes.  We may use cookies (and similar items such as clear gifs, web beacons, tags, etc.) on our Service to customize your visit and for other purposes to make your visit more convenient or to enable us to enhance our Service.  We may also use and place cookies (and similar items) on your computer from our third party service providers in connection with the Service.  In addition, our advertisers and business partners may set cookies and similar items on your computer when you use our Service.  You may stop or restrict the placement of cookies on your computer or flush them from your browser by adjusting your web browser preferences, in which case you may still use our Service, but it may interfere with some of its functionality. Cookies and similar items are not used by us to automatically retrieve personally identifiable information from your computer without your knowledge.
+        </p>
+
+        <p>
+          If you delete your cookies, change browsers or use a different cookie, our cookie (or an opt-out cookie) may no longer work and you will have to reinput (or opt-out) again.
+        </p>
+
+        <h4>
+          Automatically Collected Information: 
+        </h4>
+
+        <p>
+          When you access the Service or open one of our HTML emails, we may automatically record certain information from your system by using cookies and other types of tracking technologies. This "automatically collected" information may include Internet Protocol address ("IP Address"), a unique user ID, device type, device identifiers, browser types and language, referring and exit pages, platform type, version of software installed, system type, the content and pages that you access on the Service, the number of clicks, the amount of time spent on pages, the dates and times that you visit the Service, and other similar information. Depending on the law of your country of residence, your IP address may be considered personal data.
+        </p>
+
         <h4>
           Security:
         </h4>
@@ -631,12 +676,42 @@
       </div>
     </div>
 
+    <div id="prefooter" class='prefooter-menu'>
+      <div>
+        <a href="">press</a>
+      </div>
+      <div>
+        <a href="mailto:hello@clasp.app">contact us</a>
+      </div>
+      <div>
+        <a href="./privacy-policy.html">privacy policy</a>
+      </div>
+      <div>
+        <a href="./terms-of-service.html">terms & conditions</a>
+      </div>
+    </div>
+
     <div class="horiz-line special"></div>
+
     <div id='footer'>
-      <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
-      <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
-      <p class='copyright believe'>At Clasp, we believe in you</p>
-      <img src="./images/Heart.png">
+      <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+      <p class='copyright believe'>You are good with money</p>
+      <img src="./images/heart.svg">
+    </div>
+
+    <div class="cookie-block-wrapper disable">
+      <div class="cookie-body">
+        <div class="cookie-text">
+            We use cookies to ensure that we give you the 
+            best experience on our website. By continuing 
+            to use our site, you accept our cookie policy.
+            <a class="cookie-link">View cookie policy.</a>
+        </div>
+        <div class="cookie-btn-wrapper">
+          <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
+          <a class="cookie-link-btn">View cookie policy</a>
+        </div>
+      </div> 
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
