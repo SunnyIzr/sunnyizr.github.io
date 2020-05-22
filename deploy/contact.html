@@ -77,10 +77,10 @@
         <a href="https://www.instagram.com/clasp_app/" target="_blank">
           <img src="./images/icon-instagram.svg" alt="instagram">
         </a>
-        <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+        <a href="https://twitter.com/clasp_app" target="_blank">
           <img src="./images/icon-twitter.svg" alt="twitter">
         </a>
-        <a href="https://twitter.com/clasp_app" target="_blank">
+        <a href="https://www.facebook.com/clasptheapp/" target="_blank">
           <img src="./images/icon-facebook.svg" alt="facebook">
         </a>
       </div>
@@ -100,6 +100,16 @@
       <h3 class="title-content">CONTACT</h3>
 
       <div id="contact-body">
+        <div class="contact-header">
+          We’re here for feedback, questions, or whatever’s on your mind. 
+          Let us know. We’ll get back to you in about a day.
+        </div>
+
+        <div class="contact-error">
+          <img src="./icons/icon-warning.svg">
+          <div>We could not add you to the list. Email us at hello@clasp.app</div>
+        </div>
+        
         <div class="successBox">
           <div class="img-holder">
             <img src="./icons/icon-success.svg">
@@ -109,16 +119,17 @@
           </div>
         </div>
 
-        <div class="contact-email contact-block"  id="contactEmailBlock">
-          <span class="email-title">Email</span>
-          <input id="contactValidEmail" class="android-input" />
-          <img class="email-delete delete-text" src="./icons/icon-clear-field.svg" />
-        </div>
-
         <div class="contact-name contact-block" id="contactNameBlock">
           <span class="name-title">Name</span>
           <input id="contactName" class="name-input" />
           <img class="name-delete delete-text" src="./icons/icon-clear-field.svg" />
+        </div>
+
+        <div class="contact-email contact-block"  id="contactEmailBlock">
+          <span class="email-title">Email</span>
+          <input id="contactValidEmail" class="android-input" />
+          <img class="email-delete delete-text" src="./icons/icon-clear-field.svg" />
+          <div class="emailError">Your email is missing the '@'</div>
         </div>
 
         <div class="contact-massage contact-block"  id="contactMessageBlock">
@@ -190,7 +201,7 @@
     <script src="script.min.js"></script>
     
     <script>
-      mixpanel.track('Page Visit', {'where': 'About Page'});
+      mixpanel.track('Page Visit', {'where': 'Contact'});
     </script>
   </body>
 

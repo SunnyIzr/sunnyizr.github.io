@@ -76,7 +76,7 @@
     <div class="logo-border" id="progressBarContainner">
       <div class="logo-white-block">
         <img class="fiscal-logo active" src="./icons/icon-question.svg"/>
-        <img class="fiscal-end-logo" src="./icons/icon-wait.svg"/>
+        <img class="fiscal-end-logo" src="./icons/icon-question.svg"/>
       </div>
     </div>
     
@@ -172,6 +172,11 @@
           <div class="endInputBlock">
             <input id="fiscalValid" type="email" placeholder="EMAIL" onclick="FiscalFemmeQuiz.submitEmail()">
           </div>
+
+          <div class="errorEmailFF">
+            We couldn’t add you to the list
+          </div>
+
           <div class="buttonHolder">
             <div class="singedUpText">You have successfully signed up!</div>
             <button class="singUp-btn" onclick="FiscalFemmeQuiz.activeFiscalBtn()">
@@ -210,7 +215,7 @@
           </div>
          
           <div class="start_here-button-holder actualHomePage">
-            <button class="iosButton" onclick="LandingPage.iosBtn()">
+            <button class="iosButton" onclick="LandingPage.iosBtn('ff_quiz')">
               <span class="iosButton-text">Text Me the App</span>
               <span class="iosButton-textGrow">Text the link</span>
             </button>
@@ -247,11 +252,13 @@
             </div>
           </div>
 
+          <div class="phone-error"></div>
+
           <div class="mobilOnly">
             <img src="./images/apple.svg"/>
           </div>
           <div class="imgTitle">
-            <a href="./home.html">
+            <a class='ffMoreDetails' onClick="FiscalFemmeQuiz.trackMoreDetailsLink()" href="./home.html" target="_blank">
               Find out more
             </a>  
           </div>
