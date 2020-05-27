@@ -71,7 +71,7 @@
 </head>
 
 
-<body data-page='posts post-template' class="blogPage blog-posts">
+<body data-page='post-template' class="blogPage blog-posts post-template">
   <div class="nav-bar">
     <div class="social-block">
       <a href="https://www.instagram.com/clasp_app/" target="_blank">
@@ -270,7 +270,7 @@
         <form id='bottomBlogEmailSignup'>
           <div class="inputEmailWrapper">
             <div class="border-input">
-              <input type="text"  placeholder="Email" id="articleEmail" onclick="LandingPage.articleEmail()">
+              <input type="text"  placeholder="Email" id="articleEmail">
             </div>  
             <div class="error">
               <div class="submitEr">
@@ -281,19 +281,6 @@
           
           <button class="emailSubButton">SIGN UP</button>
         </form>
-      </div>
-    </div>
-    <div class="afterSignUp signUpBlock"> 
-      <div>
-        <h3>And away we go</h3>
-        <div class="breakLine"></div>
-        <p>All set! </p>
-        <p style='margin-bottom: -50px;'>This is the beginning of a beautiful friendship. 
-          In the meantime, are you curious to know what emotions drive your spending? 
-          Take our quiz to find out.</p>
-      </div>
-      <div>
-          <a href="../deploy/emotional-spender.html"><button class="signUpBtn">Take the quiz</button></a>
       </div>
     </div>
   </div>
@@ -328,11 +315,11 @@
           We use cookies to ensure that we give you the 
           best experience on our website. By continuing 
           to use our site, you accept our cookie policy.
-          <a class="cookie-link">View cookie policy.</a>
+          <a href="./terms-of-service.html" target="_blank" class="cookie-link">View terms of service</a>
       </div>
       <div class="cookie-btn-wrapper">
         <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
-        <a class="cookie-link-btn">View cookie policy</a>
+        <a href="./terms-of-service.html" target="_blank" class="cookie-link-btn">View terms of service</a>
       </div>
     </div> 
   </div>
