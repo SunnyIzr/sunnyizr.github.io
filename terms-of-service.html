@@ -53,7 +53,7 @@
   <!-- End MixPanel Tracking Code -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <link rel="icon" href="images/favicon.ico">
 
   <title>Clasp &#8226; Be brilliant with your money</title>
@@ -61,9 +61,6 @@
   <link href='style.min.css' rel='stylesheet' type='text/css'>
   
   <meta name="description" content="Clasp provides financial tools that bring mindfulness to your spending. We believe in you."/>
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/bad25507da.js"></script>
 
   
   <!-- <meta property="og:image" content="images/hero-graphic-mobile.png" /> -->
@@ -76,21 +73,35 @@
 
   <body class="privacyPage">
     <div class="nav-bar">
-            <a class="logo-holder" href="/">
-              <img src="./images/Logo.png">
-              <p class="logo-text">clasp</p>
-            </a>
-          
-            <div class="switch-block">
-              <div class="btn"><a href="./about.html">about</a></div>
-              <div class="btn"><a href="/blog/">blog</a></div>
-            </div>
+      <div class="social-block">
+        <a href="https://www.instagram.com/clasp_app/" target="_blank">
+          <img src="./images/icon-instagram.svg" alt="instagram">
+        </a>
+        <a href="https://twitter.com/clasp_app" target="_blank">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+        </a>
+        <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+        </a>
+      </div>
+      <a class="logo-holder" href="/">
+        <img src="./images/sm-logo-wordmark.svg">
+      </a>
+
+      <div class="switch-block">
+        <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+        <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+      </div>
+
     </div>
+
 
     <div  class="terms_of_servise_block">
       <div class="terms_of_servise_content_holder">
       
-        <h3>CLASP TERMS OF USE AGREEMENT </h3>
+        <h3>
+          Clasp Terms of Use Agreement
+        </h3>
       
         <p>
           Welcome to Clasp ("Clasp," "we," or "our").
@@ -290,6 +301,10 @@
           any financial decision, you should always consult with your accountant, 
           financial advisor, and any other tax and legal advisors who are fully 
           informed about your individual financial situation.
+        </p>
+
+        <p>
+          There are risks inherent in investing, including without limitation investment in securities, bonds, mutual funds, exchange traded funds, ​and money market funds, and such investment involves risk of loss. Certain high-risk investments may use leverage, which can increase the risk of loss. Previous performance of a security or fund is not a guarantee or predictor of future investment performance. You should always consult with your financial, tax and legal advisors about the risks inherent in a planned course of investment.
         </p>
       
         <h4>
@@ -1079,21 +1094,57 @@
       </div>
     </div>
 
-    <div class="horiz-line special"></div>
-    <div id='footer'>
-      <div class='social-icons'>
-        <div class='social-icon'><a target="_blank" href='https://www.instagram.com/clasp_app/'><i class="fab fa-instagram"></i></a></div>
-        <div class='social-icon'><a target="_blank" href='https://www.facebook.com/clasptheapp/'><i class="fab fa-facebook-square"></i></a></div>
-        <div class='social-icon'><a target="_blank" href='https://twitter.com/clasp_app'><i class="fab fa-twitter-square"></i></a></div>
+    <div class="footer-socials-new">
+      <img src="./icons/Icon-Instagram.svg"/>
+      <img src="./icons/Icon-Twitter.svg"/>
+      <img src="./icons/Icon-Facebook.svg"/>
+    </div>
+    <div id="prefooter" class='prefooter-menu'>
+      <div>
+        <a href="./press.html">press</a>
       </div>
-      <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
-      <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
-      <p class='copyright believe'>At Clasp, we believe in you</p>
-      <img src="./images/Heart.png">
+      <div>
+        <a href="./contact.html">contact us</a>
+      </div>
+      <div>
+        <a href="./privacy-policy.html">privacy policy</a>
+      </div>
+      <div>
+        <a href="./terms-of-service.html">terms & conditions</a>
+      </div>
+    </div>
+
+    <div class="horiz-line special"></div>
+
+    <div id='footer'>
+      <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+      <p class='copyright believe old'>You are good with money</p>
+      <p class="copyright believe new">“Let’s get better. Together.”</p>
+      <img class="old" src="./images/heart.svg">
+      <img class="new" src="./icons/Icon-Go-En.svg">
+    </div>
+
+    <div class="cookie-block-wrapper disable">
+      <div class="cookie-body">
+        <div class="cookie-text">
+            We use cookies to ensure that we give you the 
+            best experience on our website. By continuing 
+            to use our site, you accept our cookie policy.
+            <a href="./terms-of-service.html" target="_blank" class="cookie-link">View terms of service</a>
+        </div>
+        <div class="cookie-btn-wrapper">
+          <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
+          <a href="./terms-of-service.html" target="_blank" class="cookie-link-btn">View terms of service</a>
+        </div>
+      </div> 
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="script.min.js"></script>
+
+    <script>
+      mixpanel.track('Page Visit', {'where': 'Terms of Service'});
+    </script>
   </body>
 
 </html>

@@ -53,7 +53,7 @@
   <!-- End MixPanel Tracking Code -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <link rel="icon" href="images/favicon.ico">
 
   <title>Clasp &#8226; Be brilliant with your money</title>
@@ -61,9 +61,6 @@
   <link href='style.min.css' rel='stylesheet' type='text/css'>
   
   <meta name="description" content="Clasp provides financial tools that bring mindfulness to your spending. We believe in you."/>
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/bad25507da.js"></script>
 
   
   <!-- <meta property="og:image" content="images/hero-graphic-mobile.png" /> -->
@@ -74,149 +71,386 @@
 </head>
 
 
-<body>
-<a href="com.clasp.claspapp:">test</a>
-<a href="lookback-clasp:">test2</a>
-<a href="com.googleusercontent.apps.766594565415-tma8iqu0e5d4p0ccnqc99g0q6rltqdvj:">test3</a>
-<a href="claspapp:">test4</a>
+  <body class='home' data-page='home'>
+    <div class="nav-bar">
+      <div class="social-block">
+        <a href="https://www.instagram.com/clasp_app/" target="_blank">
+          <img src="./images/icon-instagram.svg" alt="instagram">
+        </a>
+        <a href="https://twitter.com/clasp_app" target="_blank">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+        </a>
+        <a href="https://www.facebook.com/clasptheapp/" target="_blank">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+        </a>
+      </div>
+      <a class="logo-holder" href="/">
+        <img src="./images/sm-logo-wordmark.svg">
+      </a>
+
+      <div class="switch-block">
+        <div class="btn"><a class="aboutPageAnchor" href="./about.html">about</a></div>
+        <div class="btn"><a class="blogPageAnchor" href="/blog/">blog</a></div>
+      </div>
+
+    </div>
 
 
-  <div class="nav-bar">
-          <a class="logo-holder" href="/">
-            <img src="./images/Logo.png">
-            <p class="logo-text">clasp</p>
+    <div class="androidPage">
+      <div class="header">
+        <div class="back-block">
+          <a class="back-btn" onclick="LandingPage.backBtn()">
+            <div class="back-arrow"></div>
           </a>
-        
-          <div class="switch-block">
-            <div class="btn"><a href="./about.html">about</a></div>
-            <div class="btn"><a href="/blog/">blog</a></div>
+          <p class="back-text">
+            BACK
+          </p>
+        </div>
+      </div>
+      <div id="android-body">
+        <img class="android" src="./icons/icon-android.svg">
+
+          <div class="android-error">
+            <img src="./icons/icon-warning.svg">
+            <div>We could not add you to the list. Email us at hello@clasp.app</div>
           </div>
-  </div>
 
-  <div class="mainPage">
-          <div class="topBlock">
-                  <div>
-                      <span>Be brilliant<br>
-                          with your money</span>
-                  </div>
-              <div class="breakLine"></div>
-              <div class="topText">
-                  <p>
-                      <span class='initial'>
-                          Achieve goals you never thought possible
-                      </span>
+          <div class="android-email">
+            <span class="email-title">Email</span>
+            <input id="androidValid" class="android-input" onclick="LandingPage.emailActive()"/>
+            <img class="email-delete" src="./icons/icon-clear-field.svg" onclick="LandingPage.emailDelete()"/>
+          </div>
+          
+          <button class="valid-email" onclick="LandingPage.addWaitListBtnActive()">Add me to the waitlist</button>
 
-                      <span class='instructions'>
-                          We'll text you a link to download.
-                      </span>
-                      <span class='instructions2'>
-                          Provide us your email to confirm early access
-                      </span>
-                  </p>
-              </div>
+          <div class="btn-loader">
+            <div class="lds-spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+        </div>
+      </div>
+    </div>
 
-              <div class="start_here-button-holder actualHomePage">
-                  <button class="start-btn home-page active centerButton">GET EARlY ACCESS</button>
+    <div class="homePage">
+      <div class="frame">
 
-                  <div class="input-holder active">
-                    <input type="tel" id="phoneInput" class='phone_us' placeholder="Enter your phone number">
-                    <button class="sing-up-btn" id="submitPhoneButton">LET'S GO</button>
-                    <input class='email-sign-up' type="email" id="emailInput" placeholder="Enter your email address">
-                    <button class="email-sign-up sing-up-btn" id="submitEmailButton">ALL SET</button>
-                  </div>
+        <div class="topBlock">
+          <div class="topBlock-title">
+            <span class="homePage-title">
+              Let’s Master Your Money.
+            </span>
+            <span class="homePage-title ">
+              Together.
+            </span>
+          </div>
+
+          <div class="topText">
+            <p>
+              <span class='initial'>
+                Make smarter money choices with your own personal finance coach.
+              </span>
+
+              <span class='initial'>
+                Clasp matches you with a Money Mentor who keeps you motivated and on-task to reach your financial goals.
+              </span>
+
+              <span class='initial'>
+                Become a beta tester (it’s free)
+              </span>
+
+              <span class='initial-subtitle'>
+                We currently support iPhones and US financial institutions. 
+              </span>
 
 
+              <span class='instructions'>
+                We'll text you a link to download.
+              </span>
+              <span class='instructions2'>
+                Provide us your email to confirm early access
+              </span>
+            </p>
+          </div>
 
-                  <button class="sing-up-btn active">LET'S GO</button>
-              </div>
-              <div class="welcom-content">
-                  <p class="only-home-page">&#10004; You're now on the early access list for Clasp!</p>
-                  <p class="errore">Something went wrong. Please try again</p>
-                  <p class="try-again-later">Something went wrong. Please try again later</p>
+          <div class="start_here-button-holder actualHomePage">
+            <!-- <button class="iosButton" onclick="LandingPage.iosBtn('home')">
+              <span class="iosButton-text">Text me the iOS app</span>
+              <span class="iosButton-textGrow">Text the link</span>
+            </button>
+
+            <div class="phoneNumber-block">
+              <div class="phoneNumWrapper">
+                <input type="text" placeholder="US Mobile Phone" id="phoneNum" autofocus="autofocus">
               </div>
               
-                  
-          </div>
-          <div class="bunnerImg">
-                  <img src="./images/landing.png" >
-          </div>
-          <div>
-              <div class=panelBlock>
-                  <span>Everything You Need</span>
-                  <p>Success means understanding yourself and making the best financial choices for you.</p>
-                  <div class="breakLine"></div>
-                  <div class="panelFlex">
-                      <div>
-                          <div class="imgBox">
-                            <div class="oval">
-                              <img class="inOval" src="./icons/map-signs.svg" >
-                            </div>
-                          </div>
+              <button class="link-num-btn" onclick="LandingPage.submitPhone('home')">
+                Text the link
+              </button>
+            </div>
+            
+            <div class="btn-loader">
+                <div class="lds-spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+            </div>
 
-                          <span>A complete financial plan</span>
-                          <p>In one beautiful place.
-                          Let us handle the big picture</p>
-                      </div>
-                      <div>
-                          <div class="imgBox">
-                              <div class="oval">
-                                <img class="inOval" src="./icons/spa.svg" >
-                              </div>
-                          </div>
-                          <span>Mindful spending choices</span>
-                          <p>Understand your spending habits
-                          with our in-the-moment tools</p>
-                      </div>
-                      <div>
-                          <div class="imgBox">
-                              <div class="oval">
-                                <img class="inOval" src="./images/change.png" >
-                              </div>
-                          </div>
-                          <span>Small changes = big difference</span>
-                          <p>Pick a targeted spending area
-                          and watch your savings grow.</p>
-                      </div>
-                  </div>
+            <div class="sentTo-block">
+              text sent to <span class="phoneNumVal"></span>  
+            </div>
+
+            <div class="phone-error"></div>
+
+            <a onclick="LandingPage.mobileAppStoreClick('home')" href="https://apps.apple.com/us/app/clasp-mindful-money/id1462311345?ls=1" target="_blank" style="margin-right: auto;"><img class="mobila-iOS" src="./images/apple.svg"></a> -->
+
+
+            <div id="emailBlock">
+              <div class="home-email">
+                <span class="email-title">Email</span>
+                <input id="homeValid" class="home-input" onclick="LandingPage.emailActiveHome()" onblur="LandingPage.emailEmptyInput()"/>
+                <img class="email-delete" src="./icons/icon-clear-field.svg" onclick="LandingPage.emailDeleteHome()"/>
               </div>
+      
+              <span class="error-email">
+                Email needs '@'
+              </span>
+      
+              <span class="error-email-text">
+                Please enter a valid email address
+              </span>
+      
+              <button class="emailButton" onclick="LandingPage.emailValidationButton()">
+                RESERVE YOUR SPOT
+              </button>
 
-          </div>
-          <a href='./about.html'>
-              <div class="storyBlock">
-                  <div class="imageHolder">
-                      <img src="./images/together3.jpeg">
-                  </div>
-                  <div class="textBlock">
-                          <span>Our Story</span>
-                          <div class="breakLine"></div>
-                      <p>
-                              Out of failure comes focus; and kinship springs from unexpected corners of life. Our story is no exception. Both of us experienced financial volatility during childhood and adulthood; every good habit came at the cost of a tough lesson we had to learn on our own. We're determined to not let our past define us but rather to <i>drive</i> us. And that led us to a natural conclusion: build a company where empathy lies at the heart.
-                      </p>
-                          <span>Pleased to meet you! Here's our story.</span>
-                  </div>
+              <div class="successfulValidation">
+                <div>
+                  You’ve been added
+                </div>
+                <div>
+                  Check your inbox for details
+                </div>
               </div>
-          </a>
-  </div>
+            </div>
 
-  <div class="horiz-line special"></div>
-  <div id='footer'>
-    <div class='social-icons'>
-      <div class='social-icon'><a target="_blank" href='https://www.instagram.com/clasp_app/'><i class="fab fa-instagram"></i></a></div>
-      <div class='social-icon'><a target="_blank" href='https://www.facebook.com/clasptheapp/'><i class="fab fa-facebook-square"></i></a></div>
-      <div class='social-icon'><a target="_blank" href='https://twitter.com/clasp_app'><i class="fab fa-twitter-square"></i></a></div>
+
+            <a class="forAndroid" onclick="LandingPage.launchAndroidForm()">or Join the Android waitlist</a>
+            <a class="forAndroidAdded">Added to Android Waitlist</a>
+          </div>
+
+          <div class="welcom-content">
+            <p class="only-home-page">&#10004; You're now on the early access list for Clasp!</p>
+            <p class="errore">Something went wrong. Please try again</p>
+            <p class="try-again-later">Something went wrong. Please try again later</p>
+          </div>
+
+
+        </div>
+        <div class="bunnerImg">
+          <img src="./images/hero-i-phone-x-clay-plan-3-x@3x.png" >
+        </div>
+
+        <!-- <div class="homeTopBlock">
+          <div class="topBlockTitle">
+            <div>
+              Let’s Master Your Money.
+            </div>
+            <div>
+              Together.
+            </div>
+          </div>
+
+          <div class="topBlockSubtitle">
+            <div>
+              Make smarter money choices with your own personal finance coach.
+            </div>
+            <div>
+              Clasp matches you with a Money Mentor who keeps you motivated and on-task to reach your financial goals.
+            </div>
+            <div>
+              Become a beta tester (it’s free)
+            </div>
+            <div class="greySubtitle">
+              We currently support iPhones and US financial institutions. 
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+      <div class=panelBlock>
+        <div class="frame">
+          <div class="slider" >
+            <div class="toLeft" id="toLeft">
+              <img src="./images/icon-left-arrow.svg" alt="">
+            </div>
+
+            <div class="slide-wrapper" id="slide-wrapper" data-slide="1">
+
+                <div class="slide">
+                    <div class="slide-header">
+                      "Clasp can help you make sense of how you feel about money,
+                    </div>
+                    <div class="slide-content">
+                      your emotional triggers, and your most influential financial role models &mdash; all necessary pre-work to help you think more critically
+                      about how to match your money with your values."<br/>&mdash; Kara Stevens
+                    </div>
+                    <div class="slide-footer">
+                      <img src="./images/life-and-money-logo.svg" alt="">
+                    </div>
+                </div>
+        
+                <div class="slide">
+                  <div class="slide-header">
+                      "When you drill down on what freedom means, for many it means spontaneity. 
+                  </div>
+                  <div class="slide-content">
+                      For example 'I can spontaneously go on a trip across the world' or 
+                      'I can spontaneously go out and study something in higher education.'"
+                  </div>
+                  <div class="slide-footer">
+                    <img src="./images/bi-blue-background-horizontal@3x.jpg" alt="" style="width: 100%; max-width:287px; height:50px;">
+                  </div>
+                </div>
+            </div>
+
+            <div class="toRight" id="toRight">
+              <img src="./images/icon-right-arrow.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="informationBlock">
+          <div class="inf-header">
+            <span>
+              Real Support from a Real Person
+            </span>
+            <div>
+              What Sets Us Apart
+            </div>
+            <div class="breakLine"></div>
+          </div>
+          <div class="inf-content">
+            <div class="inf-block">
+              <img src="./images/thoughtful1.svg" alt="">
+              <div>Expert Coaching</div>
+              <span>
+                Your Money Mentor is always with you to give you 
+                the encouragement you need, and the accountability to succeed.
+              </span>
+            </div>
+
+            <div class="inf-block">
+              <img src="./images/prepared.svg" alt="">
+              <div>Smart Goals</div>
+              <span>
+                Small habits create big results. 
+                Make meaningful progress each week with a bite-sized challenge. 
+              </span>
+            </div>
+            <div class="inf-block">
+              <img src="./images/challenged.svg" alt="">
+              <div>Thoughtful Insights</div>
+              <span>
+                Understand yourself and get ahead of the curve. 
+                Discover the emotional patterns that affect your spending.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href='./about.html' class="story">
+        <div class="storyBlock">
+          <div class="imageHolder">
+            <img src="./images/home-team.jpg">
+          </div>
+          <div class="textBlock">
+            <span>Our Story</span>
+            <div class="breakLine"></div>
+            <p>
+              Out of failure comes focus, and kinship springs from unexpected corners of life. Both of us experienced financial volatility
+              during childhood and adulthood; every good habit came
+              at the cost of a tough lesson we had to learn on our own. We don't let the past define us &mdash; in fact, it drove us to build a company with
+              <span class="orange">both smarts and heart</span>
+            </p>
+          </div>
+        </div>
+      </a>
     </div>
-    <p class='copyright'><a href="./privacy-policy.html">Privacy Policy</a> - <a href="./terms-of-service.html">Terms <span> & </span>Conditions</a> - <a href='mailto:hello@clasp.app'>Contact Us</a></p>
-    <p class='copyright'>Copyright <span>&copy;</span> 2019 Clasp Inc. All rights reserved.</p>
-    <p class='copyright believe'>At Clasp, we believe in you</p>
-    <img src="./images/Heart.png">
-  </div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="script.min.js"></script>
+    <div class="footer-socials-new">
+      <img src="./icons/Icon-Instagram.svg"/>
+      <img src="./icons/Icon-Twitter.svg"/>
+      <img src="./icons/Icon-Facebook.svg"/>
+    </div>
+    <div id="prefooter" class='prefooter-menu'>
+      <div>
+        <a href="./press.html">press</a>
+      </div>
+      <div>
+        <a href="./contact.html">contact us</a>
+      </div>
+      <div>
+        <a href="./privacy-policy.html">privacy policy</a>
+      </div>
+      <div>
+        <a href="./terms-of-service.html">terms & conditions</a>
+      </div>
+    </div>
 
-  <script>
-    mixpanel.track('Page Visit', {'where': 'Home Page'});
-  </script>
-</body>
+    <div class="horiz-line special"></div>
+
+    <div id='footer'>
+      <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
+      <p class='copyright believe old'>You are good with money</p>
+      <p class="copyright believe new">“Let’s get better. Together.”</p>
+      <img class="old" src="./images/heart.svg">
+      <img class="new" src="./icons/Icon-Go-En.svg">
+    </div>
+
+    <div class="cookie-block-wrapper disable">
+      <div class="cookie-body">
+        <div class="cookie-text">
+            We use cookies to ensure that we give you the 
+            best experience on our website. By continuing 
+            to use our site, you accept our cookie policy.
+            <a href="./terms-of-service.html" target="_blank" class="cookie-link">View terms of service</a>
+        </div>
+        <div class="cookie-btn-wrapper">
+          <button class="cookie-btn" onclick="CookiePolicy.acceptCookiePolicy()">ACCEPT</button>
+          <a href="./terms-of-service.html" target="_blank" class="cookie-link-btn">View terms of service</a>
+        </div>
+      </div> 
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="script.min.js"></script>
+
+    <script>
+      mixpanel.track('Page Visit', {'where': 'Home'});
+    </script>
+  </body>
 
 </html>

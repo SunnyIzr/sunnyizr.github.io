@@ -53,7 +53,7 @@
   <!-- End MixPanel Tracking Code -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <link rel="icon" href="images/favicon.ico">
 
   <title>Clasp &#8226; Be brilliant with your money</title>
@@ -144,27 +144,47 @@
 
     <div class="homePage">
       <div class="frame">
+
         <div class="topBlock">
-          <div>
-            <span class="homePage-title">Be brilliant with your money</span>
+          <div class="topBlock-title">
+            <span class="homePage-title">
+              Let’s Master Your Money.
+            </span>
+            <span class="homePage-title ">
+              Together.
+            </span>
           </div>
+
           <div class="topText">
             <p>
               <span class='initial'>
-                  Achieve goals you never thought possible - one step at a time
+                Make smarter money choices with your own personal finance coach.
               </span>
 
+              <span class='initial'>
+                Clasp matches you with a Money Mentor who keeps you motivated and on-task to reach your financial goals.
+              </span>
+
+              <span class='initial'>
+                Become a beta tester (it’s free)
+              </span>
+
+              <span class='initial-subtitle'>
+                We currently support iPhones and US financial institutions. 
+              </span>
+
+
               <span class='instructions'>
-                  We'll text you a link to download.
+                We'll text you a link to download.
               </span>
               <span class='instructions2'>
-                  Provide us your email to confirm early access
+                Provide us your email to confirm early access
               </span>
             </p>
           </div>
 
           <div class="start_here-button-holder actualHomePage">
-            <button class="iosButton" onclick="LandingPage.iosBtn('home')">
+            <!-- <button class="iosButton" onclick="LandingPage.iosBtn('home')">
               <span class="iosButton-text">Text me the iOS app</span>
               <span class="iosButton-textGrow">Text the link</span>
             </button>
@@ -202,11 +222,43 @@
 
             <div class="phone-error"></div>
 
-            <a href="https://apps.apple.com/us/app/clasp-mindful-money/id1462311345?ls=1" target="_blank" style="margin-right: auto;"><img class="mobila-iOS" src="./images/apple.svg"></a>
-            <a class="forAndroid" onclick="LandingPage.launchAndroidForm()">Join the Android waitlist</a>
-            <a class="forAndroidAdded">Added to Android Waitlist</a>
+            <a onclick="LandingPage.mobileAppStoreClick('home')" href="https://apps.apple.com/us/app/clasp-mindful-money/id1462311345?ls=1" target="_blank" style="margin-right: auto;"><img class="mobila-iOS" src="./images/apple.svg"></a> -->
 
+
+            <div id="emailBlock">
+              <div class="home-email">
+                <span class="email-title">Email</span>
+                <input id="homeValid" class="home-input" onclick="LandingPage.emailActiveHome()" onblur="LandingPage.emailEmptyInput()"/>
+                <img class="email-delete" src="./icons/icon-clear-field.svg" onclick="LandingPage.emailDeleteHome()"/>
+              </div>
+      
+              <span class="error-email">
+                Email needs '@'
+              </span>
+      
+              <span class="error-email-text">
+                Please enter a valid email address
+              </span>
+      
+              <button class="emailButton" onclick="LandingPage.emailValidationButton()">
+                RESERVE YOUR SPOT
+              </button>
+
+              <div class="successfulValidation">
+                <div>
+                  You’ve been added
+                </div>
+                <div>
+                  Check your inbox for details
+                </div>
+              </div>
+            </div>
+
+
+            <a class="forAndroid" onclick="LandingPage.launchAndroidForm()">or Join the Android waitlist</a>
+            <a class="forAndroidAdded">Added to Android Waitlist</a>
           </div>
+
           <div class="welcom-content">
             <p class="only-home-page">&#10004; You're now on the early access list for Clasp!</p>
             <p class="errore">Something went wrong. Please try again</p>
@@ -216,8 +268,35 @@
 
         </div>
         <div class="bunnerImg">
-          <img src="./images/hero-i-phone-x-clay@3x.png" >
+          <img src="./images/hero-i-phone-x-clay-plan-3-x@3x.png" >
         </div>
+
+        <!-- <div class="homeTopBlock">
+          <div class="topBlockTitle">
+            <div>
+              Let’s Master Your Money.
+            </div>
+            <div>
+              Together.
+            </div>
+          </div>
+
+          <div class="topBlockSubtitle">
+            <div>
+              Make smarter money choices with your own personal finance coach.
+            </div>
+            <div>
+              Clasp matches you with a Money Mentor who keeps you motivated and on-task to reach your financial goals.
+            </div>
+            <div>
+              Become a beta tester (it’s free)
+            </div>
+            <div class="greySubtitle">
+              We currently support iPhones and US financial institutions. 
+            </div>
+          </div>
+        </div> -->
+
       </div>
       <div class=panelBlock>
         <div class="frame">
@@ -230,11 +309,11 @@
 
                 <div class="slide">
                     <div class="slide-header">
-                      “Clasp can help you make sense of how you feel about money,
+                      "Clasp can help you make sense of how you feel about money,
                     </div>
                     <div class="slide-content">
-                      your emotional triggers, and your most influential financial role models — all necessary pre-work to help you think more critically
-                      about how to match your money with your values.”
+                      your emotional triggers, and your most influential financial role models &mdash; all necessary pre-work to help you think more critically
+                      about how to match your money with your values."<br/>&mdash; Kara Stevens
                     </div>
                     <div class="slide-footer">
                       <img src="./images/life-and-money-logo.svg" alt="">
@@ -243,11 +322,11 @@
         
                 <div class="slide">
                   <div class="slide-header">
-                      “When you drill down on what freedom means, for many it means spontaneity. 
+                      "When you drill down on what freedom means, for many it means spontaneity. 
                   </div>
                   <div class="slide-content">
-                      For example ‘I can spontaneously go on a trip across the world’ or 
-                      ‘I can spontaneously go out and study something in higher education.’”
+                      For example 'I can spontaneously go on a trip across the world' or 
+                      'I can spontaneously go out and study something in higher education.'"
                   </div>
                   <div class="slide-footer">
                     <img src="./images/bi-blue-background-horizontal@3x.jpg" alt="" style="width: 100%; max-width:287px; height:50px;">
@@ -261,37 +340,43 @@
           </div>
         </div>
       </div>
+
       <div class="frame">
         <div class="informationBlock">
           <div class="inf-header">
-              <span>
-                Find out who you are and make the best choices
-              </span>
+            <span>
+              Real Support from a Real Person
+            </span>
             <div>
-              Everything you need
+              What Sets Us Apart
             </div>
             <div class="breakLine"></div>
           </div>
           <div class="inf-content">
             <div class="inf-block">
-              <img src="./images/thoughtful.svg" alt="">
-              <div>Be thoughtful</div>
-              <span>Make mindful choices with our
-                  in-the-moment tools</span>
+              <img src="./images/thoughtful1.svg" alt="">
+              <div>Expert Coaching</div>
+              <span>
+                Your Money Mentor is always with you to give you 
+                the encouragement you need, and the accountability to succeed.
+              </span>
+            </div>
+
+            <div class="inf-block">
+              <img src="./images/prepared.svg" alt="">
+              <div>Smart Goals</div>
+              <span>
+                Small habits create big results. 
+                Make meaningful progress each week with a bite-sized challenge. 
+              </span>
             </div>
             <div class="inf-block">
               <img src="./images/challenged.svg" alt="">
-              <div>Be challenged</div>
+              <div>Thoughtful Insights</div>
               <span>
-                  Pick a targeted spending area and watch your savings grow.
-                </span>
-            </div>
-            <div class="inf-block">
-              <img src="./images/prepared.svg" alt="">
-              <div>Be prepared</div>
-              <span>
-                  Get a complete financial plan. Let us handle the big picture
-                </span>
+                Understand yourself and get ahead of the curve. 
+                Discover the emotional patterns that affect your spending.
+              </span>
             </div>
           </div>
         </div>
@@ -306,8 +391,8 @@
             <div class="breakLine"></div>
             <p>
               Out of failure comes focus, and kinship springs from unexpected corners of life. Both of us experienced financial volatility
-              during childhood and adulthood; every good babit came
-              at the cost of a tough lesson we had to learn on our own. We don’t let the past define us — in fact, it drove us to build a company with
+              during childhood and adulthood; every good habit came
+              at the cost of a tough lesson we had to learn on our own. We don't let the past define us &mdash; in fact, it drove us to build a company with
               <span class="orange">both smarts and heart</span>
             </p>
           </div>
@@ -315,6 +400,11 @@
       </a>
     </div>
 
+    <div class="footer-socials-new">
+      <img src="./icons/Icon-Instagram.svg"/>
+      <img src="./icons/Icon-Twitter.svg"/>
+      <img src="./icons/Icon-Facebook.svg"/>
+    </div>
     <div id="prefooter" class='prefooter-menu'>
       <div>
         <a href="./press.html">press</a>
@@ -334,8 +424,10 @@
 
     <div id='footer'>
       <p class='copyright'>Copyright <span>&copy;</span> 2020 Clasp Inc. All rights reserved.</p>
-      <p class='copyright believe'>You are good with money</p>
-      <img src="./images/heart.svg">
+      <p class='copyright believe old'>You are good with money</p>
+      <p class="copyright believe new">“Let’s get better. Together.”</p>
+      <img class="old" src="./images/heart.svg">
+      <img class="new" src="./icons/Icon-Go-En.svg">
     </div>
 
     <div class="cookie-block-wrapper disable">
