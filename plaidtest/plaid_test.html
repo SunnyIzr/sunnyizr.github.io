@@ -1,0 +1,176 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plaid Walkthrough Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div id="banner">
+        <h1>Clasp Plaid Test</h1>
+        <p id="intro">
+            This is an example application that walks through integrating Plaid Link using the API to retrieve Auth and Transaction data.
+        </p>
+        <p id="steps">
+            Great - you just created an Item! The server was successfully able to exchange the public_token for an access_token.
+            Below are a few options - you can get account data, retrieve information about the Item itself, or pull transaction data.
+        </p>
+        <p>
+          First Platypus Bank<br/>
+          username: user_good<br/>
+          password: pass_good<br/>
+          pin: credential_good (when required)
+
+        </p>
+    </div>
+
+    <div id="container">
+        <p>
+          <!-- User 631 -->
+            Account <span id="phone"></span> has been logged in.<br/>
+            <strong>Name: </strong><span id="name"></span><br/>
+            <strong>Email: </strong><span id="email"></span><br/>
+            <strong># of Accts: </strong><span id="num_of_accts"></span><br/>
+        </p>
+
+        <button id="link-btn">Link Account</button>
+    </div>
+
+    <div id="container">
+      <h4>Transactions</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Recorded Name</th>
+            <th>Merchant Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+    
+<script type="text/javascript">
+
+
+(function($) {
+  auth_token = null
+  $.ajax({
+      // url: 'https://evening-journey-41294.herokuapp.com/api/v1/login',
+      url: 'https://evening-journey-41294.herokuapp.com/api/v1/login',
+      type: 'post',
+      data: {
+          user: {
+              phone: '+11111111301',
+              password: 'password'
+          }
+      },
+      dataType: 'json',
+      success: function (data, status, request) {
+          console.log(data)
+          $('#phone').html(data["user_data"]["phone"])
+          $('#name').html(data["user_data"]["name"])
+          $('#email').html(data["user_data"]["email"])
+          $('#num_of_accts').html(data["accounts"].length)
+          auth_token = request.getResponseHeader('authorization')
+      }
+  });
+
+
+
+
+
+
+
+
+  var handler = Plaid.create({
+    clientName: 'Plaid Walkthrough Demo',
+    env: 'sandbox',
+    // Replace with your public_key from the Dashboard
+    key: 'ca18fa6546c9ada11bb25de0e9cbdc',
+    // token:  "public-sandbox-93f2df71-548c-44c8-b9f3-8153a5787a35",
+    product: ['transactions'],
+    apiVersion: 'v2',
+    // Optional, use webhooks to get transaction and error updates
+    webhook: 'https://evening-journey-41294.herokuapp.com/plaid_webhooks',
+    // webhook: "http://claspapp.herokuapp.com/plaid_webhooks",
+    onLoad: function() {
+      // Optional, called when Link loads
+    },
+    onSuccess: function(public_token, metadata) {
+      // Send the public_token to your app server.
+      // The metadata object contains info about the institution the
+      // user selected and the account ID or IDs, if the Select Account
+      // view is enabled.
+      $.ajax({
+        url: 'https://evening-journey-41294.herokuapp.com/get_access_token_v2',
+        // url: 'http://claspapp.herokuapp.com/get_access_token',
+        type: 'post',
+        headers: {
+          'Authorization': auth_token
+        },
+        data: {
+          public_token: public_token,
+        },
+        dataType: 'json',
+        success: function (data, status, request) {
+            console.log('success!!')
+            console.log(data)
+            
+            for (i = 0; i < data["transactions"].length; i++) {
+              var trans = data["transactions"][i]
+              var trrow = $("<tr></tr>")
+              trrow.append("<td>" + trans["recorded_name"] + "</td>")
+              trrow.append("<td>" + trans["merchant_name"] + "</td>")
+              trrow.append("<td>" + trans["date"] + "</td>")
+              trrow.append("<td>" + trans["amt_cents"] + "</td>")
+              trrow.append("<td>" + trans["category"] + "</td>")
+              $("tbody").append(trrow)
+            }
+        }
+      });
+
+      // $.post('http://0.0.0.0:3000/get_access_token', {
+      //   public_token: public_token,
+      // });
+    },
+    onExit: function(err, metadata) {
+      // The user exited the Link flow.
+      if (err != null) {
+        // The user encountered a Plaid API error prior to exiting.
+      }
+      // metadata contains information about the institution
+      // that the user selected and the most recent API request IDs.
+      // Storing this information can be helpful for support.
+    },
+    onEvent: function(eventName, metadata) {
+      // Optionally capture Link flow events, streamed through
+      // this callback as your users connect an Item to Plaid.
+      // For example:
+      // eventName = "TRANSITION_VIEW"
+      // metadata  = {
+      //   link_session_id: "123-abc",
+      //   mfa_type:        "questions",
+      //   timestamp:       "2017-09-14T14:42:19.350Z",
+      //   view_name:       "MFA",
+      // }
+    }
+  });
+
+  $('#link-btn').on('click', function(e) {
+    handler.open();
+  });
+})(jQuery);
+</script>
+</body>
+</html>
