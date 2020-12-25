@@ -54,6 +54,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  
   <link rel="icon" href="images/favicon.ico">
 
   <title>Clasp &#8226; Be brilliant with your money</title>
@@ -334,28 +335,32 @@
             All quality. Unsubscribe anytime.
           </p>
         </div>
-        <div class="email-input"> 
-          <div class="input-holder contact-block">
-            <input type="email"/>
-            <label class="email-label">Email</label>
+        <div id="emailBlockFooter">
+          <div class="confirmSuccesses">
+            Check your inbox for confirmation
           </div>
-          <img class="arrow-button" src="./icons/Icon-Circle-Arrow _ solid.svg"/> 
-        </div>
+
+          <div class="confirmError">
+            We can’t submit your request right now
+          </div>
+
+          <div class="home-email-block">
+            <div class="home-email">
+                <span class="email-title">Email</span>
+                <input id="homeValid" class="home-input" onclick="LandingPage.emailActiveHomePage()" onblur="LandingPage.emailEmptyInputPage()"/>
+            </div>
+            <img class="arrow-button" src="./icons/Icon-Circle-Arrow _ solid.svg" onclick="LandingPage.emailValidationButtonPage()"/>
+          </div>
+        
+          <span class="error-email">
+            Error message
+          </span>
+    			</div>
       </div>
     </div>
 
 
-    <!-- <div id="emailBlock">
-      <div class="home-email">
-        <span class="email-title">Email</span>
-        <input id="homeValid" class="home-input" onclick="LandingPage.emailActiveHome()" onblur="LandingPage.emailEmptyInput()"/>
-        <img class="email-delete" src="./icons/icon-clear-field.svg" onclick="LandingPage.emailDeleteHome()"/>
-      </div>
 
-      <span class="error-email">
-        Email needs '@'
-      </span>
-    </div>   -->
 
     <div class="footer-socials-new">
       <img src="./icons/Icon-Instagram.svg"/>
@@ -364,10 +369,10 @@
     </div>
     <div id="prefooter" class='prefooter-menu'>
       <div>
-        <a href="./press.html">press</a>
+        <a href="./contact.html">contact us</a>
       </div>
       <div>
-        <a href="./contact.html">contact us</a>
+        <a href="./press.html">press</a>
       </div>
       <div>
         <a href="./privacy-policy.html">privacy policy</a>
