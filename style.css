@@ -13,7 +13,7 @@ body{
   max-width: 576px;
   width: 100%;
   margin: 0 auto;
-  line-height: 36px; 
+  line-height: 31px; 
 }
 a{
   font-weight: 600;
@@ -33,6 +33,7 @@ a{
 .footer-container{
   max-width: 850px;
   margin: 0 auto;
+  padding: 0 25px;
 }
 .left{
   float: left;
@@ -70,3 +71,25 @@ a{
   text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .left, .right{
+    float: none;
+  }
+  .right{
+    padding-top: 10px;
+  }
+  .title{
+    text-align: center;
+    font-size: 26px;
+    margin-top: 15px;
+  }
+  .subtitle{
+    text-align: center;
+  }
+  .btn-grad{
+    padding: 10px 30px;
+  }
+}
