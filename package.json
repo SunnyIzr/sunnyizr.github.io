@@ -6,7 +6,7 @@
   "dependencies": {
     "chart.js": "^2.9.1",
     "chartjs-plugin-datalabels": "0.7.0",
-    "grunt": "~0.4.4",
+    "grunt": "~1.5.3",
     "grunt-contrib-sass": "~0.7.3"
   },
   "devDependencies": {
@@ -15,7 +15,7 @@
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-watch": "~1.1.0",
     "grunt-includes": "~0.3.0",
     "grunt-replace": "~1.0.0",
     "grunt-move": "~1.0.0",
